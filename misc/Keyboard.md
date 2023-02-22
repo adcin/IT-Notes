@@ -2,7 +2,7 @@
 
 - [Wikipedia Article](https://en.wikipedia.org/wiki/Keyboard_layout)
 
-# QWERTY (US default)
+# QWERTY (US without AltGr)
 
 ![QWERTY](../zz_rss/KB_United_States-NoAltGr.svg)
 
