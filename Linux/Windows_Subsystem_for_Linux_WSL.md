@@ -7,7 +7,7 @@ WSL is only supported on both Windows 10 64-bit (from version 1607) and Windows 
 Open: Settings → System → About
 Shortcut: `⊞ Win`+`Pause`
 
-![[../zz_rss/win10_version.webp]]
+![Windows Version](../zz_rss/win10_version.webp)
 
 ## 2. Enable Windows Subsystem for Linux
 
@@ -20,12 +20,22 @@ There are two types of WSL: WSL 1 runs a translation layer which bridges the gap
 In this Tutorial we activate WSL 2
 
 1. Search "Windows features" in Start Menu (shortcut: `⊞ Win`+`S`
-2. Open _"Turn Windows features on and off"_ control panel from the search result. ![[../zz_rss/win10_features_onoff.webp]]
-   (Alternative: Run `⊞ Win`+`R` "optionalfeatures")
+2. Open _"Turn Windows features on and off"_ control panel from the search result. 
+
+![Win10 Features](../zz_rss/win10_features_onoff.webp)
+
+(Alternative: Run `⊞ Win`+`R` "optionalfeatures")
+
 3. Enable _"Windows Subsystem for Linux"_. 
-   ![[../zz_rss/win10_activate_WSL_feature.webp]] 
-   You can skip restart for now.
-4. Enable _"Virtual Machine Platform"_. ![[../zz_rss/win10_enable_VMplattform.webp]]
+
+![Win10 WSL feature](../zz_rss/win10_activate_WSL_feature.webp) 
+
+You can skip restart for now.
+
+4. Enable _"Virtual Machine Platform"_. 
+
+![Win10 enable VMplattform](../zz_rss/win10_enable_VMplattform.webp)
+
 5. Reboot
 6. Download and execute [Windows Subsystem for Linux x64 Update](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
 7. Set WSL 2 as your default version when installing a new Linux distribution.
