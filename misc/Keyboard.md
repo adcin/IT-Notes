@@ -4,7 +4,7 @@
 
 # QWERTZ (German default)
 
-![[../zz_rss/KB_Germany.svg]]
+![QWERTZ](../zz_rss/KB_Germany.svg)
 
 # MacBook_Keyboard_DE-QWERTZ
 
