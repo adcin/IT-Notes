@@ -1,0 +1,6 @@
+- [Debian Manpages](https://manpages.debian.org)  
+- [Debian Administrator's Handbook](https://debian-handbook.info)  
+- [sslh - protocol demultiplexer](https://www.rutschle.net/tech/sslh/README.html)
+- [ubuntuusers DE](https://ubuntuusers.de/)
+- [Official ubuntu wiki](https://wiki.ubuntu.com/)
+- [GNU](https://www.gnu.org/)
