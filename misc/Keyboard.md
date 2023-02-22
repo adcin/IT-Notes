@@ -1,6 +1,6 @@
 # QWERTY (US default)
 
-![[../zz_rss/qwerty.jpg]]
+![QWERTY](../zz_rss/qwerty.jpg)
 
 # QWERTZ (German default)
 
