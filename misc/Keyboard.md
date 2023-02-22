@@ -1,6 +1,10 @@
+# Links
+
+- [Wikipedia Article](https://en.wikipedia.org/wiki/Keyboard_layout)
+
 # QWERTY (US default)
 
-![QWERTY](../zz_rss/qwerty.jpg)
+![QWERTY](../zz_rss/KB_United_States-NoAltGr.svg)
 
 # QWERTZ (German default)
 
