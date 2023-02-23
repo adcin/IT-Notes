@@ -364,11 +364,11 @@ ___
 
 # Diagrams
 
-\`\`\`mermaid
-pie
-"Villain" : 80
-"Hero" : 20
-\`\`\`
+\`\`\`mermaid  
+pie  
+"Villain" : 80  
+"Hero" : 20  
+\`\`\`  
 
 ```mermaid
 pie
@@ -409,61 +409,61 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 End of comment
 
 ```
-*   Asterisk
-\   Backslash
-`   Backtick
-{}  Curly braces
-.   Dot
-!   Exclamation mark
-#   Hash symbol
--   Hyphen symbol
-()  Parentheses
-+   Plus symbol
-[]  Square brackets
-_   Underscore`
+*   Asterisk  
+\   Backslash  
+`   Backtick  
+{}  Curly braces  
+.   Dot  
+!   Exclamation mark  
+#   Hash symbol  
+-   Hyphen symbol  
+()  Parentheses  
++   Plus symbol  
+[]  Square brackets  
+_   Underscore`  
 ```
 
-*   Asterisk
-\   Backslash
-`   Backtick
-{}  Curly braces
-.   Dot
-!   Exclamation mark
-#   Hash symbol
--   Hyphen symbol
-()  Parentheses
-+   Plus symbol
-[]  Square brackets
-_   Underscore
+*   Asterisk  
+\   Backslash  
+`   Backtick  
+{}  Curly braces  
+.   Dot  
+!   Exclamation mark  
+#   Hash symbol  
+-   Hyphen symbol  
+()  Parentheses  
++   Plus symbol  
+[]  Square brackets  
+_   Underscore  
 
 
 ```
-\*   Asterisk
-\\   Backslash
-\`   Backtick
-\{}  Curly braces
-\.   Dot
-\!   Exclamation mark
-\#   Hash symbol
-\-   Hyphen symbol
-\()  Parentheses
-\+   Plus symbol
-\[]  Square brackets
-\_   Underscore
+\*   Asterisk  
+\\   Backslash  
+\`   Backtick  
+\{}  Curly braces  
+\.   Dot  
+\!   Exclamation mark  
+\#   Hash symbol  
+\-   Hyphen symbol  
+\()  Parentheses  
+\+   Plus symbol  
+\[]  Square brackets  
+\_   Underscore  
 ```
 
-\*   Asterisk
-\\   Backslash
-\`   Backtick
-\{\}  Curly braces
-\.   Dot
-\!   Exclamation mark
-\#   Hash symbol
-\-   Hyphen symbol
-\(\)  Parentheses
-\+   Plus symbol
-\[\]  Square brackets
-\_   Underscore
+\*   Asterisk  
+\\   Backslash  
+\`   Backtick  
+\{\}  Curly braces  
+\.   Dot  
+\!   Exclamation mark  
+\#   Hash symbol  
+\-   Hyphen symbol  
+\(\)  Parentheses  
+\+   Plus symbol  
+\[\]  Square brackets  
+\_   Underscore  
 
 ```
 :octocat:
