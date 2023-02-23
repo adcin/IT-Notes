@@ -23,7 +23,7 @@ list partition
 select partition #
 ```
 - “#” is the number of the partition you want to delete.
-- 
+
 ```shell
 delete partition
 ```
