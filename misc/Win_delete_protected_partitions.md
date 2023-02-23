@@ -1,4 +1,4 @@
-# Delete hidden partition on USB drive via Diskpart command
+# Delete hidden partition on USB drive via `diskpart` command
 
 Diskpart is a text-mode command interpreter, and it is able to help you create, delete or format partition. To remove hidden partition on hard drive, first of all, press “Windows+R” simultaneously to open "Run" window and type “cmd” and press "Enter", then in the Command Prompt window, type the following commands in sequence and hit on “Enter” after each one.
 
