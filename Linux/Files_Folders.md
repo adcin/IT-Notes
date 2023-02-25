@@ -49,6 +49,12 @@ Empty folder:
 rmdir FOLDER
 ```
 
+Overwrite a file to hide its contents, then deallocate and remove it:  
+
+```shell
+shred -u <FILENAME>
+```
+
 **Symbolic links (symlinks)**
 
 Create a hardlink:
