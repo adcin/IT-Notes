@@ -23,6 +23,10 @@ Example - show all (`-a`) locations of rsync:
 which -a rsync
 ```
 
+# echo - print text
+
+
+
 # Shutdown/Reboot
 
 **Shutdown system in 1 minute:**  
