@@ -25,7 +25,23 @@ which -a rsync
 
 # echo - print text
 
+Usually quotation marks are the easiest way to use `echo`:  
+```shell
+echo "Hello World!"
+```
 
+The option `-e` enables backslash escapes
+```shell
+
+```
+
+```shell
+
+```
+
+```shell
+
+```
 
 # Shutdown/Reboot
 
