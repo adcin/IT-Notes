@@ -30,14 +30,24 @@ Usually quotation marks are the easiest way to use `echo`:
 echo "Hello World!"
 ```
 
-The option `-e` enables backslash escapes
+The option `-e` enables backslash escapes:  
 ```shell
-
+echo -e "Hello\nWorld!\a"
 ```
 
 ```shell
-
+duration=45
+echo -e "Duration: $duration \bm"
 ```
+
+| Option | Description                      |
+|:------:| -------------------------------- |
+|  \\n   | new line                         |
+|  \\b   | backspace (useful for variables) |
+|  \\\\  | actual backslash                 |
+|  \\a   | alert (BEL)                      | 
+
+Write the echo output into a file
 
 ```shell
 
