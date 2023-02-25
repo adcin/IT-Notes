@@ -47,10 +47,15 @@ echo -e "Duration: $duration \bm"
 |  \\\\  | actual backslash                 |
 |  \\a   | alert (BEL)                      | 
 
-Write the echo output into a file
+Write the echo output into a file _\(If the file already exists one `>` would delete all content\)_:  
 
 ```shell
+echo "Line No 1" > file.txt
+```
 
+Two `>>` will add the text to the end of the file:  
+```shell
+echo "Line No 2" >> file.txt
 ```
 
 # Shutdown/Reboot
