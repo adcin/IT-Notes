@@ -4,7 +4,11 @@
 Info about a user and his groups with corresponding IDs. Just `id` shows Info about current user.
 
 ```shell
-id <USER>
+id <USERAME>
+```
+
+```shell
+finger <USERNAME>
 ```
 
 Show all users:

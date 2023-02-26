@@ -8,7 +8,7 @@ lsb_release -a
 uname -r
 ```
 
-# Execute last command as root/sudo  
+# Execute last command as sudo  
 ```shell
 sudo !!
 ```
@@ -21,6 +21,12 @@ which <PROGRAMM NAME>
 Example - show all (`-a`) locations of rsync:  
 ```shell
 which -a rsync
+```
+
+Locate the binary, source, and manual page files for a command
+
+```shell
+whereis <COMMAND>
 ```
 
 # echo - print text
@@ -57,6 +63,22 @@ Two `>>` will add the text to the end of the file:
 ```shell
 echo "Line No 2" >> file.txt
 ```
+
+# Read files
+
+Print whole file: 
+```shell
+cat <FILENAME>
+```
+
+Print one page at a time:  
+```shell
+less <FILENAME>
+```
+
+Navigate: Arrow → Scroll 1 row/col; Space Bar → Scroll 1 Page
+Search forward (starts at the top of current display): \/\<PATTERN\>; `n` → next; `N` → previous
+
 
 # Shutdown/Reboot
 
