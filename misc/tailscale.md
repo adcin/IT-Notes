@@ -46,7 +46,7 @@ Executed on:   
 | kernel | 5.15.84-v8+                            | 
 | shell  | bash 5.1.4                             |
 
-1. Connect to the server via ssh: [My ssh notes](../Linux/ssh_rdp_remote.md)
+1. Connect to the server via ssh: [My ssh notes](ssh_rdp_remote.md)
 
 2. Execute installation script based on [official Guide](https://tailscale.com/download/linux):
 
