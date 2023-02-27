@@ -10,9 +10,12 @@
 
 ![QWERTZ](../zz_rss/KB_Germany.svg)
 
-# MacBook_Keyboard_DE-QWERTZ
+------------------------
+# MacBook
 
-Not all shortcuts work the same on every Mac
+The MacBook which I sometimes use has a different layout then a PC and there also aren't all symbols which I need printed on the keys. I haven't found a nice pic of the layout, so here is my cheat sheet for the german M1 MacBook I sometimes use.
+
+**Keyboard layout: MacBook M1 DE QWERTZ**
 
 ## Keys
 

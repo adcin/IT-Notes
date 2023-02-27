@@ -18,17 +18,19 @@ Document Metainformations:
 
 ## Basic Triggers
 
-| Trigger | Description |
-|---------|-------------|
-| :`w` | save |
-| :`q` | quit |
-| :`wq` | save and quit |
-| ! | force command (example :`w!`)
-| `y` | copy |
-| `yy` | copy a line |
-| `p` | paste |
-| `d` | cut |
-| `dd` | cut a line |
+| Trigger | Description                               |
+| ------- | ----------------------------------------- |
+| :`w`    | save                                      |
+| :`q`    | quit                                      |
+| :`q!`   | force quit and throw away unsaved changes | 
+| :`wq`   | save and quit                             |
+| :`x`    | save and quit (alternative)               |
+| !       | force command (example :`q!`)             |
+| `y`     | copy                                      |
+| `yy`    | copy a line                               |
+| `p`     | paste                                     |
+| `d`     | cut                                       |
+| `dd`    | cut a line                                |
 
 ## Vim as Language
 
