@@ -174,9 +174,5 @@ adb -s <DEVICE_ADB_SERIAL> exec-out screencap -p > /path/to/the/screenshot.png
 Example:
 
 ```shell
-adb -s 192.168.0.137:5555 exec-out screencap -p > /home/username/Pictures/screenshot.png
+adb -s 192.168.0.137:5555 exec-out screencap -p > /home/myusername/Pictures/screenshot.png
 ```
-
-| Option | Description |
-|:------:| ----------- |
-|  -s SERIAL      |   use device with given serial          |
