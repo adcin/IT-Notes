@@ -38,7 +38,9 @@ adb devices -l
 
 ## Multiple Devices
 
-If more then one device is connected you can use the -s option with the adb commands to specify the serial number. Example  
+If more then one device is connected you can use the -s option with the adb commands to specify the serial number. 
+
+Example:  
 
 ```shell
 adb -s 192.168.0.137:5555 shell input keyevent 4
@@ -162,3 +164,19 @@ adb shell monkey -p your.app.package.name 1
 ```shell
 adb shell am force-stop your.app.package.name
 ```
+
+## Take screenshot
+
+```shell
+adb -s <DEVICE_ADB_SERIAL> exec-out screencap -p > /path/to/the/screenshot.png
+```
+
+Example:
+
+```shell
+adb -s 192.168.0.137:5555 exec-out screencap -p > /home/username/Pictures/screenshot.png
+```
+
+| Option | Description |
+|:------:| ----------- |
+|  -s SERIAL      |   use device with given serial          |
