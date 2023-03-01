@@ -15,7 +15,7 @@ adb tcpip 5555
 ```
 3. Connect via WiFi.
 ```shell
-adb connect 192.168.131.123:5555
+adb connect 192.168.0.123:5555
 ```
 4. Check the connection.
 ```shell
