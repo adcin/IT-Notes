@@ -5,3 +5,11 @@ sudo apt install locales
 sudo locale-gen de_DE.UTF-8
 sudo dpkg-reconfigure locales
 ```
+
+# Notification: Pending update of "firefox" snap
+
+1. Close all Firefox windows. Additionally you can execute `sudo killall firefox`.
+2. Refresh snap:  
+```shell
+sudo snap refresh
+```

@@ -1,4 +1,4 @@
-# Managing Sources
+# Sources
 
 ## Debian
 
@@ -41,10 +41,81 @@ Create separate `*.list` files in `/etc/apt/sources.list.d/`.
 
 -------------------
 
-# Install a deb file
+# Package Management
 
+## Dpkg - apt, aptitude, synaptic, etc.
+
+Dpkg is the base package manager for Debian. Apt, Aptitude, Synaptic etc. are tools and interfaces for Package Management, with additional features to dpkg.
+
+[Dpkg - Homepage](https://www.dpkg.org/)
+[Dpkg - Manpage](https://manpages.debian.org/dpkg.1.en.html)
+
+### apt
+
+Command line interface for package management.
+
+Download package information from all configured sources:
+```shell
+sudo apt update
+```
+- `apt list --upgradable`
+
+Update packages which are installed from the sources:
+```shell
+sudo apt upgrade
+```
+
+Update and upgrade:
+```shell
+sudo apt update && sudo apt upgrade -y
+```
+
+Search for packages:
+```shell
+apt search <PATTERN>
+```
+
+Install packages:
+```shell
+sudo apt install <PACKAGE_NAME>
+```
+
+Install a local deb package file:
 ```shell
 sudo apt install ./STRATGE_APPLICATION.deb
+```
+
+Remove packages (keep the configuration files):
+```shell
+sudo apt remove <PACKAGE_NAME>
+```
+
+Remove packages (delete the configuration files):
+```shell
+sudo apt purge <PACKAGE_NAME>
+```
+
+### aptitude
+
+Text-based user interface for package management.
+
+Start the interface:
+```shell
+sudo aptitude
+```
+
+| Short-key  | Function  |
+|:----------:| --------- |
+| `Ctrl`+`T` | Open Menu |
+|    `?`     | Help      |
+|    `q`     | Quit      | 
+
+### synaptic
+
+Graphical management of software packages.
+
+```shell
+sudo apt install synaptic
 ```
 
 -------------------
