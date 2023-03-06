@@ -8,12 +8,62 @@ chmod +x /path/to/my_script.sh
 
 ## Execute script
 
+### Execute immediately 
+
 - Method 1: Enter whole path and filename   
     `/path/to/my_script.sh`
 - Method 2: Enter `./` in front of filename    
     `./my_script.sh`
 - Method 3: Specify the interpreter    
     `bash my_script.sh`
+
+### Execute at particular time
+
+`at` - [Debian manpage](https://manpages.debian.org/at.1.en.html)
+
+```shell
+which at
+```
+
+Installation:
+```shell
+sudo apt update && sudo apt install at
+```
+
+Run script at 23:00 o'clock
+```shell
+at 23:00 -f /home/myusername/script.sh
+```
+
+Alternatively by using the `at` command prompt:
+```shell
+at 23:00
+```
+The command prompt `at>` can be exited with `ctrl`+`D`.
+```shell
+at> bash /home/myusername/script.sh
+at>
+```
+Or use `echo`and pipe `at`:
+```shell
+echo "bash /home/myusername/script.sh" | at 23:00
+```
+
+| Time examples           | 
+| ----------------------- |
+| at 23:00 tomorrow       |
+| at 23:00 sunday         |
+| at 11pm + 2 days        |
+| at HH:MM DD.MM.\[CC\]YY |
+
+List current users queued `at` jobs:
+```shell
+atq
+```
+Delete an `at` job (example job no. 9):
+```shell
+atrm 9
+```
 
 -----------------
 
