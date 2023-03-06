@@ -115,33 +115,27 @@ ssh -L <LOCALPORT>:<HOSTADDRESS>:<HOSTPORT> <USERNAME>@<HOSTADDRESS>
 
 `ssh-keygen` generates, manages and converts authentication keys for ssh. 
 
-Default key length 3.072 (3 x 1024): 
+#### RSA
+
+Default rsa 3072 bit key : 
 
 ```shell
 ssh-keygen
 ```
 
-Increase security with key length of 4.096 (4 x 1024):
+Two files have been created: 
+- _id_rsa_ - the private key is your SECRET client keyfile
+- _id_rsa.pub_ - the keyfile with the public server key
 
-```shell
-ssh-keygen -b 4096
-```
+Increase security with key length of 4.096 (4 x 1024):
 
 ```shell
 ssh-keygen -b 4096 -C <Comment> -f <CUSTOM_FILENAME>
 ```
 
-Output:  
 
-```
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/marcin/.ssh/id_rsa): <ENTER FILENAME OR NOTHING FOR STANDARD FILENAME: /home/marcin/.ssh/id_rsa>
-Enter passphrase (empty for no passphrase): <AS DESCRIBED ENTER PASSWORD OR NOT>
-```
 
-Two files have been created: 
-- _id_rsa_ - the private key is your SECRET client keyfile
-- _id_rsa.pub_ - the keyfile with the public server key
+
 
 ### Generate public key out of existing private key
 
