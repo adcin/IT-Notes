@@ -127,15 +127,34 @@ Two files have been created:
 - _id_rsa_ - the private key is your SECRET client keyfile
 - _id_rsa.pub_ - the keyfile with the public server key
 
-Increase security with key length of 4.096 (4 x 1024):
+Increase security with key length of 4.096 bit (4 x 1024):
 
 ```shell
 ssh-keygen -b 4096 -C <Comment> -f <CUSTOM_FILENAME>
 ```
 
+|   Option    | Description                         |
+|:-----------:| ----------------------------------- |
+| -b \<bits\> | Number of bits in the key to create | 
+| -C \<Text\> | Comment                             |
+|     -f      | Filename of the key file            |
 
+#### Ed25519
 
+Ed25519 is the most recommended public-key algorithm available today.  
 
+Generate ed25519 key:
+```shell
+ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "user@example.com_on_device"
+```
+
+|   Option    | Description                                                                                                       |
+|:-----------:| ----------------------------------------------------------------------------------------------------------------- |
+|     -o      | Save the private-key using the new OpenSSH format rather than the PEM format.                                     |
+|     -a      | Number of KDF rounds used.  Higher numbers = slower passphrase verification = increased resistance to brute-force |
+|     -t      | Specifies the type of key to create                                                                               |
+| -C \<Text\> | Comment                                                                                                           |
+|     -f      | Filename of the key file                                                                                          | 
 
 ### Generate public key out of existing private key
 
