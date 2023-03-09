@@ -132,6 +132,20 @@ sudo lshw -C <class>
 ```
 _The "class" can be found by using `sudo lshw -short`._
 
+## lspci - list PCI devices
+
+```shell
+lspci
+```
+
+```shell
+
+```
+
+```shell
+
+```
+
 ## Harddrives  
 
 **List all bulk devices and their file systems:**  
