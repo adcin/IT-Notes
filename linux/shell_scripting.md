@@ -114,6 +114,25 @@ Tipp: Use `read` to pause script until input:
 read -p "Press Enter to continue" </dev/tty
 ```  
 
+# Arguments
+
+Arguments are passed to the script by writing them separated by `Space`. The arguments (also known as positional parameters) can be accessed within the bash script by using the variables $1, $2, $3 ... $n.
+
+-------------------
+
+# Special Bash shell variables
+
+|   Variable    | Description                                          |
+|:-------------:|:---------------------------------------------------- |
+|     `$0`      | The name of the bash script.                         |
+| `$1, $2...$n` | The bash script arguments.                           |
+|     `$$`      | The process id of the current shell.                 |
+|     `$#`      | The total number of arguments passed to the script.  |
+|     `$@`      | The value of all the arguments passed to the script. |
+|     `$?`      | The exit status of the last executed command.        | 
+|     `$!`      | The process id of the last executed command.         |
+
+
 -------------------
 
 # Download files from URL
@@ -175,5 +194,6 @@ sleep 1m 30s
 
 # Useful links
 
-[ubuntuusers: Bash-Skripting-Guide für Anfänger](https://wiki.ubuntuusers.de/Shell/Bash-Skripting-Guide_f%C3%BCr_Anf%C3%A4nger)
+- [ubuntuusers: Bash-Skripting-Guide für Anfänger](https://wiki.ubuntuusers.de/Shell/Bash-Skripting-Guide_f%C3%BCr_Anf%C3%A4nger)
+- [devhints.io - Bash scripting cheatsheet](https://devhints.io/bash)
 
