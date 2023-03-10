@@ -68,6 +68,17 @@ Alternative change to root \(Insert current user password\):
 sudo -i
 ```
 
+## Send message
+
+Send a message to all users currently logged in:
+```shell
+sudo wall -n THIS IS MY MESSAGE!
+```
+
+| Option | Description                                   |
+|:------:| --------------------------------------------- |
+|   -n   | Send only the message and suppress the banner | 
+
 ----------
 # Groups 
 
