@@ -179,6 +179,7 @@ http://example.com/file3.tar
 ```shell
 sleep <NUMBER>[suffix]
 sleep 5m
+sleep 0.5s
 sleep 90s
 sleep 1m 30s
 ```
