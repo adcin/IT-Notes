@@ -1,6 +1,7 @@
 # Links
 
-- [Wikipedia Article](https://en.wikipedia.org/wiki/Keyboard_layout)
+- [Wikipedia - Keyboard layout](https://en.wikipedia.org/wiki/Keyboard_layout)
+- [Wikipedia- Space-cadet keyboard](https://en.wikipedia.org/wiki/Space-cadet_keyboard)
 
 # QWERTY (US without AltGr)
 
