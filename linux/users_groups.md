@@ -46,6 +46,42 @@ Debian script `deluser`:
 sudo deluser --remove-home <USER>
 ```
 
+## Disable user
+
+Method 1 - Lock a user's password. This puts a '!' in front of the encrypted password, effectively disabling the password:
+
+```shell
+sudo usermod -L <USERNAME>
+```
+
+Method 2 - Change users default login shell to `/sbin/nologin` or `/usr/sbin/nologin`:
+
+```shell
+sudo usermod <USERNAME> -s /sbin/nologin
+```
+
+_When trying to login the user will see the message "This account is currently not available."_
+
+Method 3 - Change users default login shell to `/bin/false` if you don't want the user to receive a message linke in method 2:
+
+```shell
+sudo usermod <USERNAME> -s /bin/false
+```
+
+## Re-enable user
+
+Unlock users password:
+
+```shell
+sudo usermod -U <USERNAME>
+```
+
+Change default login shell:
+
+```shell
+sudo usermod <USERNAME> -s /bin/bash
+```
+
 ## Change password
 
 ```shell
