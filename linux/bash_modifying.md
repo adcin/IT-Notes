@@ -74,12 +74,12 @@ nano ~/.bashrc
 
 My standard user setting:  
 ```shell
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;30m\] @ \h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u \[\033[00;00m\]@ \[\033[01;37m\]\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
 ``` 
 
 My standard root setting:  
 ```shell
-PS1='${debian_chroot:+($debian_chroot)}\[\033[00;31m\]\u\[\033[01;30m\] @ \h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
+PS1='${debian_chroot:+($debian_chroot)}\[\033[00;31m\]\u \[\033[00;00m\]@ \[\033[01;37m\]\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
 ``` 
 
 # Change tty shortcuts 
