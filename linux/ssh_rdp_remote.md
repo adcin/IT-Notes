@@ -399,6 +399,31 @@ Create ssh connection and run command:
 ssh <REMOTE_SERVER> "DISPLAY=:10 filezilla >/dev/null 2>&1 &"
 ```
 
+### known_hosts
+
+Host address or IP for copy\&paste:
+```shell
+HOST_ADDR=
+```
+
+Add server to known_hosts:
+
+```shell
+ssh-keyscan -H $HOST_ADDR >> ~/.ssh/known_hosts
+```
+
+Remove server from known_hosts method 1:
+
+```shell
+ssh-keygen -f ~/.ssh/known_hosts -R $HOST_ADDR
+```
+
+Remove server from known_hosts method 2 (deleting the line - line 6 in this example):
+
+```shell
+sed -i '6d' ~/.ssh/known_hosts
+```
+
 -------------------------------- 
 
 # RDP Remote Desktop `xrdp`
