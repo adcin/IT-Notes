@@ -176,3 +176,23 @@ Example:
 ```shell
 adb -s 192.168.0.137:5555 exec-out screencap -p > /home/myusername/Pictures/screenshot.png
 ```
+
+## Processes
+
+Show running processes:
+
+```shell
+adb shell ps
+```
+
+Show only running apps:
+
+```shell
+adb shell ps | grep -F com.
+```
+
+Show process ID of a specific app:
+
+```shell
+adb shell pidof com.specific.application
+```
