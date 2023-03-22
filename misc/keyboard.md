@@ -70,6 +70,7 @@ The MacBook which I sometimes use has a different layout then a PC and there als
 
 | Shortcut                                       | Description                        |
 | ---------------------------------------------- | ---------------------------------- |
+| `shift` + `cmd` + `.`                          | Show / Hide hidden files in finder (.ssh for example)  |
 | `shift` + `cmd` + `Q`                          | Log out                            |
 | `alt` + `cmd` + `⏏`                            | Sleep                              |
 | `ctrl` + `cmd` + `Q`                           | Lock Screen                        |
