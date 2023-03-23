@@ -1,4 +1,48 @@
-# Bash aliases
+# Shell in general
+
+Show current shell:
+
+```shell
+ps -p $$
+#or
+echo "$0"
+```
+
+Show available shells:
+
+```shell
+cat /etc/shells
+```
+
+Show path of a specific shell:
+
+```shell
+type -a bash
+```
+
+Change shell to bash:
+
+```shell
+bash
+```
+
+Change standard shell to bash (current user):
+
+```shell
+chsh -s /bin/bash
+```
+
+Change standard shell of a specific user to bash:
+
+```shell
+chsh -s /bin/bash username
+```
+
+--------------------
+
+# Bash
+
+## Bash aliases
 
 The Bash alias is a shortcut for a command. It's often used to automatically execute a command with your standard options, so you don't have to type them every time.  
 
@@ -27,7 +71,7 @@ Example ~/.bash_aliases file:
 eval "$(dircolors -b)"
 
 alias ls="ls --color=auto"
-alias l="ls -lah --time-style=long-iso --color=auto"
+alias l="ls -lahF --time-style=long-iso --color=auto"
 alias dir="dir --color=auto"
 alias vdir="vdir --color=auto"
 
@@ -56,7 +100,7 @@ uanlias ll
 unalias -a
 ```  
 
-# Bash shell colours
+## Bash shell colours
 
 - https://wiki.ubuntuusers.de/Bash/Prompt/  
 
@@ -81,6 +125,8 @@ My standard root setting:
 ```shell
 PS1='${debian_chroot:+($debian_chroot)}\[\033[00;31m\]\u \[\033[00;00m\]@ \[\033[01;37m\]\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
 ``` 
+
+--------------------
 
 # Change tty shortcuts 
 
