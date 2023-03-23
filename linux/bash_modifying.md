@@ -35,7 +35,7 @@ chsh -s /bin/bash
 Change standard shell of a specific user to bash:
 
 ```shell
-chsh -s /bin/bash username
+sudo chsh -s /bin/bash username
 ```
 
 --------------------
