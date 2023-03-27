@@ -48,8 +48,10 @@ Search: `@include common-auth`
 
 Insert underneath:
 ```bash
-auth    required    pam_u2f.so
+auth    required    pam_u2f.so    cue
 ```  
+
+
 
 **Testing**
 
