@@ -117,7 +117,7 @@ ssh -L <LOCALPORT>:<HOSTADDRESS>:<HOSTPORT> <USERNAME>@<HOSTADDRESS>
 
 #### RSA
 
-Default rsa 3072 bit key : 
+Default rsa 3072 bit key pair: 
 
 ```shell
 ssh-keygen
@@ -143,17 +143,23 @@ ssh-keygen -b 4096 -C <Comment> -f <CUSTOM_FILENAME>
 
 - [Wikipedia - Elliptic Curve Digital Signature Algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
 
-Generate ecdsa key:
+Generate ecdsa key pair:
 
 ```shell
-
+ssh-keygen -t ecdsa -a 40 -b 521
 ```
+
+| Option | Description                                                                                                                      |
+|:------:| -------------------------------------------------------------------------------------------------------------------------------- |
+|   -t   | Specifies the type of key to create                                                                                              |
+|   -a   | Number of KDF rounds used.  Higher numbers = slower passphrase verification = increased resistance to brute-force (default = 16) |
+|   -b   | Specifies ecdsa key length of 256, 384 or 521 bits                                                                               | 
 
 #### Ed25519
 
 Ed25519 is the most recommended public-key algorithm available today.  It is quite new, so check if it is supported.
 
-Generate ed25519 key:
+Generate ed25519 key pair:
 ```shell
 ssh-keygen -a 40 -t ed25519 -f ~/.ssh/id_ed25519 -C "user@example.com_on_device"
 ```
