@@ -1,8 +1,15 @@
 # Yubikey - Security Key
 
-YubiKey is a hardware authentication device manufactured by [yubiko](https://www.yubico.com).  I'm using the [YubiKey 5c NFC](https://www.yubico.com/product/yubikey-5c-nfc) for these notes, but other Security Keys should work similar.
+YubiKey is a hardware authentication device manufactured by [yubico](https://www.yubico.com).  I'm using the [YubiKey 5c NFC](https://www.yubico.com/product/yubikey-5c-nfc) for these notes, but other Security Keys should work similar.
 
 **Attention!** You always should have a backup key, in case you loose or destroy the main one. Setup the backup key the same way you setup the main key and store it in a safe place!
+
+Useful Links:
+
+- [GitHub - Yubico](https://github.com/Yubico)
+- [GitHub - Yubico - pam-u2f](https://github.com/Yubico/pam-u2f)
+- [GitHub - linux-pam](https://github.com/linux-pam/linux-pam)
+- [Debian Manpage - pam.conf\(5\)](https://manpages.debian.org/pam.conf.5.en.html)
 
 # Setup local authentication
 
@@ -46,12 +53,17 @@ sudo nano /etc/pam.d/sudo
 
 Search: `@include common-auth`  
 
-Insert underneath:
+To set up requirement to Yubikey auth after password auth Insert **underneath** `@include common-auth`:
 ```bash
 auth    required    pam_u2f.so    cue
 ```  
 
+To set up requirement only to Yubikey auth Insert **above** `@include common-auth`:
+```bash
+auth    sufficient    pam_u2f.so    cue
+```  
 
+_The Argument `cue` is optional - it is set to prompt a message to remind to touch the device._
 
 **Testing**
 
