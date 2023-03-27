@@ -193,6 +193,12 @@ Source key can be either private or public.
 | -f     | Specifies the filename of the private key file.                                                                                                 |
 | -e     | Read a private or public OpenSSH key file and print to stdout a public key in one of the formats specified by the -m option (default: RFC4716). | 
 
+### Change passphrase of an existing private key
+
+```shell
+ssh-keygen -p -f ~/.ssh/my_private_superkey
+```
+
 ### Copy public key to the server
 
 The public ssh user key shall be inserted in the users home directory ~/.ssh/authorized_keys file.  Each line in the file contains one key.
