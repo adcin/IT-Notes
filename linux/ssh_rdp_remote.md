@@ -139,19 +139,28 @@ ssh-keygen -b 4096 -C <Comment> -f <CUSTOM_FILENAME>
 | -C \<Text\> | Comment                             |
 |     -f      | Filename of the key file            |
 
+#### ecdsa
+
+- [Wikipedia - Elliptic Curve Digital Signature Algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
+
+Generate ecdsa key:
+
+```shell
+
+```
+
 #### Ed25519
 
-Ed25519 is the most recommended public-key algorithm available today.  
+Ed25519 is the most recommended public-key algorithm available today.  It is quite new, so check if it is supported.
 
 Generate ed25519 key:
 ```shell
-ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "user@example.com_on_device"
+ssh-keygen -a 40 -t ed25519 -f ~/.ssh/id_ed25519 -C "user@example.com_on_device"
 ```
 
 |   Option    | Description                                                                                                       |
 |:-----------:| ----------------------------------------------------------------------------------------------------------------- |
-|     -o      | Save the private-key using the new OpenSSH format rather than the PEM format.                                     |
-|     -a      | Number of KDF rounds used.  Higher numbers = slower passphrase verification = increased resistance to brute-force |
+|     -a      | Number of KDF rounds used.  Higher numbers = slower passphrase verification = increased resistance to brute-force (default = 16) |
 |     -t      | Specifies the type of key to create                                                                               |
 | -C \<Text\> | Comment                                                                                                           |
 |     -f      | Filename of the key file                                                                                          | 
