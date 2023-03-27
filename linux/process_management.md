@@ -3,6 +3,7 @@
 Basic commands to view processes:  
 - `ps` - List commands
 - `top` - Dynamic real-time view of a running system
+- `pgrep` - 
 
 Additional CLI software:  
 - `htop` - Powerful process managing tool
@@ -45,6 +46,21 @@ Output terminology:
 | %MEM    | Percentage of RAM used by the process        |
 | TIME+   | Total CPU time consumed by the process       |
 | Command | Command used to activate the process         | 
+
+## `pgrep` - find process
+
+```shell
+PATTERN=
+```
+
+```shell
+pgrep -a -f $PATTERN
+```
+
+| Option | Description                                                                                                         |
+|:------:| ------------------------------------------------------------------------------------------------------------------- |
+|   -a   | List the full command line as well as the process ID.                                                               |
+|   -f   | The _pattern_ is normally only matched against the process name. When **-f** is set, the full command line is used. | 
 
 # Back-/ Foreground
 
