@@ -118,6 +118,11 @@ Graphical management of software packages.
 sudo apt install synaptic
 ```
 
+### snap
+
+Quote [Canonical - About Snaps](https://snapcraft.io/about) (Mrz 2023):
+Snaps are app packages for desktop, cloud and IoT that are easy to install, secure, cross‐platform and dependency‐free. Snaps are discoverable and installable from the Snap Store
+
 -------------------
 # Software  
 
