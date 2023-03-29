@@ -34,6 +34,27 @@ Locate the binary, source, and manual page files for a command:
 whereis <COMMAND>
 ```
 
+# Command chains
+
+Execute automatically multiple commands one by one.
+
+`&&` Stops whole chain when an error occurs:
+```shell
+sudo apt update && sudo apt upgrade
+sudo apt this_is_a_typo && sudo apt upgrade
+```
+
+`;` Proceeds to the next command if an error occurs:
+```shell
+sudo apt update; sudo apt upgrade
+sudo apt this_is_a_typo; sudo apt upgrade
+```
+
+`||` Proceeds to the next command **only if an error occures**:
+```shell
+htop || sudo apt install htop && htop
+```
+
 # echo - print text
 
 Usually quotation marks are the easiest way to use `echo`: 
