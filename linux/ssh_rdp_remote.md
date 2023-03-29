@@ -305,8 +305,9 @@ In the `~/.ssh/config` you can store ssh information and settings for your serve
 User's configuration file: `~/.ssh/config`
 System-wide configuration file: `/etc/ssh/ssh_config`
 
-- [OpenSSH client config manual on openbsd.org](https://man.openbsd.org/ssh_config)
-- [OpenSSH client config manual on ssh.com](https://www.ssh.com/academy/ssh/config)
+- [openbsd.org - OpenSSH client config manual](https://man.openbsd.org/ssh_config)
+- [ssh.com - OpenSSH client config manual](https://www.ssh.com/academy/ssh/config)
+- [howtogeek.com - How to Manage an SSH Config File in Windows and Linux](https://www.howtogeek.com/devops/how-to-manage-an-ssh-config-file-in-windows-linux/)
 
 Create ~/.ssh/config file:  
 ```shell
@@ -318,7 +319,7 @@ ssh_config structure:
 ```shell
 Host Hostname1
     ssh_option value
-    SSH_OPTION value
+    ssh_option value
 
 HostHostname2
     ssh_option value
@@ -335,6 +336,7 @@ Host example
     Hostname example.com
     User xmpl
     IdentityFile ~/.ssh/example.key
+    IdentitiesOnly yes
 
 Host craftmine
     Hostname 192.168.0.66
@@ -352,6 +354,7 @@ Host 192.168.0.*
 
 Host * !192.168.0.*
     IdentityFile ~/.ssh/mystandard.key
+    IdentitiesOnly yes
 
 Host *
     ServerAliveInterval 120
