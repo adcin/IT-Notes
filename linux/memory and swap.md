@@ -67,6 +67,16 @@ sudo swapon -av
 |   -a   | All devices marked as in /etc/fstab are made available, except for those with the noauto option. Devices that are already being used as swap are silently skipped. | 
 |   -v   | verbose                                                                                                                                                            |
 
+**When a swap-file is used (eg. Raspberry Pi) other commands might have to be used:**
 
+Disable swap (can take some time):
+```shell
+sudo dphys-swapfile swapoff
+```
+
+Enable swap again:
+```shell
+sudo dphys-swapfile swapon
+```
 
 
