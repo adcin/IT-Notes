@@ -90,3 +90,20 @@ tailscale --help
 | lock       | Manage tailnet lock                                    |
 | licenses   | Get open source license information                    | 
 
+Check status of Tailscaled service:
+
+```shell
+sudo systemctl status tailscaled
+```
+
+Start Tailscaled service:
+
+```shell
+sudo systemctl start tailscaled
+```
+
+Stop Tailscaled service:
+
+```shell
+sudo systemctl stop tailscaled
+```
