@@ -218,10 +218,32 @@ chmod u=rwx <FILE>
 
 ```shell
 chmod +x <FILE>
+# same as
+chmod a+x <FILE>
 ```
 
+**Make file executable (for Owner):**
 
-**Numerical Permissions:**
+```shell
+chmod u+x <FILE>
+```
+
+**Remove write permissions for group and others:**
+
+```shell
+chmod go-w <FILE>
+```
+
+**Letter users notation:**
+
+| Letter | Description                        |
+|:------:| ---------------------------------- |
+|   u    | owner                              |
+|   g    | group                              |
+|   o    | other (not owner, nor group users) |
+|   a    | all (default option)               | 
+
+**Numerical permission notation:**
 
 | #   | Sum                | rwx | Permission              |
 | --- | ------------------ | --- | ----------------------- |
@@ -233,6 +255,9 @@ chmod +x <FILE>
 | 2   | 2(w)               | -w- | write only              |
 | 1   | 1(x)               | --x | execute only            |
 | 0   | 0                  | --- | none                    |
+
+
+
 
 ## `umask` - change the default file and folder permissions
 
