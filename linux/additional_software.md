@@ -187,6 +187,29 @@ sudo apt install virtualbox virtualbox-dkms virtualbox-ext-pack
 
 ## Command Line Software
 
+### nano
+
+A very common FOSS editor, inspired by Pico.
+
+- [Official GNU nano homepage](https://www.nano-editor.org/)
+- [Official Documentation](https://www.nano-editor.org/docs.php)
+- [Documentation - nanorc \(config file\)](https://www.nano-editor.org/dist/latest/nanorc.5.html)
+
+```shell
+sudo apt install nano
+```
+
+Configuration file locations:
+- `/etc/nanorc`
+- `~/.nanorc`
+- `$XDG_CONFIG_HOME/nano/nanorc`
+- `~/.config/nano/nanorc`
+
+| Option           | Description                |
+|:---------------- | -------------------------- |
+| set tabsize 4    | Tabsize value (0-8)        |
+| set tabstospaces | Use Spaces instead of Tabs | 
+
 ### neofetch
 
 A fast, highly customizable system info script.  
