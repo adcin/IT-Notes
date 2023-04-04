@@ -124,7 +124,7 @@ Arguments are passed to the script by writing them separated by `Space`. The arg
 
 |   Variable    | Description                                          |
 |:-------------:|:---------------------------------------------------- |
-|     `$0`      | The name of the bash script.                         |
+|     `$0`      | Absolute path and name of the bash script.                         |
 | `$1, $2...$n` | The bash script arguments.                           |
 |     `$$`      | The process id of the current shell.                 |
 |     `$#`      | The total number of arguments passed to the script.  |
