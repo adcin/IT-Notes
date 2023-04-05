@@ -312,6 +312,10 @@ sudo apt install krusader
 
 ### Kate / Kwrite - Texteditor
 
+- [Kate Website](https://kate-editor.org/)
+- [Syntax Highlight](https://kate-editor.org/syntax/)
+- [Alerts Syntax](https://kate-editor.org/syntax/data/html/test-alerts.dark.html)
+
 Kate is a powerful text editor - focused on development.
 
 ```shell
