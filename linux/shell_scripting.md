@@ -193,6 +193,48 @@ sleep 1m 30s
  
 -----------------
 
+# Menu
+
+- [Text based menu](#Text%20based%20Menu%20Template)
+- [Dialog - Graphical CLI menu](https://invisible-island.net/dialog/)
+- [Zenity - GUI menu](https://help.gnome.org/users/zenity/stable/index.html)
+
+## Text based Menu Template
+
+Menu embedded  in a function:
+```shell
+#!/bin/bash
+
+mymenu() {
+echo -ne "\nFancy menu title
+  1) Option 1
+  2) Option 2
+  3) Option 3
+  0) Exit
+Choose an option: "
+    read MENU_DECISION
+    case $MENU_DECISION in
+        1)
+            echo -e "\n\tYou've chosen Option 1."
+            mymenu;;
+        2)
+            echo -e "\n\tYou've chosen Option 2."
+            mymenu;;
+        3)
+            echo -e "\n\tYou've chosen Option 3."
+            mymenu;;
+        0)
+            echo -e "\n\tOK, that's it.\n"
+            exit 0;;
+        *)
+            echo -e "\n\t!!! $MENU_DECISION IS NOT AN OPTION !!!"
+            mymenu;;
+    esac
+}
+
+mymenu
+```
+
 # Useful links
 
 - [ubuntuusers: Bash-Skripting-Guide für Anfänger](https://wiki.ubuntuusers.de/Shell/Bash-Skripting-Guide_f%C3%BCr_Anf%C3%A4nger)
