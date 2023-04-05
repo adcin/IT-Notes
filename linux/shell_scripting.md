@@ -225,7 +225,7 @@ Choose an option: "
             mymenu;;
         0)
             echo -e "\nOK, that's it.\n"
-            break;;
+            exit 0;;
         *)
             echo -e "\n=>\t!!! \"$MENU_DECISION\" IS NOT AN OPTION !!!"
             mymenu;;
