@@ -210,7 +210,7 @@ echo -ne "\nFancy menu title
   1) Option 1
   2) Option 2
   3) Option 3
-  0) Exit
+  0) Exit menu
 Choose an option: "
     read MENU_DECISION
     case $MENU_DECISION in
@@ -225,7 +225,7 @@ Choose an option: "
             mymenu;;
         0)
             echo -e "\nOK, that's it.\n"
-            exit 0;;
+            break;;
         *)
             echo -e "\n=>\t!!! \"$MENU_DECISION\" IS NOT AN OPTION !!!"
             mymenu;;
