@@ -10,7 +10,7 @@ lsb_release -a
 uname -r
 ```
 
-# Execute last command as sudo  
+# Execute last command as sudo
 
 ```shell
 sudo !!
