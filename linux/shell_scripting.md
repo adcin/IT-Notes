@@ -132,6 +132,11 @@ Arguments are passed to the script by writing them separated by `Space`. The arg
 |     `$?`      | The exit status of the last executed command.        | 
 |     `$!`      | The process id of the last executed command.         |
 
+*Print the path to the current script file ([source](https://stackoverflow.com/a/4774063)):*
+
+```bash
+SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+```
 
 -------------------
 
