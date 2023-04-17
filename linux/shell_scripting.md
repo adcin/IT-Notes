@@ -241,7 +241,30 @@ mymenu
 ```
 
 -----------------
+# Arguments
 
+## Flags
+
+```shell
+
+```
+
+while getopts u:a:f: flag
+do
+    case "${flag}" in
+        u) username=${OPTARG};;
+        a) age=${OPTARG};;
+        f) fullname=${OPTARG};;
+    esac
+done
+echo "Username: $username";
+echo "Age: $age";
+echo "Full Name: $fullname";
+
+
+
+
+-----------------
 # Useful links
 
 - [ubuntuusers: Bash-Skripting-Guide für Anfänger](https://wiki.ubuntuusers.de/Shell/Bash-Skripting-Guide_f%C3%BCr_Anf%C3%A4nger)
