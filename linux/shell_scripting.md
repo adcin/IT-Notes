@@ -71,15 +71,15 @@ atrm 9
 
 Tells the shell what program to interpret the script with, when executed.
 
-| **Shell Name**        | **Code**            |
-| --------------------- | ------------------- |
-| Standard system shell | `#!/bin/sh`         |
-| Bash shell            | `#!/bin/bash`       |
-| C shell               | `#!/bin/csh`        |
-| Perl                  | `#!/bin/bin/perl`   |
-| PHP CLI               | `#!/bin/bin/php`    |
-| Python                | `#!/bin/bin/python` |
-| Ruby                  | `#!/bin/bin/ruby`   |
+| **Shell Name**                      | **Code**            |
+| ----------------------------------- | ------------------- |
+| Standard Bourne shell or compatible | `#!/bin/sh`         |
+| Bash shell                          | `#!/bin/bash`       |
+| C shell                             | `#!/bin/csh`        |
+| Perl                                | `#!/bin/bin/perl`   |
+| PHP CLI                             | `#!/bin/bin/php`    |
+| Python                              | `#!/bin/bin/python` |
+| Ruby                                | `#!/bin/bin/ruby`   |
 
 -----------------
 
@@ -245,24 +245,37 @@ mymenu
 
 ## Flags
 
+Example Code for flags a,s,d:
+
 ```shell
+#!/bin/sh
 
-```
-
-while getopts u:a:f: flag
+while getopts a:s:d: flag
 do
     case "${flag}" in
-        u) username=${OPTARG};;
-        a) age=${OPTARG};;
-        f) fullname=${OPTARG};;
+        a) printf "The a argument was: ${OPTARG}\n";;
+        s) printf "The s argument was: ${OPTARG}\n";;
+        d) printf "The d argument was: ${OPTARG}\n";;
     esac
 done
-echo "Username: $username";
-echo "Age: $age";
-echo "Full Name: $fullname";
 
+printf "Your arguments have been processed - bye.\n"
+```
 
+Starting the script with flags:
 
+```shell
+./example.sh -a awbubfds -s 21317571345 -d "This is my D input"
+```
+
+Output:
+
+```shell
+The a argument was: awbubfds
+The s argument was: 21317571345
+The d argument was: This is my D input
+Your arguments have been processed - bye.
+```
 
 -----------------
 # Useful links
