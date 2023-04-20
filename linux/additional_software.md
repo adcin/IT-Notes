@@ -328,6 +328,10 @@ KWrite is a simpler Kate editor.
 sudo apt install kwrite
 ```
 
+### Audacity - FOS cross-platform audio software
+
+- [Official Project Website](https://www.audacityteam.org/)
+
 ## Server Software
 
 ### fail2ban
