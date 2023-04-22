@@ -118,6 +118,41 @@ read -p "Press Enter to continue" </dev/tty
 
 Arguments are passed to the script by writing them separated by `Space`. The arguments (also known as positional parameters) can be accessed within the bash script by using the variables $1, $2, $3 ... $n.
 
+## Flags
+
+Example Code for flags a,s,d:
+
+```shell
+#!/bin/sh
+
+while getopts a:s:d: flag
+do
+    case "${flag}" in
+        a) printf "The a argument was: ${OPTARG}\n";;
+        s) printf "The s argument was: ${OPTARG}\n";;
+        d) printf "The d argument was: ${OPTARG}\n";;
+    esac
+done
+
+printf "Your arguments have been processed - bye.\n"
+```
+
+Starting the script with flags:
+
+```shell
+./example.sh -a awbubfds -s 21317571345 -d "This is my D input"
+```
+
+Output:
+
+```shell
+The a argument was: awbubfds
+The s argument was: 21317571345
+The d argument was: This is my D input
+Your arguments have been processed - bye.
+```
+
+
 -------------------
 
 # Special Bash shell variables
@@ -238,43 +273,6 @@ Choose an option: "
 }
 
 mymenu
-```
-
------------------
-# Arguments
-
-## Flags
-
-Example Code for flags a,s,d:
-
-```shell
-#!/bin/sh
-
-while getopts a:s:d: flag
-do
-    case "${flag}" in
-        a) printf "The a argument was: ${OPTARG}\n";;
-        s) printf "The s argument was: ${OPTARG}\n";;
-        d) printf "The d argument was: ${OPTARG}\n";;
-    esac
-done
-
-printf "Your arguments have been processed - bye.\n"
-```
-
-Starting the script with flags:
-
-```shell
-./example.sh -a awbubfds -s 21317571345 -d "This is my D input"
-```
-
-Output:
-
-```shell
-The a argument was: awbubfds
-The s argument was: 21317571345
-The d argument was: This is my D input
-Your arguments have been processed - bye.
 ```
 
 -----------------
