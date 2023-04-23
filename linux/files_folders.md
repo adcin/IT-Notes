@@ -200,6 +200,90 @@ Example IPv6 client to server with authentication key:
 scp -6 -i ~/.ssh/megasecret.rsa -P 31337 cinhub@\[2001:6666::abcd\]:/path/to/source/file /path/to/destination/file
 ```
 
+## rsync
+
+Rsync  is  a  fast and extraordinarily versatile file copying tool.  It can copy locally, to/from another host over any remote shell, or to/from a remote rsync daemon. (Source: [rsync man page](https://download.samba.org/pub/rsync/rsync.1))
+
+Basic syntax: 
+```shell
+rsync options SOURCE DESTINATION
+```
+</br>
+
+### Important slash "`/`" syntax
+
+Copy the content of `folder1`into `folder2`:
+```shell
+rsync -a ~/docs/folder1/ ~/docs/folder2
+```
+
+Copy the `folder1` itself and its content into `folder2`:
+```shell
+rsync -a ~/docs/folder1 ~/docs/folder2
+```
+
+_Notice the missing `/` at the end of the source in the 2nd example_
+
+This means these two commands do the same: 
+```shell
+rsync -a ~/docs/folder1/ ~/docs/folder2/folder1
+rsync -a ~/docs/folder1 ~/docs/folder2
+```
+</br> 
+
+### Common options
+
+|   Option   | Description                                                                       |
+|:----------:| --------------------------------------------------------------------------------- |
+|     -a     | archive mode (same as -rlptgoD) - keeps basically the meta data as in the source. |
+|     -v     | verbose mode                                                                      |
+|     -q     | quiet mode                                                                        |
+|     -z     | compresses data during transfers                                                  |
+|     -h     | human readable numbers                                                            |
+| --progress | show progress during transfer                                                     |
+|  --delete  | delete extraneous files from destination                                          |
+|     -e     | specify the remote shell to use                                                   |
+|     -n     | perform a trial run with no changes made                                          |
+</br>
+
+### Examples
+
+Copy the content of a local folder to an other:  
+```shell
+rsync -rvzh --progress ~/docs/folder1/ ~/docs/folder2
+```
+</br>
+
+Copy multiple sources to a folder:  
+```shell
+rsync -rvzh --progress ~/downloads/music1/ ~/downloads/music2/ ~/downloads/Pink_Floyd ~/music
+```
+_Notice: rsync will copy only the content of music1 and music2, but will also copy the folder itself for Pink_Floyd._
+</br>
+
+Make a backup of a folder (like copy but also deletes files from destination):
+```shell
+rsync -avzh --progress --delete ~/docs/folder1/ ~/docs/backup_of_folder1
+```
+</br>
+
+Backup local folder to remote server via ssh:
+```shell
+rsync -avzh --progress --delete -e ssh ~/docs/folder1/ username@192.168.0.69:home/username/docs/backup_of_folder1
+```
+</br>
+
+Backup local folder to remote server via ssh with keyfile and specified port: 
+```shell
+rsync -avzh --progress --delete -e "ssh -p 6969 -i ~/.ssh/id_rsa" ~/docs/folder1/ username@192.168.0.69:home/username/docs/backup_of_folder1
+```
+</br>
+
+Backup remote server folder to local machine via ssh with keyfile and specified port: 
+```shell
+rsync -avzh --progress --delete -e "ssh -p 6969 -i ~/.ssh/id_rsa" username@192.168.0.69:home/username/docs/folder1/ ~/docs/backup_of_folder1
+```
+
 ---------------------
 
 # Permissions
