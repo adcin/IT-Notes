@@ -2,9 +2,13 @@
 
 - [Official manual](https://docs.docker.com/engine/install/)
 
+</br>
+
 ## Server installation on Debian 11  
 
 Based on [Debian install guide](https://docs.docker.com/engine/install/debian/).
+
+</br>
 
 ### 1. Set up the repository  
 
@@ -30,6 +34,8 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
+</br>
+
 ### 2. Install Docker Engine  
 
 ```shell
@@ -39,6 +45,8 @@ sudo apt-get update
 ```shell
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
+
+</br>
 
 ### 3. Test installation  
 

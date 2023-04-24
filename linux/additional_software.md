@@ -1,16 +1,26 @@
 # Sources
 
+</br>
+
 ## Debian
 
+</br>
+
 ### Source List
+
+</br>
 
 #### Format
 - `deb [ option1=value1 option2=value2 ] uri suite [component1] [component2] [...]`
 - `deb-src [ option1=value1 option2=value2 ] uri suite [component1] [component2] [...]`
 
+</br>
+
 #### Files
 - /etc/apt/sources.list
 - /etc/apt/sources.list.d/
+
+</br>
 
 #### Show standard source list:
 
@@ -30,10 +40,13 @@ deb http://deb.debian.org/debian bullseye-updates main contrib non-free
 #deb-src http://deb.debian.org/debian bullseye-updates main contrib non-free
 ```
 
+</br>
+
 #### Add custom sources
 
 Create separate `*.list` files in `/etc/apt/sources.list.d/`.
 
+</br>
 
 #### Resources:
 - Debian manual: [Chapter 2. Debian package management](https://www.debian.org/doc/manuals/debian-reference/ch02.en.html)
@@ -41,7 +54,11 @@ Create separate `*.list` files in `/etc/apt/sources.list.d/`.
 
 -------------------
 
+</br>
+
 # Package Management
+
+</br>
 
 ## Dpkg - apt, aptitude, synaptic, etc.
 
@@ -49,6 +66,8 @@ Dpkg is the base package manager for Debian. Apt, Aptitude, Synaptic etc. are to
 
 [Dpkg - Homepage](https://www.dpkg.org/)
 [Dpkg - Manpage](https://manpages.debian.org/dpkg.1.en.html)
+
+</br>
 
 ### apt
 
@@ -95,6 +114,8 @@ Remove packages (delete the configuration files):
 sudo apt purge <PACKAGE_NAME>
 ```
 
+</br>
+
 ### aptitude
 
 Text-based user interface for package management.
@@ -110,6 +131,8 @@ sudo aptitude
 |    `?`     | Help      |
 |    `q`     | Quit      | 
 
+</br>
+
 ### synaptic
 
 Graphical management of software packages.
@@ -118,15 +141,24 @@ Graphical management of software packages.
 sudo apt install synaptic
 ```
 
+</br>
+
 ### snap
 
 Quote [Canonical - About Snaps](https://snapcraft.io/about) (Mrz 2023):
 Snaps are app packages for desktop, cloud and IoT that are easy to install, secure, cross‐platform and dependency‐free. Snaps are discoverable and installable from the Snap Store
 
 -------------------
+
+</br>
+
 # Software  
 
+</br>
+
 ## General
+
+</br>
 
 ### ClamAV - Anti Virus
 
@@ -135,22 +167,16 @@ Snaps are app packages for desktop, cloud and IoT that are easy to install, secu
 
 **Installation on Kubuntu**
 
-1. RAR Support  
-```shell
-sudo apt install libclamunrar9
-```  
-2. Install ClamAV Packages  
-```shell
-sudo apt install clamav clamav-base clamav-daemon clamav-docs clamav-freshclam clamav-milter
-```  
-3. Check if Daemon is running  
-```shell
-clamdtop
-```  
-4. If you get errors, you might want reconfigure the Daemon  
-```shell
-sudo dpkg-reconfigure clamav-daemon
-```  
+1. RAR Support 
+	- `sudo apt install libclamunrar9`   
+2. Install ClamAV Packages
+	- `sudo apt install clamav clamav-base clamav-daemon clamav-docs clamav-freshclam clamav-milter`  
+3. Check if Daemon is running
+	- `clamdtop`
+3. If you get errors, you might want reconfigure the Daemon
+	- `sudo dpkg-reconfigure clamav-daemon`
+
+</br>
 
 ### VirtualBox  
 
@@ -185,7 +211,11 @@ sudo apt update
 sudo apt install virtualbox virtualbox-dkms virtualbox-ext-pack
 ```  
 
+</br>
+
 ## Command Line Software
+
+</br>
 
 ### nano
 
@@ -210,6 +240,8 @@ Configuration file locations:
 | set tabsize 4    | Tabsize value (0-8)        |
 | set tabstospaces | Use Spaces instead of Tabs | 
 
+</br>
+
 ### neofetch
 
 A fast, highly customizable system info script.  
@@ -221,6 +253,8 @@ A fast, highly customizable system info script.
 sudo apt install neofetch
 ```
 
+</br>
+
 ### iftop
 
 Display live bandwidth usage on an interface by host.
@@ -231,21 +265,29 @@ Display live bandwidth usage on an interface by host.
 sudo apt install iftop
 ```
 
+</br>
+
 ### screen
 
 With screen you can run a session inside your current ssh session. For example detach it so it keeps running in the background, and reattach it later. This way you can have multiple sessions in one terminal or close the terminal without loosing the screen session.  
 
 - [Screen Debian manpage](https://manpages.debian.org/bullseye/screen/screen.1.en.html)
 
+</br>
+
 Check if screen is installed:
 ```shell
 which screen
 ```
 
+</br>
+
 Install Screen:  
 ```shell
 sudo apt install screen
 ```
+
+</br>
 
 Start Screen session:  
 ```shell
@@ -258,49 +300,67 @@ Now your Screen session is started, so use it :)
 Detach Screen session:  
 `Ctrl+A` `Ctrl+D`
 
+</br>
+
 List active Screen sessions:  
 ```shell
 screen -ls
 ```
+
+</br>
 
 Reattach Screen session:  
 ```shell
 screen -r <SESSION_NAME>
 ```
 
+</br>
+
 To close the session use exit in an attached screen session:  
 ```shell
 exit
 ```
 
+</br>
 
 ## Desktop Software
+
+</br>
 
 ### Synaptic - GUI package manager
 ```shell
 sudo apt install synaptic
 ```
 
+</br>
+
 ### Thunderbird - Mail + Kalender
 ```shell
 sudo apt install thunderbird thunderbird-locale-de
 ```
+
+</br>
 
 ### Filezilla - FTP-Client
 ```shell
 sudo apt install filezilla 
 ```
 
-### GParted - Partition manager
+</br>
 
+### GParted - Partition manager
 ```shell
 sudo apt install gparted
 ```
+
+</br>
 
 Driver for NTFS partitions:
 ```shell
 sudo apt install ntfs-3g
 ```
+
+</br>
 
 ### Krusader - file manager
 
@@ -310,11 +370,15 @@ Powerful, Total Commander and Midnight Commander like file manager. Homepage: ht
 sudo apt install krusader
 ```
 
+</br>
+
 ### Kate / Kwrite - Texteditor
 
 - [Kate Website](https://kate-editor.org/)
 - [Syntax Highlight](https://kate-editor.org/syntax/)
 - [Alerts Syntax](https://kate-editor.org/syntax/data/html/test-alerts.dark.html)
+
+</br>
 
 Kate is a powerful text editor - focused on development.
 
@@ -322,17 +386,25 @@ Kate is a powerful text editor - focused on development.
 sudo apt install kate markdownpart svgpart
 ```
 
+</br>
+
 KWrite is a simpler Kate editor.
 
 ```shell
 sudo apt install kwrite
 ```
 
+</br>
+
 ### Audacity - FOS cross-platform audio software
 
 - [Official Project Website](https://www.audacityteam.org/)
 
+</br>
+
 ## Server Software
+
+</br>
 
 ### fail2ban
 
@@ -342,6 +414,8 @@ sudo apt install kwrite
 sudo apt install fail2ban
 ```
 
+</br>
+
 #### Configuration
 
 The jail.local configuration is given priority by fail2ban - jail.conf shouldn't be changed.
@@ -350,6 +424,8 @@ The jail.local configuration is given priority by fail2ban - jail.conf shouldn't
 ```shell
 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 ```
+
+</br>
 
 2. customise the configuration as preferred 
 
@@ -371,10 +447,14 @@ maxretry = 3
 service fail2ban restart
 ```
 
+</br>
+
 #### Status of the service
 ```shell
 fail2ban-client status
 ```
+
+</br>
 
 Output: 
 ```shell
@@ -382,11 +462,14 @@ Number of jail:      1
 Jail list:   sshd
 ```
 
+</br>
 
 Info from sshd jail list:
 ```shell
 fail2ban-client status sshd
 ```
+
+</br>
 
 #### Resources:
 - https://www.the-art-of-web.com/system/fail2ban-log/
