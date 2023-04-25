@@ -109,6 +109,22 @@ ssh -L <LOCALPORT>:<HOSTADDRESS>:<HOSTPORT> <USERNAME>@<HOSTADDRESS>
 	- `-i ~/.ssh/megasecret.rsa`: Location of rsa key file
 	- On mac you might have to use `\[` and `\]` instead of `[` and `]`: `ssh -6 -L 3389:\[2001:6666:5555:4444:3333:2222:1111:aaaa\]:3389 marcin@2001:6666:5555:4444:3333:2222:1111:aaaa -p 31337 -i ~/.ssh/megasecret.rsa`
 
+Executing a non interactive command on remote system:
+
+```shell
+ssh user@remote_address ls -la ~/
+```
+
+Execute an interactive command on remote system:
+
+```shell
+ssh -t user@remote_address "sudo apt update && sudo apt upgrade"
+```
+
+| Option | Description                                                                                                                                                                                                                                                 |
+|:------:| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   -t   | Force pseudo-terminal allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g. when implementing menu services.  Multiple -t options force tty allocation, even if ssh has no local tty. | 
+
 ## SSH key authentication
 
 ### Create authentication key pair:
