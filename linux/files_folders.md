@@ -379,6 +379,10 @@ chown <USER>:<GROUP> <FILE OR FOLDER>
 
 # Search/Find files
 
+Plocate - fast search the file sshd_config: 
+```shell
+plucate sshd_config
+```
 
 Search the file sshd_config: 
 ```shell
