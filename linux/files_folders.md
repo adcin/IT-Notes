@@ -74,6 +74,8 @@ df -h
 
 ---------------------
 
+</br>
+
 # Mount
 
 Show mounted filesystems:
@@ -87,11 +89,15 @@ cat /etc/mtab
 less /etc/mtab
 ```
 
-## ssh mount
+</br>
+
+## sshfs mount
 
 ```shell
 sudo apt update && sudo apt install sshfs libfuse2 -y
 ```
+
+</br>
 
 Add remote host to known_hosts:
 
@@ -99,15 +105,49 @@ Add remote host to known_hosts:
 ssh-keyscan -H REMOTE_HOST_ADDRESS >> ~/.ssh/known_hosts
 ```
 
+</br>
+
 Create local mount directory (if necessary):
 
 ```shell
-mkdir /home/USER_NAME/MOUNT_TO_HERE
+mkdir /home/USER_NAME/MOUNT/HERE
 ```
 
+</br>
 
+1st quick mount to test and add host key to known hosts:
+
+```shell
+sshfs REMOTE_USER_NAME@REMOTE_HOST_ADDRESS:/PATH/TO/REMOTE/DIRECTORY /home/LOCAL_USER_NAME/MOUNT/HERE
+```
+
+</br>
+
+Mount without interactive password request (method: unsecure, quick and dirty):
+
+```shell
+sshfs -o reconnect,password_stdin REMOTE_USER_NAME@REMOTE_HOST_ADDRESS:/PATH/TO/REMOTE/DIRECTORY /home/LOCAL_USER_NAME/MOUNT/TO/HERE <<< 'REMOTE_USER_PASSWORD'
+```
+
+</br>
+
+Mount with ssh authentication key `/home/LOCAL_USER_NAME/.ssh/ID_KEYFILE` (method: more secure, needs to be supported and set up on remote host first):
+
+```shell
+sshfs -o reconnect,IdentityFile=/home/LOCAL_USER_NAME/.ssh/ID_KEYFILE REMOTE_USER_NAME@REMOTE_HOST_ADDRESS:/PATH/TO/REMOTE/DIRECTORY /home/LOCAL_USER_NAME/MOUNT/TO/HERE
+```
+
+</br>
+
+## Unmount
+
+```shell
+umount /home/LOCAL_USER_NAME/MOUNT/HERE
+```
 
 ---------------------
+
+</br>
 
 # Symbolic links (symlinks)
 
@@ -129,6 +169,8 @@ Softlinks can be used for files and folders, and work regardless of different di
 
 
 ---------------------
+
+</br>
 
 # Navigate along a path
 
