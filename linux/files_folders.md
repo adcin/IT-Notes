@@ -130,7 +130,7 @@ mkdir /home/USER_NAME/MOUNT/HERE
 
 </br>
 
-1st quick mount to test and add host key to known hosts:
+1st quick mount as test and for adding host key to known hosts (important):
 
 ```shell
 sshfs REMOTE_USER_NAME@REMOTE_HOST_ADDRESS:/PATH/TO/REMOTE/DIRECTORY /home/LOCAL_USER_NAME/MOUNT/HERE
