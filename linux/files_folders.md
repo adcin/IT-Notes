@@ -87,6 +87,12 @@ cat /etc/mtab
 less /etc/mtab
 ```
 
+## ssh mount
+
+```shell
+sudo apt update && sudo apt install sshfs libfuse2 -y
+```
+
 ---------------------
 
 # Symbolic links (symlinks)
