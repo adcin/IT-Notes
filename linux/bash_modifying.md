@@ -82,6 +82,8 @@ alias egrep="egrep --color=auto"
 alias rm="rm -I"
 alias cp="cp -i"
 alias mv="mv -i"
+
+alias cls="echo -ne '\033c'"
 ```  
 
 List existing aliases:
