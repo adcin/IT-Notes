@@ -154,6 +154,38 @@ sshfs -o reconnect,IdentityFile=/home/LOCAL_USER_NAME/.ssh/ID_KEYFILE REMOTE_USE
 
 </br>
 
+## Mount automatically using crontab
+
+Create a script:
+
+```shell
+nano ~/my_mount_script.sh
+```
+
+Simple example for sshfs mount:
+
+```shell
+#!/bin/bash
+
+## Insert your credentials!
+
+REMOTE_USER=""
+REMOTE_HOST=""
+REMOTE_DIRECTORY=""
+AUTH_KEY=""
+LOCAL_DESINATION_DIRECTORY=""
+
+# Wait 15s for network connection to establish
+sleep 15
+
+# Mount the remote drive
+sshfs -o reconnect,IdentityFile=$AUTH_KEY $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIRECTORY $LOCAL_DESINATION_DIRECTORY
+```
+
+
+
+</br>
+
 ## Unmount
 
 ```shell
