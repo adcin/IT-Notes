@@ -93,6 +93,20 @@ less /etc/mtab
 sudo apt update && sudo apt install sshfs libfuse2 -y
 ```
 
+Add remote host to known_hosts:
+
+```shell
+ssh-keyscan -H REMOTE_HOST_ADDRESS >> ~/.ssh/known_hosts
+```
+
+Create local mount directory (if necessary):
+
+```shell
+mkdir /home/USER_NAME/MOUNT_TO_HERE
+```
+
+
+
 ---------------------
 
 # Symbolic links (symlinks)
