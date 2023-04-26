@@ -182,7 +182,23 @@ sleep 15
 sshfs -o reconnect,IdentityFile=$AUTH_KEY $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIRECTORY $LOCAL_DESINATION_DIRECTORY
 ```
 
+</br>
 
+Create a crontab instruction:
+
+```shell
+crontab -e
+```
+
+Insert the line at the end of the file:
+
+```shell
+@reboot /home/USER_NAME/my_mount_script.sh
+```
+
+</br>
+
+_Done - the network drive should now be automatically mounted on next reboot._
 
 </br>
 
