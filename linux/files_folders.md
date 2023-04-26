@@ -5,6 +5,8 @@
 pwd
 ```
 
+</br>
+
 **Create folder:**  
 ```shell
 mkdir FOLDER [FOLDER2] [FOL...]
@@ -14,10 +16,14 @@ Create all non existing parent folders as well:
 mkdir -p FOLDER [FOLDER2] [FOL...]
 ```
 
+</br>
+
 **Move/Rename files and folders:**  
 ```shell
 mv /way/to/folder/or/file /new/way/to/folder/or/file
 ```
+
+</br>
 
 **Copy:**  
 ```shell
@@ -29,6 +35,8 @@ Copy directory and all subdirectories to folder
 ```shell
 cp -R junk /tmp
 ```
+
+</br>
 
 **delete**
 
@@ -49,11 +57,15 @@ Empty folder:
 rmdir FOLDER
 ```
 
+</br>
+
 Overwrite a file to hide its contents, then deallocate and remove it:  
 
 ```shell
 shred -u <FILENAME>
 ```
+
+</br>
 
 Show folder size:
 
@@ -65,6 +77,8 @@ du -shc <FOLDER1> <FOLDER2> <...>
 | -s, --summarize | Display an entry for each specified file |
 | -h, --human-readable | “Human-readable” output, like MB,GB,TB... |
 | -c, --total | Display a grand total |
+
+</br>
 
 Show file system disk space usage:
 
@@ -84,6 +98,7 @@ Show mounted filesystems:
 cat /proc/mounts
 less /proc/mounts
 ```
+
 ```shell
 cat /etc/mtab
 less /etc/mtab
