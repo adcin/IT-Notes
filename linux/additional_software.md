@@ -265,6 +265,24 @@ Display live bandwidth usage on an interface by host.
 sudo apt install iftop
 ```
 
+</br>  
+
+### sshto
+
+- [GitHub: vaniacer / sshto](https://github.com/vaniacer/sshto) 
+
+Quote:
+> Small bash script to manage your ssh connections. It builds menu (via dialog) from your ~/.ssh/config. It can not only connect but also to run commands, copy files, tunnel ports. 
+
+Clone the git repository:
+```shell
+git clone https://github.com/vaniacer/sshto.git
+```
+
+Or download the scrypt:
+
+wget https://raw.githubusercontent.com/vaniacer/sshto/master/sshto
+
 </br>
 
 ### screen
