@@ -281,7 +281,10 @@ git clone https://github.com/vaniacer/sshto.git
 
 Or download the scrypt:
 
+```shell
 wget https://raw.githubusercontent.com/vaniacer/sshto/master/sshto
+```
+
 
 </br>
 
