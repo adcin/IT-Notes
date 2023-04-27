@@ -506,7 +506,7 @@ chown <USER>:<GROUP> <FILE OR FOLDER>
 
 Plocate - fast search the file sshd_config: 
 ```shell
-plucate sshd_config
+plocate sshd_config
 ```
 
 Search the file sshd_config: 
