@@ -67,6 +67,14 @@ shred -u <FILENAME>
 
 </br>
 
+Overwrite a whole partition to delete all files safely:  
+
+```shell
+sudo shred -vn 1 /dev/sdb1
+```
+
+</br>
+
 Show folder size:
 
 ```shell
