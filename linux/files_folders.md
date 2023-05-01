@@ -594,6 +594,11 @@ Extract:
 tar xfv archiv.tar
 ```
 
+Extract to a defined directory:
+```shell
+tar xfv archiv.tar -C $HOME/extrace/here
+```
+
 Create new archive:
 ```shell
 tar cfvp archiv.tar file1 file2 file3
@@ -611,15 +616,16 @@ tar tfv archiv.tar
 
 Options:
 
-| Option | Description                      |
-|:------:|:-------------------------------- |
-|   c    | create new tar archive           |
-|   v    | verbosely  list  files processed |
-|   f    | archive filename                 |
-|   z    | compress with gzip               |
-|   x    | extract archive                  |
-|   t    | show content of the archive      |
-| p       | preserve  file permissions (default for superuser)                                 |
+| Option | Description                                        |
+|:------:|:-------------------------------------------------- |
+|   c    | create new tar archive                             |
+|   v    | verbosely  list  files processed                   |
+|   f    | archive filename                                   |
+|   z    | compress with gzip                                 |
+|   x    | extract archive                                    |
+|   t    | show content of the archive                        |
+|   p    | preserve  file permissions (default for superuser) |
+|   C    | Change to DIR before performing any operations.  This option is order-sensitive, i.e. it affects all options that follow.                                                   |
 
 ## gzip .gz archives
 
