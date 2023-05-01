@@ -609,6 +609,12 @@ Create new archive and compress with gzip:
 tar cfzvp archiv.tar file1 file2 file3
 ```
 
+Archive all files from inside a folder (not the folder itself)
+
+```shell
+tar cfzvp $HOME/destination/of/my/backup.tar.gz -C /path/to/source/folder ./
+```
+
 List the contents of an archive:
 ```shell
 tar tfv archiv.tar
@@ -616,16 +622,16 @@ tar tfv archiv.tar
 
 Options:
 
-| Option | Description                                        |
-|:------:|:-------------------------------------------------- |
-|   c    | create new tar archive                             |
-|   v    | verbosely  list  files processed                   |
-|   f    | archive filename                                   |
-|   z    | compress with gzip                                 |
-|   x    | extract archive                                    |
-|   t    | show content of the archive                        |
-|   p    | preserve  file permissions (default for superuser) |
-|   C    | Change to DIR before performing any operations.  This option is order-sensitive, i.e. it affects all options that follow.                                                   |
+| Option | Description                                               |
+|:------:|:--------------------------------------------------------- |
+|   c    | create new tar archive                                    |
+|   v    | verbosely  list  files processed                          |
+|   f    | archive filename                                          |
+|   z    | compress with gzip                                        |
+|   x    | extract archive                                           |
+|   t    | show content of the archive                               |
+|   p    | preserve  file permissions (default for superuser)        |
+|   C    | Change to DIR before performing any following operations. | 
 
 ## gzip .gz archives
 
