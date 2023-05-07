@@ -8,6 +8,7 @@ Useful Links:
 
 - [GitHub - Yubico](https://github.com/Yubico)
 - [GitHub - Yubico - pam-u2f](https://github.com/Yubico/pam-u2f)
+- [YubiKey Manager ykman](https://docs.yubico.com/software/yubikey/tools/ykman/index.html)
 - [GitHub - linux-pam](https://github.com/linux-pam/linux-pam)
 - [Debian Manpage - pam.conf\(5\)](https://manpages.debian.org/pam.conf.5.en.html)
 
