@@ -252,24 +252,24 @@ echo -ne "\nFancy menu title
   3) Option 3
   0) Exit menu
 Choose an option: "
-    read MENU_DECISION
-    case $MENU_DECISION in
-        1)
-            echo -e "\n=>\tYou've chosen \"Option 1\"."
-            mymenu;;
-        2)
-            echo -e "\n=>\tYou've chosen \"Option 2\"."
-            mymenu;;
-        3)
-            echo -e "\n=>\tYou've chosen \"Option 3\"."
-            mymenu;;
-        0)
-            echo -e "\nOK, that's it.\n"
-            exit 0;;
-        *)
-            echo -e "\n=>\t!!! \"$MENU_DECISION\" IS NOT AN OPTION !!!"
-            mymenu;;
-    esac
+read MENU_DECISION
+case $MENU_DECISION in
+	1)
+		echo -e "\n=>\tYou've chosen \"Option 1\"."
+		mymenu;;
+	2)
+		echo -e "\n=>\tYou've chosen \"Option 2\"."
+		mymenu;;
+	3)
+		echo -e "\n=>\tYou've chosen \"Option 3\"."
+		mymenu;;
+	0)
+		echo -e "\nOK, that's it.\n"
+		exit 0;;
+	*)
+		echo -e "\n=>\t!!! \"$MENU_DECISION\" IS NOT AN OPTION !!!"
+		mymenu;;
+esac
 }
 
 mymenu
