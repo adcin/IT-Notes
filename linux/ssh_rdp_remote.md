@@ -383,6 +383,37 @@ Connecting to server with example above:
 ssh craftmine
 ```  
 
+## ProxyJump (Bastion Host)
+
+- [ProxyJump on Red Hat - Enable Sysadmin](https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump)
+
+-J option (ProxyJump) is used to connect to your target through an ssh connection to one or more jump-hosts (also called bastion hosts). Very useful if you can't connect directly to your target and more convenient then opening the ssh-sessions one by one.
+
+Single Jump Host:
+
+```shell
+ssh -J user@<jump-host:port> <user@target-host:port>
+```
+
+Multiple Jump Hosts:
+
+```shell
+ssh -J <jump-host1>,<jump-host2> <target-host>
+```
+
+I recommend using ~/.ssh/config especially for key authentication. You also can define the jump host in the ssh config:
+
+```shell
+Host jump-host-nickname
+  HostName jump-hostname
+
+Host target-host-nickname
+  HostName target-hostname
+  ProxyJump jump-host-nickname
+```
+
+ProxyJump is available since ssh version 7.3. For earlier versions you can use `ProxyCommand` instead.
+
 ## Useful ssh commands
 
 ### Execute program/script on a remote desktop session
