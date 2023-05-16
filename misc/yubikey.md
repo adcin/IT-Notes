@@ -134,3 +134,19 @@ Insert underneath:
 ```text
 auth    required    pam_u2f.so
 ```  
+
+# Issues
+
+## PC/SC daemon
+
+- [Ubuntu ticket #1971984](https://bugs.launchpad.net/ubuntu/+source/pcsc-lite/+bug/1971984)
+
+You man have an issue with the PC/SC daemon not starting automatically.
+
+Example of Error message:
+
+```shell
+WARNING: PC/SC not available. Smart card (CCID) protocols will not function.  
+ERROR: Unable to list devices for connection
+```
+
