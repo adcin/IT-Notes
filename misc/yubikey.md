@@ -141,7 +141,7 @@ auth    required    pam_u2f.so
 
 - [Ubuntu ticket #1971984](https://bugs.launchpad.net/ubuntu/+source/pcsc-lite/+bug/1971984)
 
-You man have an issue with the PC/SC daemon not starting automatically.
+You man have an issue with the PC/SC Smart Card Daemon not starting automatically.
 
 Example of Error message:
 
@@ -150,3 +150,12 @@ WARNING: PC/SC not available. Smart card (CCID) protocols will not function.
 ERROR: Unable to list devices for connection
 ```
 
+### Fix:
+
+1. Enable the pcscd.socket manually:
+
+```shell
+sudo systemctl enable pcscd.socket
+```
+
+2. Reboot
