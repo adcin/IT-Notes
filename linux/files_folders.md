@@ -94,6 +94,16 @@ Show file system disk space usage:
 df -h
 ```
 
+</br>
+
+Show Inode usage:
+
+```shell
+df -i
+```
+
+_Simplified - amount of available (used/free) files._
+
 ---------------------
 
 </br>
