@@ -97,11 +97,13 @@ ssh <USERNAME>@<HOSTADDRESS> -p <PORT> -i <PRIVAT-KEY-FILE>
 ```
 - Example: `ssh root@192.168.0.69 -p 42654 -i ~/.ssh/private-key.rsa`
 
+### Port forwarding
+
 Port forwarding (SSH tunnel): 
 ```shell
 ssh -L <LOCALPORT>:<HOSTADDRESS>:<HOSTPORT> <USERNAME>@<HOSTADDRESS>
 ```
-- Example - IPv6 different ssh-port and rsa-key: `ssh -6 -L 3389:[2001:6666:5555:4444:3333:2222:1111:aaaa]:3389 marcin@2001:6666:5555:4444:3333:2222:1111:aaaa -p 31337 -i ~/.ssh/megasecret.rsa`
+- Example - IPv6 different ssh-port and rsa-key: `ssh -6 -L 3389:[2001:6666:5555:4444:3333:2222:1111:aaaa]:3389 marcin@2001:6666:5555:4444:3333:2222:1111:aaaa -p 31337 -i ~/.ssh/megasecret.rsa`  
 	- `-6`: force using IPv6
 	- `-L 3389:[2001:6666:5555:4444:3333:2222:1111:aaaa]:3389` - Forward local port 3389 to the servers port 3389
 	- `marcin@2001:2001:6666:5555:4444:3333:2222:1111:aaaa` - user and IPv6 address of host server
