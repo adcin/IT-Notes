@@ -659,8 +659,15 @@ gzip file.txt
 ```
 Output: `file.gz`
 
-Decompress file.gz:
+Extract file.gz:
 ```shell
 gunzip file.gz
 ```
 Output: `file.txt`
+
+## unzip .zip archives
+
+Extract file.zip to current folder:
+```shell
+unzip file.zip
+```
