@@ -607,6 +607,8 @@ find /path/to/file/ –size +5M
 
 ## GNU  tar .tar archives
 
+- [TecMint tar examples](https://www.tecmint.com/tar-command-examples-linux/)
+
 Extract:
 ```shell
 tar xfv archiv.tar
