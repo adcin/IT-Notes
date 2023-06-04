@@ -148,6 +148,39 @@ sudo apt install synaptic
 Quote [Canonical - About Snaps](https://snapcraft.io/about) (Mrz 2023):
 Snaps are app packages for desktop, cloud and IoT that are easy to install, secure, cross‐platform and dependency‐free. Snaps are discoverable and installable from the Snap Store
 
+</br>
+
+### Flatpak
+
+</br>
+
+#### Installation
+
+- [Official setup guide](https://flatpak.org/setup/)
+
+Example installation on Debian ([Source](https://flatpak.org/setup/Debian)):  
+
+```shell
+apt install flatpak
+```
+
+</br>
+
+Install the Flatpak plugin for GNOME Software:  
+
+```shell
+apt install gnome-software-plugin-flatpak
+```
+
+</br>
+
+Add the Flathub repository:  
+
+```shell
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+
+
 -------------------
 
 </br>
