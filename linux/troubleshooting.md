@@ -16,3 +16,20 @@ sudo dpkg-reconfigure locales
 ```shell
 sudo snap refresh
 ```
+
+# Ubuntu server dialogue: "Which service should be restarted ?"
+
+**Cause:** The needrestart command, which is part of the apt-get upgrade process, is set to "interactive" mode by default. This starts a dialogue after every apt upgrade.
+
+**Solution:** Change the needrestart restart mode to automatically.
+
+1. Edit /etc/needrestart/needrestart.conf
+
+```shell
+sudo nano /etc/needrestart/needrestart.conf
+```
+
+2. Change mode
+
+Find: `#$nrconf{restart} = 'i';`
+Change to: `$nrconf{restart} = 'a';`
