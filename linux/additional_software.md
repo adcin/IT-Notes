@@ -157,6 +157,7 @@ Snaps are app packages for desktop, cloud and IoT that are easy to install, secu
 #### Installation
 
 - [Official setup guide](https://flatpak.org/setup/)
+- [Flatpak documentation](https://docs.flatpak.org)
 
 Example installation on Debian ([Source](https://flatpak.org/setup/Debian)):  
 
