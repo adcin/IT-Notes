@@ -605,29 +605,55 @@ find /path/to/file/ –size +5M
 # Archives
 
 
-## GNU  tar .tar archives
+## tar (tarball) archives
 
 - [TecMint tar examples](https://www.tecmint.com/tar-command-examples-linux/)
 
+</br>
+
 Extract:
 ```shell
-tar xfv archiv.tar
+tar vxf archiv.tar
 ```
+
+</br>
 
 Extract to a defined directory:
 ```shell
-tar xfv archiv.tar -C $HOME/extrace/here
+tar vxf archiv.tar -C $HOME/extract/here
 ```
+
+</br>
+
+Extract to a defined directory, but without the first 2 leading parent directories. Very useful, if you want to get rid of the `/home/user` directory.
+
+```shell
+tar vxf archiv.tar -C $HOME/extract/here --strip-components=2
+```
+
+</br>
+
+Extract only a specific file/folder from within the tarball. Specify destination directory and strip 2 leading parent directories.
+
+```shell
+tar vxf archiv.tar -C $HOME/extract/here home/user/Documents/ --strip-components=2
+```
+
+</br>
 
 Create new archive:
 ```shell
 tar cfvp archiv.tar file1 file2 file3
 ```
 
+</br>
+
 Create new archive and compress with gzip:
 ```shell
 tar cfzvp archiv.tar file1 file2 file3
 ```
+
+</br>
 
 Archive all files from inside a folder (not the folder itself)
 
@@ -635,23 +661,30 @@ Archive all files from inside a folder (not the folder itself)
 tar cfzvp $HOME/destination/of/my/backup.tar.gz -C /path/to/source/folder ./
 ```
 
+</br>
+
 List the contents of an archive:
 ```shell
 tar tfv archiv.tar
 ```
 
+</br>
+
 Options:
 
-| Option | Description                                               |
-|:------:|:--------------------------------------------------------- |
-|   c    | create new tar archive                                    |
-|   v    | verbosely  list  files processed                          |
-|   f    | archive filename                                          |
-|   z    | compress with gzip                                        |
-|   x    | extract archive                                           |
-|   t    | show content of the archive                               |
-|   p    | preserve  file permissions (default for superuser)        |
-|   C    | Change to DIR before performing any following operations. | 
+|          Option           | Description                                                    |
+|:-------------------------:|:-------------------------------------------------------------- |
+|             c             | create new tar archive                                         |
+|             v             | verbosely  list  files processed                               |
+|             f             | archive filename                                               |
+|             z             | compress with gzip                                             |
+|             x             | extract archive                                                |
+|             t             | show content of the archive                                    |
+|             p             | preserve  file permissions (default for superuser)             |
+|             C             | Change to DIR before performing any following operations.      |
+| --strip-components=NUMBER | Strip NUMBER leading components from file names on extraction. |
+
+</br>
 
 ## gzip .gz archives
 
