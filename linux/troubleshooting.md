@@ -41,17 +41,21 @@ Change to: `$nrconf{restart} = 'a';`
 
 </br>
 
-# KDE Spell Check
+# KDE - add spell check dictionaries
 
+## Useful Links:
 - [Spell Checker Docs](https://docs.kde.org/stable5/en/plasma-desktop/kcontrol/spellchecking/index.html)
 - [Hunspell Project Website](http://hunspell.github.io/)
 - [Hunspell Languages](https://hosted.weblate.org/projects/hunspell/#languages)
 - [GNU Aspell](http://aspell.net/)
 - [GNU Aspell Dictionaries](https://ftp.gnu.org/gnu/aspell/dict/0index.html)
 
-</br>
 
-**Executed on:**  
+
+## Prerequisites
+
+**Executed on:**
+
 | distro | Kubuntu 23.04 x86_64 | 
 | ------ | -------------------- |
 | kernel | 6.2.0-20-generic     |
@@ -59,9 +63,11 @@ Change to: `$nrconf{restart} = 'a';`
 | de     | Plasma 5.27.4        |
 | wm     | KWin                 |
 
-## Add additional languages
+## Procedure
 
 1. Find the Aspell and Hunspell dictionaries you need. You can use the dictionary links above or simply try your country code.
+
+</br>
 
 Example for German dictionaries:
 
@@ -90,6 +96,8 @@ hunspell-de-med - German medical dictionary for hunspell
 </br>
 
 2. Install the dictionaries
+
+</br>
 
 Example for my German dictionaries:
 
