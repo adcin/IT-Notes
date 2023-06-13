@@ -41,8 +41,12 @@ apt purge neofetch && apt autoremove
 
 # Structure
 
+Title
+Table of contents - Sitemap
 Introduction - Einleitung
 Prerequisites - Voraussetzungen
+Main - Article Body
+TL;DR - too long; didn't read
 Conclusion - Fazit
 
 # Unicode symbols
