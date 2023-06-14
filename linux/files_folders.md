@@ -650,7 +650,7 @@ tar cfvp archiv.tar file1 file2 file3
 
 Create new archive and compress with gzip:
 ```shell
-tar cfzvp archiv.tar file1 file2 file3
+tar cfzvp archiv.tar.gz file1 file2 file3
 ```
 
 </br>
