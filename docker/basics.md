@@ -175,11 +175,13 @@ docker compose down
 
 </br>
 
-## Reload Container (Update Image Version)
+## Update Containers to new version
 
+Pull new images, recreate and restart container, delete unused images: 
 ```shell
 docker compose pull && \
-docker compose up -d
+docker compose up --force-recreate --wait --detach && \
+docker image prune -f
 ```  
 
 </br>
