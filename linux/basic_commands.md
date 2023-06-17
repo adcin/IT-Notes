@@ -44,7 +44,7 @@ sudo apt update && sudo apt upgrade
 sudo apt this_is_a_typo && sudo apt upgrade
 ```
 
-`;` Proceeds to the next command if an error occurs:
+`;` Proceeds to the next command **regardless if an error occurred** in previous command:
 ```shell
 sudo apt update; sudo apt upgrade
 sudo apt this_is_a_typo; sudo apt upgrade
