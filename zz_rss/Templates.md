@@ -43,12 +43,12 @@ apt purge neofetch && apt autoremove
 
 Title
 Table of contents - Sitemap
-Inspiration / Links / Source
 Introduction - Einleitung
+Inspiration / Links / Source
 Prerequisites - Voraussetzungen
 Main - Article Body
 TL;DR - too long; didn't read
-Conclusion - Fazit
+Conclusion - Fazit, Schlusswort
 
 # Unicode symbols
 
