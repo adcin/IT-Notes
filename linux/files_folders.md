@@ -314,10 +314,16 @@ Download to current directory:
 wget http://example.com/file.tar
 ```
 
-Download to ~/download/subdirectory/:
+Download to specified directory:
 
 ```shell
-wget http://example.com/file.tar -O ~/download/subdirectory/file.tar
+wget -P ~/tmp http://example.com/file.tar
+```
+
+Download to specified file:
+
+```shell
+wget -O ~/download/subdirectory/my_file.tar http://example.com/what_ever.tar
 ```
 
 Alternative:
