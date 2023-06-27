@@ -49,6 +49,7 @@ Prerequisites - Voraussetzungen
 Main - Article Body
 TL;DR - too long; didn't read
 Conclusion - Fazit, Schlusswort
+Meta Information
 
 # Unicode symbols
 
