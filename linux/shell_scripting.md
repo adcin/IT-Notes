@@ -278,6 +278,6 @@ mymenu
 -----------------
 # Useful links
 
-- [ubuntuusers: Bash-Skripting-Guide für Anfänger](https://wiki.ubuntuusers.de/Shell/Bash-Skripting-Guide_f%C3%BCr_Anf%C3%A4nger)
+- [ubuntuusers: German Bash Skripting Guide](https://wiki.ubuntuusers.de/Shell/Bash-Skripting-Guide_f%C3%BCr_Anf%C3%A4nger)
 - [devhints.io - Bash scripting cheatsheet](https://devhints.io/bash)
-
+- [ShellCheck](https://www.shellcheck.net)
