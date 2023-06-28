@@ -110,7 +110,18 @@ _Simplified - amount of available (used/free) files._
 
 # Mount
 
-Show mounted filesystems:
+</br>
+
+## mnt vs media
+
+| Path   | Description                                     |
+|:------ | ----------------------------------------------- |
+| /media | Linux mounts media like CDs or USB-Drives here. | 
+| /mnt   | You should mount manually here.                 |
+
+</br>
+
+## Show mounted file-systems:
 
 ```shell
 cat /proc/mounts
