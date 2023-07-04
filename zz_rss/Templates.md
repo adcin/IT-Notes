@@ -44,6 +44,7 @@ apt purge neofetch && apt autoremove
 Title
 Table of contents - Sitemap
 Introduction - Einleitung
+Goal - Ziel
 Inspiration / Links / Source
 Prerequisites - Voraussetzungen
 Main - Article Body
