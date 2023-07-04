@@ -4,3 +4,4 @@
 - [ubuntuusers DE](https://ubuntuusers.de/)
 - [Official ubuntu wiki](https://wiki.ubuntu.com/)
 - [GNU](https://www.gnu.org/)
+- [Manned.org - Archive for Manpages](https://manned.org/)
