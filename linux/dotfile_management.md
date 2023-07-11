@@ -11,7 +11,7 @@ In Linux application settings are saved in files - located in the users home dir
 </br>
 
 ---
-# Create a github repo
+# Create a GitHub repo
 
 </br>
 
