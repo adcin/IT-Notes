@@ -57,6 +57,7 @@ ls -l /dev/disk/by-id
 The prozess can take quite long - even one hour or more.
 
 #### Method 1: Simple 1 to 1 copy.
+
 ```shell
 sudo dd status=progress if=/dev/disk6 of=wifi-pi.img
 ```
@@ -78,7 +79,8 @@ My method 1 output:
 
 This backup of a fresh installed Raspberry OS Lite on a 64 GB SD-Card took ~33 min. The size of the compressed image is ~64 GB.
 
-##### Method 2: Faster copy + compress
+#### Method 2: Faster copy + compress
+
 ```shell
 sudo dd status=progress if=/dev/rdisk6 bs=1m | gzip > ~/backups/wifi-pi.gz
 ```
