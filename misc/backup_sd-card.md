@@ -82,7 +82,7 @@ This backup of a fresh installed Raspberry OS Lite on a 64 GB SD-Card took ~33 m
 #### Method 2: Faster copy + compress
 
 ```shell
-sudo dd status=progress if=/dev/rdisk6 bs=1m | gzip > ~/backups/wifi-pi.gz
+sudo dd status=progress if=/dev/rdisk6 bs=1M | gzip > ~/backups/wifi-pi.gz
 ```
 | Command | Description |
 |-----|-----|
@@ -126,7 +126,7 @@ sudo dd status=progress if=wifi-pi.img of=/dev/disk6
 #### Method 2: Compressed image
 
 ```shell
-sudo gzip -dcv /backups/wifi-pi.gz | sudo dd status=progress of=/dev/rdisk6 bs=1m
+sudo gzip -dcv /backups/wifi-pi.gz | sudo dd status=progress of=/dev/rdisk6 bs=1M
 ```
 | Command        | Description                          |
 | -------------- | ------------------------------------ |
