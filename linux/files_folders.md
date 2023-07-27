@@ -619,7 +619,7 @@ Show files bigger then 5 MB:
 find /path/to/file/ –size +5M
 ```
 
-Delete all ini files in the current and all child directories:
+Delete all ini files in the current directory and all sub-directories:
 
 ```shell
 cd /media/some_usb_drive/directory/
