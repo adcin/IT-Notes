@@ -612,9 +612,18 @@ Show file which have been changed up till 2 days ago:
 ```shell
 find /path/to/file/ –ctime -2
 ```
+
 Show files bigger then 5 MB:
+
 ```shell
 find /path/to/file/ –size +5M
+```
+
+Delete all ini files in the current and all child directories:
+
+```shell
+cd /media/some_usb_drive/directory/
+find . -name 'desktop.ini' -type f -delete
 ```
 
 ------------------------
