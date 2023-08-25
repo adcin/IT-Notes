@@ -109,6 +109,10 @@ unalias -a
 Bash colour chart:  
 ![Bash Colour Chart](../zz_rss/bash-color-chart.png)
 
+xterm-256color chart: 
+![xterm-256color chart](https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg)
+
+
 ```shell
 nano ~/.bashrc
 ```  
