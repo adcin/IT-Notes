@@ -85,6 +85,13 @@ Meta Information
 |   ┗    | `0xE2 0x94 0x97` | `0x2517` | `0x00002517` |
 |   ┛    | `0xE2 0x94 0x9B` | `0x251B` | `0x0000251B` |
 
+# UTF Box
+
+```text
+┏━━━━┓
+┃    ┃
+┗━━━━┛
+```
 
 # Placeholder text (Lorem ipsum)
 
