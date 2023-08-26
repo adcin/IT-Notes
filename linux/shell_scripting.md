@@ -83,6 +83,21 @@ Tells the shell what program to interpret the script with, when executed.
 
 -----------------
 
+# POSIX compliance
+
+As there are a lot of different types and versions of shells and operating systems, you might have trouble to reuse your script. Even standard commands often have unique options in some shells or a slightly different syntax from one to another version.
+
+The POSIX standard helps you to write scripts which are very likely to run on almost any Unix based system.
+
+</br>
+
+**Links:**
+- [Wikipedia](https://wikipedia.org/wiki/POSIX)
+- [OpenGroup POSIX FAQ](http://www.opengroup.org/austin/papers/posix_faq.html)
+- [Baeldung - A Guide to POSIX](https://www.baeldung.com/linux/posix)
+- [Baeldung - How to Test for POSIX Compliance](https://www.baeldung.com/linux/test-posix-compliance-shell-scripts)
+
+-----------------
 # Read user input
 
  User input is saved into `$VARIABLE`. If user hits Enter without input, a warning is printed, then the input message comes again:
