@@ -93,6 +93,9 @@ Two `>>` will add the text to the end of the file:
 echo "Line No 2" >> file.txt
 ```
 
+Update 2023-08-28:
+> Meanwhile I've learned about POSIX compliance. See this post on stackoverflow: [Why is printf better than echo?](https://unix.stackexchange.com/a/65819)
+
 # Read files
 
 Print whole file: 
