@@ -85,9 +85,13 @@ Tells the shell what program to interpret the script with, when executed.
 
 # POSIX
 
-As there are a lot of different types and versions of shells and operating systems in the Unix universe, you might have trouble to reuse your script. Even basic commands often have unique options in some shells or a slightly different syntax from one to another version.
+There are a lot of different types and versions of operating systems and shells in the Unix-Like universe. And because even basic commands often have unique options or a slightly different syntax in these -nunixes, IT-People often have trouble to write or reuse scripts.
 
-POSIX (Portable Operating System Interface) is an attempt at unifying all the various UNIX-like systems. It is an IEEE standard, which is maintained by The Open Group
+**POSIX** (Portable Operating System Interface) is an attempt at unifying all the various UNIX-like systems. It is maintained by The Austin Group, a joint working group which consists of representatives from The Open Group, IEEE and ISO/IEC.
+
+**SUS** (Single UNIX Specification) is a standard based on POSIX. An operating system requires the compliance with the SUS standard, to be qualified for using the UNIX trademark. The UNIX trademark belongs to The Open Group, which is also chairs the Austin Group and manages its day-to-day running.
+
+TL;DR: __**"Use commands and syntax based on the UNIX standard you n00b."**__
 
 </br>
 
