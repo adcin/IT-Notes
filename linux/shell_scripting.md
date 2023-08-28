@@ -83,11 +83,11 @@ Tells the shell what program to interpret the script with, when executed.
 
 -----------------
 
-# POSIX compliance
+# POSIX
 
-As there are a lot of different types and versions of shells and operating systems, you might have trouble to reuse your script. Even standard commands often have unique options in some shells or a slightly different syntax from one to another version.
+As there are a lot of different types and versions of shells and operating systems in the Unix universe, you might have trouble to reuse your script. Even basic commands often have unique options in some shells or a slightly different syntax from one to another version.
 
-The POSIX standard helps you to write scripts which are very likely to run on almost any Unix based system.
+POSIX (Portable Operating System Interface) is an attempt at unifying all the various UNIX-like systems. It is an IEEE standard, which is maintained by The Open Group
 
 </br>
 
