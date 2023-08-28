@@ -15,7 +15,7 @@ chmod +x /path/to/my_script.sh
 - Method 2: Enter `./` in front of filename    
     `./my_script.sh`
 - Method 3: Specify the interpreter    
-    `bash my_script.sh`
+    `/bin/bash my_script.sh`
 
 ### Execute at particular time
 
@@ -95,13 +95,60 @@ TL;DR: __**"Use commands and syntax based on the UNIX standard you n00b."**__
 
 </br>
 
-**Links:**
+## Testing POSIX compliance without tools
+
+Let's assume the standard shell `/bin/sh` is linked to a POSIX-compliant shell like dash:
+```shell
+$ ls -l /bin/sh  
+lrwxrwxrwx 1 root root 4 Mai  5 14:09 /bin/sh -> dash
+```
+
+Use the standard shell Shebang in the script:
+```shell
+#!/bin/sh
+```
+
+Test your script by using sh:
+```shell
+/bin/sh ~/myscripts/supercompliant.sh
+```
+
+## ShellCheck shell script analysis tool
+
+- [ShellCheck website](https://www.shellcheck.net)
+
+Installation:  
+```shell
+sudo apt install shellcheck -y
+```
+
+Syntax example:  
+```shell
+shellcheck --shell=sh ~/myscripts/supercompliant.sh
+```
+
+**TIPP:** ShellCheck can be integrated in many popular editors: https://github.com/koalaman/shellcheck#in-your-editor
+
+## Helpful Links:
 - [Wikipedia](https://wikipedia.org/wiki/POSIX)
 - [OpenGroup POSIX FAQ](http://www.opengroup.org/austin/papers/posix_faq.html)
 - [Baeldung - A Guide to POSIX](https://www.baeldung.com/linux/posix)
 - [Baeldung - How to Test for POSIX Compliance](https://www.baeldung.com/linux/test-posix-compliance-shell-scripts)
 
------------------
+-------------------
+# Special shell variables
+
+|   Variable    | Description                                          |
+|:-------------:|:---------------------------------------------------- |
+|     `$0`      | Absolute path and name of the bash script.                         |
+| `$1, $2...$n` | The bash script arguments.                           |
+|     `$$`      | The process id of the current shell.                 |
+|     `$#`      | The total number of arguments passed to the script.  |
+|     `$@`      | The value of all the arguments passed to the script. |
+|     `$?`      | The exit status of the last executed command.        | 
+|     `$!`      | The process id of the last executed command.         |
+
+-------------------
 # Read user input
 
  User input is saved into `$VARIABLE`. If user hits Enter without input, a warning is printed, then the input message comes again:
@@ -174,20 +221,11 @@ Your arguments have been processed - bye.
 
 -------------------
 
-# Special Bash shell variables
+# Location of the current script file
 
-|   Variable    | Description                                          |
-|:-------------:|:---------------------------------------------------- |
-|     `$0`      | Absolute path and name of the bash script.                         |
-| `$1, $2...$n` | The bash script arguments.                           |
-|     `$$`      | The process id of the current shell.                 |
-|     `$#`      | The total number of arguments passed to the script.  |
-|     `$@`      | The value of all the arguments passed to the script. |
-|     `$?`      | The exit status of the last executed command.        | 
-|     `$!`      | The process id of the last executed command.         |
+- [source stackoverflow](https://stackoverflow.com/a/4774063)
 
-*Store the path to the current script file in a variable ([source](https://stackoverflow.com/a/4774063)):*
-
+Save path in a variable:
 ```bash
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 ```
