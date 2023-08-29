@@ -149,6 +149,9 @@ shellcheck --shell=sh ~/myscripts/supercompliant.sh
 |     `$!`      | The process id of the last executed command.         |
 
 -------------------
+# Temporary files - `mktemp`
+
+-------------------
 # Read user input
 
  User input is saved into `$VARIABLE`. If user hits Enter without input, a warning is printed, then the input message comes again:
