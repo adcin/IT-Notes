@@ -148,8 +148,52 @@ shellcheck --shell=sh ~/myscripts/supercompliant.sh
 |     `$?`      | The exit status of the last executed command.        | 
 |     `$!`      | The process id of the last executed command.         |
 
+</br>
+
 -------------------
 # Temporary files - `mktemp`
+
+[Man page on man7.org](https://man7.org/linux/man-pages/man3/mktemp.3.html):
+>mktemp - create a temporary file or directory
+
+Syntax: `mktemp [OPTION]... [TEMPLATE]`
+
+</br>
+
+Best practice for most scripts is to use variables for the path to the file/directory.
+
+</br>
+
+Create a temporary file: 
+```shell
+TEMP_FILE=$(mktemp)
+```
+
+</br>
+
+Create a temporary directory: 
+```shell
+TEMP_DIR=$(mktemp -d)
+```
+
+</br>
+
+Use example:  
+```shell
+TEMP_FILE=$(mktemp)
+ls -la $HOME > $TEMP_FILE
+cat $TEMP_FILE
+rm -f $TEMP_FILE
+```
+
+</br>
+
+| Option | Description |
+|:------:| ----------- |
+| -d     |  create a directory, not a file           |
+
+
+</br>
 
 -------------------
 # Read user input
