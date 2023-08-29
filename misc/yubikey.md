@@ -135,6 +135,18 @@ Insert underneath:
 auth    required    pam_u2f.so
 ```  
 
+# Identify YubiKey
+
+- yubico: [FAQ - Identifying Your YubiKey](https://support.yubico.com/hc/en-us/articles/360013642100-Identifying-Your-YubiKey)
+- yubico: [Identify via browser](https://www.yubico.com/products/identifying-your-yubikey/)
+- yubico: [YubiKey Manager](https://www.yubico.com/support/download/yubikey-manager/)
+
+</br>
+
+Most YubiKeys can be identified by the serial number.
+
+
+
 # Issues
 
 ## PC/SC daemon
