@@ -143,9 +143,14 @@ auth    required    pam_u2f.so
 
 </br>
 
-Most YubiKeys can be identified by the serial number.
+Most YubiKeys can be identified by the serial number. 
 
+List the serials with the YubiKey Manager (ykman): 
+```shell
+ykman list --serials
+```
 
+</br>
 
 # Issues
 
