@@ -628,6 +628,8 @@ find . -name 'desktop.ini' -type f -delete
 
 ------------------------
 
+</br>
+
 # Archives
 
 
@@ -726,9 +728,35 @@ gunzip file.gz
 ```
 Output: `file.txt`
 
+</br>
+
 ## unzip .zip archives
 
 Extract file.zip to current folder:
 ```shell
 unzip file.zip
 ```
+
+------------------------
+
+# Compare files and directories
+
+## [diff - compare files line by line (man page)](https://man7.org/linux/man-pages/man1/diff.1.html)
+
+> Synopsis: `diff [OPTION]... FILES`
+
+</br>
+
+| Option | Description                                  |
+|:------:| -------------------------------------------- |
+|   -q   | report only when files differ                |
+|   -r   | recursively compare any subdirectories found |
+
+</br>
+
+Compare 2 directories, show the differences:
+
+```shell
+diff -q -r ~/Music /mnt/ext_ssd/music
+```
+
