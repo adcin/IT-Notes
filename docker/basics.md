@@ -167,6 +167,18 @@ docker compose up --force-recreate -d
 
 </br>
 
+## logs - show log output from container
+
+```shell
+docker compose logs -f
+```
+
+| Option | Description     |
+|:------:| --------------- |
+|   -f   | follow the logs | 
+
+</br>
+
 ## down - Stop and remove everything created by `up`
 
 ```shell
