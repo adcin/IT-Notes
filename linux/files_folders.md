@@ -243,21 +243,34 @@ umount /home/LOCAL_USER_NAME/MOUNT/HERE
 
 # Symbolic links (symlinks)
 
+</br>
+
 Create a hardlink:
 ```shell
-ln [/PATH/TO/FILE] [/DESTINATION/OF/SYMLINK]
+ln [/PATH/TO/TARGET] [/PATH/TO/SYMLINK]
 ``` 
 _Hardlinks basically define the location of a file on the hardware (disc). If the "source" is deleted, the file is still on the disk and the hardlink works fine. Only when all hardlinks are deleted, also the file on the disk will be removed.  
 Hardlinks work only on the same device and filesystem.  
 Hardlinks work with files, not with folders._
 
+</br>
+
 Create a softlink:  
 ```shell
-ln -s [/PATH/TO/FILE/OR/FOLDER] [/DESTINATION/OF/SYMLINK]
+ln -s [/PATH/TO/TARGET] [/PATH/TO/SYMLINK]
 ```  
 
 _Softlinks refer to the path in the filesystem, not the location on the hardware/disc. When the softlink is removed, the file stays intact. If the original file is deleted, the soft symlink is still there, but it doesn't work any more.  
 Softlinks can be used for files and folders, and work regardless of different disks or partitions._  
+
+</br>
+
+Remove a symlink:
+```shell
+rm </PATH/TO/SYMLINK>
+# or
+unlink </PATH/TO/SYMLINK>
+```
 
 
 ---------------------
