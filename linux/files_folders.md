@@ -104,6 +104,19 @@ df -i
 
 _Simplified - amount of available (used/free) files._
 
+
+</br>
+
+Count all files (not folders) in a directory:
+
+```shell
+find /path/to/directory -type f | wc -l
+# or for the current directory
+find ./ -type f | wc -l 
+```
+
+</br>
+
 ---------------------
 
 </br>
