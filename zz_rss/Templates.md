@@ -92,7 +92,11 @@ Meta Information
 ┃    ┃
 ┗━━━━┛
 ```
-
+```text
+#  ┏━━━━┓
+#  ┃    ┃
+#  ┗━━━━┛
+```
 # Placeholder text (Lorem ipsum)
 
 [Placeholder text generator](https://loremipsum.io/)
