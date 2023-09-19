@@ -265,20 +265,13 @@ Please, note some of these commands are not supported by VSCodeVim yet.
 
 ## Interesting resources
 
-[Official online help](https://vimhelp.org)
-
-[Cheat Sheet at DuckDuckGo](https://duckduckgo.com/?q=vim+cheat+sheet&ia=cheatsheet&iax=1)
-
-[Using marks](http://vim.wikia.com/wiki/Using_marks)
-
-[Vim + Tmux](https://www.youtube.com/watch?v=5r6yzFEXajQ&t=1269s)
-
-[Mastering the Vim Language](https://www.youtube.com/watch?v=wlR5gYd6um0)
-
-[All the right moves](https://vim.fandom.com/wiki/All_the_right_moves)
-
-[Graphical cheat sheet](https://eggplant.pro/blog/wp-content/uploads/2016/12/vi-vim-tutorial.pdf)
-
-[Vim Visual Block Mode](https://www.youtube.com/watch?v=Ydzw70SvF-g)
-
-[SpaceVim](https://spacevim.org/)
+- [vimhelp.org - Official online help](https://vimhelp.org)
+- [DuckDuckGo.com - Vim Cheat Sheet](https://duckduckgo.com/?q=vim+cheat+sheet&ia=cheatsheet&iax=1)
+- [vim.wikia.com - Using marks](http://vim.wikia.com/wiki/Using_marks)
+- [YouTube.com - Vim + Tmux](https://www.youtube.com/watch?v=5r6yzFEXajQ&t=1269s)
+- [YouTube.com - Mastering the Vim Language](https://www.youtube.com/watch?v=wlR5gYd6um0)
+- [vim.fandom.com - All the right moves](https://vim.fandom.com/wiki/All_the_right_moves)
+- [eggplant.pro - Graphical cheat sheet](https://eggplant.pro/blog/wp-content/uploads/2016/12/vi-vim-tutorial.pdf)
+- [YouTube.com - Vim Visual Block Mode](https://www.youtube.com/watch?v=Ydzw70SvF-g)
+- [SpaceVim.org - A community-driven vim distribution](https://spacevim.org/)
+- [freeCodeCamp.org - Vimrc Configuration Guide](https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor/)
