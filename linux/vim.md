@@ -128,7 +128,7 @@ Nouns or movements are commands for moving within the document or representing a
 | *\[char\]    | jump to the next instance of the word under \[char\]                    |
 | ddp / ddkP | are common commands to move a line one down / up                      |
 
-## Useful
+# Useful
 
 |   trigger       |   Description                                                                                                                                  |
 |----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -156,6 +156,22 @@ Nouns or movements are commands for moving within the document or representing a
 | Ctrl-c   | exit insert mode                                                                                                                                          |
 | Ctrl-ww  | window switching                                                                                                                                          |
 | gg=G     | Autoformat/indent code                                                                                                                                    |
+
+</br>
+
+## Search and replace
+
+Change each foo to bar, but ask for confirmation first:  
+```shell
+:%s/foo/bar/gc
+```
+
+| Flag | Description                                |
+|:----:| ------------------------------------------ |
+|  g   | global – each match in the line is changed |
+|  c   | confirmation needed for each change        | 
+
+</br>
 
 ## Registers
 
