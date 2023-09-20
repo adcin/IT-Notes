@@ -1,12 +1,18 @@
 # Running scripts
 
+</br>
+
 ## Make script-file executable
 
 ```shell
 chmod +x /path/to/my_script.sh
 ```
 
+</br>
+
 ## Execute script
+
+</br>
 
 ### Execute immediately 
 
@@ -16,6 +22,8 @@ chmod +x /path/to/my_script.sh
     `./my_script.sh`
 - Method 3: Specify the interpreter    
     `/bin/bash my_script.sh`
+
+</br>
 
 ### Execute at particular time
 
@@ -65,6 +73,8 @@ Delete an `at` job (example job no. 9):
 atrm 9
 ```
 
+</br>
+
 -----------------
 
 # Shebang
@@ -80,6 +90,8 @@ Tells the shell what program to interpret the script with, when executed.
 | PHP CLI                             | `#!/bin/bin/php`    |
 | Python                              | `#!/bin/bin/python` |
 | Ruby                                | `#!/bin/bin/ruby`   |
+
+</br>
 
 -----------------
 
@@ -113,6 +125,8 @@ Test your script by using sh:
 /bin/sh ~/myscripts/supercompliant.sh
 ```
 
+</br>
+
 ## ShellCheck shell script analysis tool
 
 - [ShellCheck website](https://www.shellcheck.net)
@@ -129,11 +143,15 @@ shellcheck --shell=sh ~/myscripts/supercompliant.sh
 
 **TIPP:** ShellCheck can be integrated in many popular editors: https://github.com/koalaman/shellcheck#in-your-editor
 
+</br>
+
 ## Helpful Links:
 - [Wikipedia](https://wikipedia.org/wiki/POSIX)
 - [OpenGroup POSIX FAQ](http://www.opengroup.org/austin/papers/posix_faq.html)
 - [Baeldung - A Guide to POSIX](https://www.baeldung.com/linux/posix)
 - [Baeldung - How to Test for POSIX Compliance](https://www.baeldung.com/linux/test-posix-compliance-shell-scripts)
+
+</br>
 
 -------------------
 # Special shell variables
@@ -212,7 +230,7 @@ done
 
 If user doesn't input anything, `$VARIABLE` is set to `Y`.
 ```shell
-read -p 'Do you want to start (Y/n): ' VARIABLE
+read -r -p 'Do you want to start (Y/n): ' VARIABLE
 VARIABLE=${VARIABLE:=Y}
 ```
 
