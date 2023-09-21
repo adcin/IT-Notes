@@ -39,6 +39,8 @@ My desired mount point is _/mnt/exthdd500a_ (exthdd500a, because I have labels o
 
 ## 3. Edit the Samba configuration file.
 
+- [samba.org - smb.conf documentation](https://www.samba.org/samba/docs/current/man-html/smb.conf.5.html)
+
 Edit the _\[dietpi\]_ part in the _smb.conf_.
 
 ```shell
