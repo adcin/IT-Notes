@@ -526,8 +526,21 @@ chmod go-w <FILE>
 | 1   | 1(x)               | --x | execute only            |
 | 0   | 0                  | --- | none                    |
 
+### Change execute mode only for directories
 
+The upper-case **`X`** means, the change to the execute bit will only take effect on directories. Other files execute bit will stay untouched.  
 
+Example:  
+```shell
+sudo chmod -R ug+rwX,o+rX-w /path/to/folder
+```
+
+| Cmd part        | Description                                                                                                                                         |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sudo chmod -R   | Change mode recursively as root user                                                                                                                |
+| ug+rwX          | User and group (`ug`) are allowed (`+`) to read, to write (`rw`) and execute directories, but don't change the execute mode of files (`X`)             |
+| o+rX-w          | Others (`o`) are allowed (`+`) to read and to execute directories, but don't change the execute mode of files (`X`). They are not allowed (`-`) to write (`w`) |
+| /path/to/folder | Path to directory, which modes will be changed                                                                                                      | 
 
 ## `umask` - change the default file and folder permissions
 
