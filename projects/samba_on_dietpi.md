@@ -90,6 +90,15 @@ Then add them to Samba `smbpasswd -a`.
 sudo systemctl restart nmbd smbd
 ```
 
+# Useful Samba commands
+
+List valid Samba users:  
+```shell
+sudo pdbedit -L -v
+```
+
+
+
 # Connection to the drive
 
 Depends on client:

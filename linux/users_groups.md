@@ -17,7 +17,7 @@ Show all users:
 cat /etc/passwd
 ```
 
-## Add user `adduser`
+## Add user
 
 ```shell
 adduser <USER>
