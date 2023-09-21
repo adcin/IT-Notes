@@ -92,12 +92,20 @@ sudo systemctl restart nmbd smbd
 
 # Useful Samba commands
 
+</br>
+
+## pdbedit
+
+- [samba.org - pdbedit documentation](https://www.samba.org/samba/docs/current/man-html/pdbedit.8.html)  
+
 List valid Samba users:  
 ```shell
 sudo pdbedit -L -v
 ```
 
 
+
+</br>
 
 # Connection to the drive
 
