@@ -386,8 +386,32 @@ ssh craftmine
 ```  
 
 </br>
+
 ## ssh agent
 
+Ssh-agent is a program to hold private keys used for public key authentication.
+
+- [man ssh-add](https://man7.org/linux/man-pages/man1/ssh-add.1.html)
+
+Check if agent is running and activate:  
+```shell
+eval "$(ssh-agent -s)"
+```
+
+Add key identifier to the agent:  
+```shell
+ssh-add ~/.ssh/nameofkey
+```
+
+List fingerprints of all identities currently represented by the agent:  
+```shell
+ssh-add -l
+```
+
+Remove all keys from the agent:  
+```shell
+ssh-agent -D
+```
 
 </br>
 
