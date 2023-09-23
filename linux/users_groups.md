@@ -23,6 +23,12 @@ cat /etc/passwd
 adduser <USER>
 ```
 
+Add a system user (database01) without a home-directory and without the ability to login into a shell:  
+```shell
+sudo useradd --system database01
+```
+_This is useful if you want a separate user for a service like samba or a docker container_
+
 ## Remove user `userdel` / `deluser`
 
 Optional preparation: Log out the user and kill all user’s running processes:  
