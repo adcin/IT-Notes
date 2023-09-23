@@ -146,7 +146,8 @@ Example: `docker exec -it wireguard wg`
 
 All the Docker Compose commands should be executed in the directory of the corresponding docker-compose.yaml file. If you want to execute it from an other directory or with a script, use the `-f <PATH_TO_FILE>` option.  
 
-[Docker Compose commands - manual](https://docs.docker.com/engine/reference/commandline/compose/)
+- [Docker Compose commands - manual](https://docs.docker.com/engine/reference/commandline/compose/)
+- [Docker run options](https://docs.docker.com/engine/reference/commandline/run/)
 
 </br>
 
