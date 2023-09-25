@@ -38,6 +38,14 @@ Change standard shell of a specific user to bash:
 sudo chsh -s /bin/bash username
 ```
 
+Reload Bash configuration `~/.bashrc` (works for other shells as well):  
+```shell
+source ~/.bashrc
+# or in short syntax
+. ~/.bashrc
+```
+
+
 --------------------
 
 # Bash
