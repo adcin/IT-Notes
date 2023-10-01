@@ -41,7 +41,7 @@ sudo usermod -aG jellyfin marcin
 Create a directory for the docker-compose.yml file and the container volumes.
 
 ```shell
-sudo mkdir -m 775 /mnt/jellyfin /mnt/jellyfin/volumes/config /mnt/jellyfin/volumes/cache /mnt/jellyfin/volumes/media
+sudo mkdir -p -m 775 /mnt/jellyfin /mnt/jellyfin/volumes/config /mnt/jellyfin/volumes/cache /mnt/jellyfin/volumes/media
 ```
 
 
