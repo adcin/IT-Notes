@@ -156,15 +156,47 @@ shellcheck --shell=sh ~/myscripts/supercompliant.sh
 -------------------
 # Special shell variables
 
+</br>
+
 |   Variable    | Description                                          |
 |:-------------:|:---------------------------------------------------- |
-|     `$0`      | Absolute path and name of the bash script.                         |
+|     `$0`      | Path to the script.                         |
 | `$1, $2...$n` | The bash script arguments.                           |
 |     `$$`      | The process id of the current shell.                 |
 |     `$#`      | The total number of arguments passed to the script.  |
 |     `$@`      | The value of all the arguments passed to the script. |
 |     `$?`      | The exit status of the last executed command.        | 
 |     `$!`      | The process id of the last executed command.         |
+
+</br>
+
+Simple test script:  
+
+```shell
+#!/bin/bash
+
+echo
+echo "# arguments called with ---->  ${@}     "
+echo "# \$1 ----------------------->  $1       "
+echo "# \$2 ----------------------->  $2       "
+echo "# path to me --------------->  ${0}     "
+echo "# parent path -------------->  ${0%/*}  "
+echo "# my name ------------------>  ${0##*/} "
+echo
+exit
+```
+
+stdout of: `./test.sh "one" "two"`
+```text
+
+# arguments called with ---->  one two
+# $1 ----------------------->  one
+# $2 ----------------------->  two
+# path to me --------------->  ./test.sh
+# parent path -------------->  .
+# my name ------------------>  test.sh
+
+```
 
 </br>
 
