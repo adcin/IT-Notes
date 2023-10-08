@@ -387,7 +387,7 @@ sleep 1m 30s
  
 -----------------
 
-# Menu
+# Some code snippets
 
 - [Text based menu](#Text%20based%20Menu%20Template)
 - [Dialog - Graphical CLI menu](https://invisible-island.net/dialog/)
@@ -428,6 +428,19 @@ esac
 
 mymenu
 ```
+
+## Create directory/file if it doesn't exist
+
+Check for a directory:  
+```shell
+[[ ! -d $HOME/output ]] && mkdir $HOME/output
+```
+
+Check for a file:  
+```shell
+[[ ! -f ./result.txt ]] && touch ./result.txt
+```
+
 
 -----------------
 # Useful links
