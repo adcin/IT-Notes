@@ -230,4 +230,3 @@ Dump crash logs into file:
 ```shell
 adb -d logcat -b crash > ./android-crash.log
 ```
-
