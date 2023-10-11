@@ -224,3 +224,10 @@ Display current logs of an app and save them to a local file:
 adb -d logcat -T 1 --pid=$(adb -d shell pidof com.ariel.zanyants) | tee ./teesting.log
 ```
 
+</br>
+
+Dump crash logs into file: 
+```shell
+adb -d logcat -b crash > ./android-crash.log
+```
+
