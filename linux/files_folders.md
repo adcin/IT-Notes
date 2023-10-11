@@ -369,14 +369,14 @@ Alternative:
 curl http://example.com/file.tar -o /path/to/dir/file.tar
 ```
 
-## Transfer over ssh `scp`
+## scp - ssh copy
 
-Copy from server to client:  
+Copy file from server to client:  
 ```shell
 scp <USER>@<SOURCE_HOST>:/path/to/source/file /path/to/destination/file
 ``` 
 
-Copy from client to server:  
+Copy file from client to server:  
 ```shell
 scp /path/to/source/file <USER>@<DESTINATION_HOST>:/path/to/destination/file
 ``` 
@@ -386,6 +386,10 @@ Example IPv6 client to server with authentication key:
 scp -6 -i ~/.ssh/megasecret.rsa -P 31337 cinhub@\[2001:6666::abcd\]:/path/to/source/file /path/to/destination/file
 ```
 
+Copy folder recursively from server to client:  
+```shell
+scp -r <USER>@<SOURCE_HOST>:/path/to/source/folder /path/to/destination/directory
+``` 
 ## rsync
 
 Rsync  is  a  fast and extraordinarily versatile file copying tool.  It can copy locally, to/from another host over any remote shell, or to/from a remote rsync daemon. (Source: [rsync man page](https://download.samba.org/pub/rsync/rsync.1))
