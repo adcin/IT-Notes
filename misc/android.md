@@ -202,6 +202,7 @@ adb shell pidof com.specific.application
 ## Logs
 
 - [android.com - logcat documentation](https://developer.android.com/tools/logcat)
+- [googleaps.com - Webbased Log Analyzer](https://toolbox.googleapps.com/apps/loganalyzer/)
 
 Logcat is a command-line tool that dumps a log of system messages including messages that you have written from your app with the Log class.
 
@@ -222,3 +223,4 @@ Display current logs of an app and save them to a local file:
 ```shell
 adb -d logcat -T 1 --pid=$(adb -d shell pidof com.ariel.zanyants) | tee ./teesting.log
 ```
+
