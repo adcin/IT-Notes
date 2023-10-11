@@ -196,3 +196,29 @@ Show process ID of a specific app:
 ```shell
 adb shell pidof com.specific.application
 ```
+
+</br>
+
+## Logs
+
+- [android.com - logcat documentation](https://developer.android.com/tools/logcat)
+
+Logcat is a command-line tool that dumps a log of system messages including messages that you have written from your app with the Log class.
+
+</br>
+
+For the following commands the device must be already attached via USB and connected to the adb server.
+
+</br>
+
+Show logcat cli help:  
+```shell
+adb -d shell logcat --help
+```
+
+</br>
+
+Display current logs of an app and save them to a local file:  
+```shell
+adb -d logcat -T 1 --pid=$(adb -d shell pidof com.ariel.zanyants) | tee ./teesting.log
+```
