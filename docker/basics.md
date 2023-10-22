@@ -17,6 +17,13 @@ docker ps -a
 
 </br>
 
+## Display a live stream of container resource usage  
+```shell
+docker stats
+```  
+
+</br>
+
 ## Start one or more stopped containers  
 ```shell
 docker start <CONTAINER_NAME_or_ID>
