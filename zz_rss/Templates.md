@@ -51,6 +51,7 @@ Main - Article Body
 TL;DR - too long; didn't read
 Conclusion - Fazit, Schlusswort
 Meta Information
+Excerpt from man description
 
 # Unicode symbols
 
