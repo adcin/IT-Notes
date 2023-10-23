@@ -53,6 +53,14 @@ Conclusion - Fazit, Schlusswort
 Meta Information
 Excerpt from man description
 
+
+Command autopsy:
+
+| Section | Description          |
+|:------- | -------------------- |
+| sudo    | You should know this | 
+
+
 # Unicode symbols
 
 - [Official website](https://home.unicode.org)

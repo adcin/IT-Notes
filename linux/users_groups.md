@@ -32,6 +32,27 @@ adduser <USER>
 
 </br>
 
+Add a new sudo user (marcin) on a osmd installation:  
+
+```shell
+sudo useradd --create-home --user-group --shell $(which bash) --groups osmc,adm,disk,lp,dialout,cdrom,audio,video,sudo marcin && passwd marcin
+```
+
+Command autopsy: 
+
+| Section                     | Description                                                              |
+|:--------------------------- | ------------------------------------------------------------------------ |
+| sudo                        | well, sudo ;)                                                            |
+| useradd                     | create new user                                                          |
+| --create-home               | create home directory                                                    |
+| --user-group                | create a new default group for the user                                  |
+| --shell $(which bash)       | set the default shell to bash                                            |
+| --groups osmc,adm,....,sudo | add the new user to these groups                                         |
+| marcin                      | username of the new user                                                 |
+| && passwd marcin            | after executing useradd successfully, set a new password for marcin |
+
+</br>
+
 Add a system user (database01) without a home-directory and without the ability to login into a shell:  
 ```shell
 sudo useradd --system database01
