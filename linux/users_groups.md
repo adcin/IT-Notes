@@ -19,9 +19,18 @@ cat /etc/passwd
 
 ## Add user
 
+**`adduser` vs `useradd`**
+- `useradd` is the main Linux command to create a user or update the user information.
+- `adduser` is a more user friendly perl script which uses the `useradd` command. It is more comfortable than `useradd`, but you also have less control of the process. 
+
+</br>
+
+Add a normal user:  
 ```shell
 adduser <USER>
 ```
+
+</br>
 
 Add a system user (database01) without a home-directory and without the ability to login into a shell:  
 ```shell
