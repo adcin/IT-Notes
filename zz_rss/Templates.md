@@ -27,7 +27,7 @@ apt install neofetch
 
 System info (`neofetch distro kernel shell de wm`):  
 ```shell
-echo -e "\n\*\*Executed on\*\*:  \n\n| $(neofetch --separator ' |' distro)|\n|----|----|\n| $(neofetch --separator ' |' kernel)|\n| $(neofetch --separator ' |' shell)|\n| $(neofetch --separator ' |' de)|\n"
+echo -e "\n| $(neofetch --separator ' |' distro)|\n|----|----|\n| $(neofetch --separator ' |' kernel)|\n| $(neofetch --separator ' |' shell)|\n| $(neofetch --separator ' |' de)|\n"
 ```
 
 Remove neofetch:  
