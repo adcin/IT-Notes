@@ -275,6 +275,10 @@ ssh <USERNAME>@<HOSTADDRESS> -i <PRIVAT-KEY-FILE>
 
 ```shell
 chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys
+
+# Alternative:
+
+chmod -R u+rwX,go-rwx $HOME/.ssh
 ```
 
 ### Set up configuration
