@@ -107,3 +107,8 @@ Stop Tailscaled service:
 ```shell
 sudo systemctl stop tailscaled
 ```
+
+# Tailscale-Systray
+
+- [github.com - tailscale-systray repo](https://github.com/mattn/tailscale-systray)
+
