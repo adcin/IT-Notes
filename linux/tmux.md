@@ -95,6 +95,8 @@ nano ~/.config/tmux/tmux.conf
 
 # Mouse select and copy to desktop clipboard
 
+- [github.com - tmux wiki - clipboard](https://github.com/tmux/tmux/wiki/Clipboard)
+
 Copying from clipboard into a tmux session in usually not a problem. The other way around might be an issue.
 
 Install xclip:  
@@ -112,9 +114,6 @@ bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xc
 # Mouse copy to clipboard - emacs mode
 bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -selection clipboard -i"
 
-# Send Up and Down keys for the mouse wheel
-bind -n WheelUpPane if -Ft= "#{mouse_any_flag}" "send -M" "send Up"
-bind -n WheelDownPane if -Ft= "#{mouse_any_flag}" "send -M" "send Down"
 ```
 
 Restart the tmux session.
