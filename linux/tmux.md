@@ -65,6 +65,8 @@ To execute a tmux command like "split the current pane" you need to use the pref
 |       `S`        | Interactive session select menu with previews |
 |       `:`        | Start the tmux command prompt                 | 
 
+</br>
+
 # configuration and customization
 
 Default tmux config file locations: 
@@ -88,6 +90,34 @@ Edit the file:
 ```shell
 nano ~/.config/tmux/tmux.conf
 ```
+
+</br>
+
+# Mouse select and copy to desktop clipboard
+
+Copying from clipboard into a tmux session in usually not a problem. The other way around might be an issue.
+
+Install xclip:  
+```shell
+sudo apt install xclip
+```
+
+Insert into `tmux.conf`:  
+```shell
+# Mouse Mode
+set -g mouse on
+
+# Mouse copy to clipboard - vi mode
+bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -selection clipboard -i"
+# Mouse copy to clipboard - emacs mode
+bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -selection clipboard -i"
+
+# Send Up and Down keys for the mouse wheel
+bind -n WheelUpPane if -Ft= "#{mouse_any_flag}" "send -M" "send Up"
+bind -n WheelDownPane if -Ft= "#{mouse_any_flag}" "send -M" "send Down"
+```
+
+Restart the tmux session.
 
 </br>
 
