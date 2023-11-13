@@ -120,6 +120,31 @@ Restart the tmux session.
 
 </br>
 
+# Autostart tmux in terminal
+
+## Alacritty
+
+Start Alacritty with zsh shell and tmux - attach to existing tmux session, or otherwise create a new one.
+
+Attach to `~/.alacritty.yml`:  
+```shell
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
+```
+
+</br>
+
+Or simply start Alacritty with this option:  
+```shell
+alacritty -e tmux
+```
+
+</br>
+
 # Tips
 
 - Some recommend setting the prefix key to `Ctrl + A`. I do not recommend this, because this is the prefix key of the cli tool **screen**. So you might have trouble when using both, tmux and screen.
