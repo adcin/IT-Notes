@@ -310,6 +310,7 @@ _The process starts the lookup at current directory, then looks for the next des
 | \~          | current users home directory                                                                            |
 | \~\<USER\>  | \<USER\> home directory                                                                                 | 
 
+
 **Examples:**  
 
 Change to my home directory: 
