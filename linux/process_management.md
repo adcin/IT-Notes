@@ -6,7 +6,7 @@ Basic commands to view processes:
 - `pgrep` - 
 
 Additional CLI software:  
-- `htop` - Powerful process managing tool
+- `htop` - Powerful process managing tool [peteris.rocks - htop explained](https://peteris.rocks/blog/htop/#process-state)
 - `glances` - Quite new system monitoring tool with advanced features
 
 Install command:  
