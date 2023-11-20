@@ -785,16 +785,17 @@ unzip file.zip
 
 # Compare files and directories
 
-## [diff - compare files line by line (man page)](https://man7.org/linux/man-pages/man1/diff.1.html)
+- [baeldung.com - benchmark of comparison methods](https://www.baeldung.com/linux/fastest-check-files-same-content)
 
-> Synopsis: `diff [OPTION]... FILES`
+## diff
 
-</br>
+### Quote [man diff](https://man7.org/linux/man-pages/man1/diff.1.html):
 
-| Option | Description                                  |
-|:------:| -------------------------------------------- |
-|   -q   | report only when files differ                |
-|   -r   | recursively compare any subdirectories found |
+Description:  
+> Compare FILES line by line.
+
+Synopsis:    
+> `diff [OPTION]... FILES`
 
 </br>
 
@@ -804,3 +805,30 @@ Compare 2 directories, show the differences:
 diff -q -r ~/Music /mnt/ext_ssd/music
 ```
 
+
+| Option | Description                                  |
+|:------:| -------------------------------------------- |
+|   -q   | report only when files differ                |
+|   -r   | recursively compare any subdirectories found |
+
+</br>
+
+## cmp
+
+### Quote man cmp:  
+
+Description:
+> Compare two files byte by byte.
+
+Synopsis: 
+> `cmp [OPTION]... FILE1 [FILE2 [SKIP1 [SKIP2]]]`
+
+## stat
+
+### Quote man stat:  
+
+Description:
+> display file or file system status
+
+Synopsis: 
+> `stat [OPTION]... FILE...`
