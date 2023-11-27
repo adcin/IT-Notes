@@ -550,9 +550,17 @@ sudo systemctl status xrdp
 
 ### xorg.conf - disable compositing
 
-Backup original: `sudo cp /etc/X11/xrdp/xorg.conf /etc/X11/xrdp/xorg.conf.orin`
+Backup original: 
+```shell
+sudo cp /etc/X11/xrdp/xorg.conf /etc/X11/xrdp/xorg.conf.orin
+```
 
-Edit xorg.conf `sudo nano /etc/X11/xrdp/xorg.conf`:  
+Edit xorg.conf: 
+
+```shell
+sudo nano /etc/X11/xrdp/xorg.conf
+```
+
 ```shell
 Section "Extensions"
     Option "Composite" "Disable"
@@ -561,9 +569,17 @@ EndSection
 
 ### xrdp.ini
 
-Backup original: `sudo cp /etc/xrdp/xrdp.ini /etc/xrdp/xrdp.ini.orig`
+Backup original: 
+```shell
+sudo cp /etc/xrdp/xrdp.ini /etc/xrdp/xrdp.ini.orig
+```
 
-Edit xrdp.ini `sudo nano /etc/xrdp/xrdp.ini`:  
+Edit xrdp.ini:  
+
+```shell
+sudo nano /etc/xrdp/xrdp.ini
+```
+
 ```shell
 crypt_level=none
 max_bpp=16
