@@ -152,6 +152,11 @@ Snaps are app packages for desktop, cloud and IoT that are easy to install, secu
 
 ### Flatpak
 
+- [flatpak.org](https://flatpak.org)
+
+Description (from `man flatpak`):  
+> Flatpak is a tool for managing applications and the runtimes they use. In the Flatpak model, applications can be built and distributed independently from the host system they are used on, and they are isolated from the host system ('sandboxed') to some degree, at runtime.
+
 </br>
 
 #### Installation
