@@ -191,12 +191,24 @@ apt install gnome-software-plugin-flatpak
 
 </br>
 
+Location of config files from flatpak apps:  
+```shell
+cd ~/.var/app
+```
+
 #### Flatpak Basic Commands
 
-Install Discord from Flathub:  
+Install [Discord from Flathub](https://flathub.org/apps/com.discordapp.Discord):  
 ```shell
 flatpak install flathub com.discordapp.Discord
 ```
+
+Run Discord from terminal:  
+```shell
+flatpak run com.discordapp.Discord
+```
+
+
 
 -------------------
 
