@@ -196,6 +196,16 @@ Location of config files from flatpak apps:
 cd ~/.var/app
 ```
 
+</br>
+
+#### Flatseal
+
+Flatseal is a graphical utility to review and modify permissions from Flatpak applications. It is recommended, because flatpacks have an isolated environment and may have permission issues.
+
+- [flathub.org - flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal)
+- [github.com - flatseal repo](https://github.com/tchx84/Flatseal)
+- [github.com - flatseal documentation](https://github.com/tchx84/Flatseal/blob/master/DOCUMENTATION.md)
+
 #### Flatpak Basic Commands
 
 Install [Discord from Flathub](https://flathub.org/apps/com.discordapp.Discord):  
@@ -203,12 +213,55 @@ Install [Discord from Flathub](https://flathub.org/apps/com.discordapp.Discord):
 flatpak install flathub com.discordapp.Discord
 ```
 
+Install Discord in user mode (for current user only): 
+```shell
+flatpak --user install flathub com.discordapp.Discord
+```
+
+</br>
+
 Run Discord from terminal:  
 ```shell
 flatpak run com.discordapp.Discord
 ```
 
+</br>
 
+List installed applications:  
+```shell
+flatpak list --app
+```
+
+</br>
+
+Search for a flatpak app on [flathub.org](https://flathub.org) or via cli:  
+```shell
+flatpak search discord
+```
+
+</br>
+
+Remove flatpak Discord app:  
+```shell
+flatpak uninstall com.discordapp.Discord
+```
+_If installed in user mode, you need to use: `flatpak --user uninstall com.discordapp.Discord`_
+
+</br>
+
+Uninstall unused flatpak runtimes: 
+```shell
+flatpak uninstall --unused
+```
+
+</br>
+
+Update installed flatpak apps:  
+```shell
+flatpak update
+# if installed in user mode
+flatpak --user update
+```
 
 -------------------
 
