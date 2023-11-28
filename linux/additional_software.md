@@ -152,7 +152,8 @@ Snaps are app packages for desktop, cloud and IoT that are easy to install, secu
 
 ### Flatpak
 
-- [flatpak.org](https://flatpak.org)
+- [flatpak.org - Flatpak Homepage](https://flatpak.org)
+- [flathub.org - Flapak App Store](https://flathub.org/)
 
 Description (from `man flatpak`):  
 > Flatpak is a tool for managing applications and the runtimes they use. In the Flatpak model, applications can be built and distributed independently from the host system they are used on, and they are isolated from the host system ('sandboxed') to some degree, at runtime.
@@ -164,10 +165,20 @@ Description (from `man flatpak`):
 - [Official setup guide](https://flatpak.org/setup/)
 - [Flatpak documentation](https://docs.flatpak.org)
 
+</br>
+
 Example installation on Debian ([Source](https://flatpak.org/setup/Debian)):  
 
 ```shell
-apt install flatpak
+sudo apt install flatpak
+```
+
+</br>
+
+Add the Flathub repository:  
+
+```shell
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
 </br>
@@ -180,12 +191,12 @@ apt install gnome-software-plugin-flatpak
 
 </br>
 
-Add the Flathub repository:  
+#### Flatpak Basic Commands
 
+Install Discord from Flathub:  
 ```shell
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.discordapp.Discord
 ```
-
 
 -------------------
 
