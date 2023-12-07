@@ -16,13 +16,17 @@ To backup thunderbird you simply need to copy / archive the profile folder.
 
 ## Find profile location
 
-On my system it's named `3jgkyq3e.default-release` and located at `$HOME/.thunderbird`. With the Flatpak version of Thunderbird it's located at `$HOME/.var/app/org.mozilla.Thunderbird/.thunderbird`
+</br>
 
 **Thunderbird:** menu → Help → Troubleshooting Information
 
 **Troubleshooting Information:** Segment "Application Basics" → "Profiles" → "about:profiles"
 
 **About Profiles:** Identify your active profile → Root Directory
+
+</br>
+
+On my system it's named `3jgkyq3e.default-release` and located at `$HOME/.thunderbird`. With the Flatpak version of Thunderbird it's located at `$HOME/.var/app/org.mozilla.Thunderbird/.thunderbird`
 
 </br>
 

@@ -372,6 +372,10 @@ curl http://example.com/file.tar -o /path/to/dir/file.tar
 
 ## scp - ssh copy
 
+> scp copies files between hosts on a network.
+
+Scp is not resumable, if the connection drops during a large transfer, you will need to restart the entire operation. It's recommended to use rsync.
+
 Copy file from server to client:  
 ```shell
 scp <USER>@<SOURCE_HOST>:/path/to/source/file /path/to/destination/file
@@ -424,17 +428,19 @@ rsync -a ~/docs/folder1 ~/docs/folder2
 
 ### Common options
 
-|   Option   | Description                                                                       |
-|:----------:| --------------------------------------------------------------------------------- |
-|     -a     | archive mode (same as -rlptgoD) - keeps basically the meta data as in the source. |
-|     -v     | verbose mode                                                                      |
-|     -q     | quiet mode                                                                        |
-|     -z     | compresses data during transfers                                                  |
-|     -h     | human readable numbers                                                            |
-| --progress | show progress during transfer                                                     |
-|  --delete  | delete extraneous files from destination                                          |
-|     -e     | specify the remote shell to use                                                   |
-|     -n     | perform a trial run with no changes made                                          |
+|        Option         | Description                                                                       |
+|:---------------------:| --------------------------------------------------------------------------------- |
+|          -a           | archive mode (same as -rlptgoD) - keeps basically the meta data as in the source. |
+|          -v           | verbose mode                                                                      |
+|          -q           | quiet mode                                                                        |
+|          -z           | compresses data during transfers                                                  |
+|          -h           | human readable numbers                                                            |
+|      --progress       | show progress during transfer                                                     |
+|       --delete        | delete extraneous files from destination                                          |
+|          -e           | specify the remote shell to use                                                   |
+|          -n           | perform a trial run with no changes made                                          |
+| --remove-source-files | remove source files after the transfer is complete                                | 
+
 </br>
 
 ### Examples

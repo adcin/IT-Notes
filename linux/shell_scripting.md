@@ -393,6 +393,8 @@ sleep 1m 30s
 - [Dialog - Graphical CLI menu](https://invisible-island.net/dialog/)
 - [Zenity - GUI menu](https://help.gnome.org/users/zenity/stable/index.html)
 
+</br>
+
 ## Text based Menu Template
 
 Menu embedded  in a function:
@@ -429,6 +431,8 @@ esac
 mymenu
 ```
 
+</br>
+
 ## Create directory/file if it doesn't exist
 
 Check for a directory:  
@@ -441,6 +445,28 @@ Check for a file:
 [[ ! -f ./result.txt ]] && touch ./result.txt
 ```
 
+</br>
+
+## Check for root privileges
+
+```bash
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ]
+then
+    exec sudo -s "$0" "$@"
+fi
+
+# script
+# script
+# ...
+
+sudo -k
+```
+
+- `if [ "$EUID" -ne 0 ]` ▷▷▷ Check if Effective User ID is 0 (root)
+- `exec sudo -s "$0" "$@"` ▷▷▷ restart current script with root privileges
+- `sudo -k` ▷▷▷ reset sudo timestamp, so password needs to be entered again
 
 -----------------
 # Useful links
