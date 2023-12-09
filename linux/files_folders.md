@@ -787,7 +787,28 @@ Extract file.zip to current folder:
 unzip file.zip
 ```
 
+</br>
+
+## xzcat .xz archives
+
+Extract file.xz to current folder and delete the input file.
+
+```shell
+unxz file.xz
+```
+
+</br>
+
+Command aliases: 
+- unxz is equivalent to xz --decompress.
+- xzcat is equivalent to xz --decompress --stdout.
+- lzma is equivalent to xz --format=lzma.
+- unlzma is equivalent to xz --format=lzma --decompress.
+- lzcat is equivalent to xz --format=lzma --decompress --stdout.
+
 ------------------------
+
+</br>
 
 # Compare files and directories
 
