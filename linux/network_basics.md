@@ -8,6 +8,15 @@ Address ranges assigned by the IANA (Internet Assigned Numbers Authority) to be 
 - Class B: 172.16.0.0 to 172.31.255.255
 - Class C: 192.168.0.0 to 192.168.255.255
 
+
+</br>
+
+# Subnet and IP ranges calculation
+
+## sipcalc
+
+command to make my life a little easier when determining IP address ranges, netmasks, and potential gateway addresses
+
 -------------
 
 </br>
