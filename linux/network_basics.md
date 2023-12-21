@@ -159,6 +159,8 @@ Usable range            - 192.168.131.1 - 192.168.131.254
 
 Also a command line tool for calculating IP ranges and subnets, but more focused on teaching networking basics.
 
+- [Project website and online tool](https://jodies.de/ipcalc)
+
 ### Description (from `man page`):
 > ipcalc  takes  an  IPv4  address and netmask and calculates the resulting broadcast, network, Cisco wildcard mask, and host range. By giving a second netmask, you can design sub‐ and supernetworks. It is also intended to be a teaching tool and presents the results as easy‐to‐understand binary values.
 
