@@ -52,7 +52,7 @@ TL;DR - too long; didn't read
 Conclusion - Fazit, Schlusswort
 Meta Information
 Excerpt from man description
-Description (from `man command`): 
+Description (from `man page`): 
 
 
 Command autopsy:
