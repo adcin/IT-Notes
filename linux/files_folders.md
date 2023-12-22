@@ -428,18 +428,27 @@ rsync -a ~/docs/folder1 ~/docs/folder2
 
 ### Common options
 
-|        Option         | Description                                                                       |
-|:---------------------:| --------------------------------------------------------------------------------- |
-|          -a           | archive mode (same as -rlptgoD) - keeps basically the meta data as in the source. |
-|          -v           | verbose mode                                                                      |
-|          -q           | quiet mode                                                                        |
-|          -z           | compresses data during transfers                                                  |
-|          -h           | human readable numbers                                                            |
-|      --progress       | show progress during transfer                                                     |
-|       --delete        | delete extraneous files from destination                                          |
-|          -e           | specify the remote shell to use                                                   |
-|          -n           | perform a trial run with no changes made                                          |
-| --remove-source-files | remove source files after the transfer is complete                                | 
+|        Option         | Description                                                                                                                             |
+|:---------------------:| --------------------------------------------------------------------------------------------------------------------------------------- |
+|          -a           | archive mode (same as -rlptgoD) - keeps basically the meta data as in the source.                                                       |
+|          -r           | copy directories recursively.                                                                                                           |
+|          -l           | add  symlinks to the transferred files instead of noisily ignoring them                                                                 |
+|          -p           | causes the receiving rsync to set the destination permissions to be the same as the source permissions.                                 |
+|          -t           | transfer modification times along with the files and update them on the remote system.                                                  |
+|          -g           | set the group of the destination file to be the same as the source file.                                                                |
+|          -o           | set the owner of the destination file to be the same as the source file, but only if the receiving rsync is being run as the super‐user |
+|          -D           | equivalent to "--devices --specials"                                                                                                    |
+|       --devices       | transfer character and block device files to the remote system to recreate these devices                                                |
+|      --specials       | transfer special files, such as named sockets and fifos                                                                                 |
+|          -v           | verbose mode                                                                                                                            |
+|          -q           | quiet mode                                                                                                                              |
+|          -z           | compresses data during transfers                                                                                                        |
+|          -h           | human readable numbers                                                                                                                  |
+|      --progress       | show progress during transfer                                                                                                           |
+|       --delete        | delete extraneous files from destination                                                                                                |
+|          -e           | specify the remote shell to use                                                                                                         |
+|          -n           | perform a trial run with no changes made                                                                                                |
+| --remove-source-files | remove source files after the transfer is complete                                                                                      |
 
 </br>
 
