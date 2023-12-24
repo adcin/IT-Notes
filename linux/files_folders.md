@@ -11,7 +11,8 @@ pwd
 ```shell
 mkdir FOLDER [FOLDER2] [FOL...]
 ```
-Create all non existing parent folders as well:
+
+Create all non existing parent folders as well:  
 ```shell
 mkdir -p FOLDER [FOLDER2] [FOL...]
 ```
