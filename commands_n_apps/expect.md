@@ -15,3 +15,10 @@ Expect is a tool for automation of text/terminal based applications. In simple t
 - [baeldung.com - Tag: expect](https://www.baeldung.com/linux/tag/expect)
 - [wikipedia.org - Expect](https://en.wikipedia.org/wiki/Expect)
 
+| Command  | Description                           |
+|:--------:| ------------------------------------- |
+|  spawn   | Creates a new process.                | 
+|   send   | Sends a reply to the program.         |
+|  expect  | Waits for output.                     |
+| interact | Enables interacting with the program. |
+
