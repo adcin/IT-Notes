@@ -12,5 +12,6 @@ Expect is a tool for automation of text/terminal based applications. In simple t
 - [die.net - man page](https://linux.die.net/man/1/expect)
 - [phoenixnap.com - Linux expect Command With Examples](https://phoenixnap.com/kb/linux-expect)
 - [geeksforgeeks.org - expect command in Linux with Examples](https://www.geeksforgeeks.org/expect-command-in-linux-with-examples/)
+- [baeldung.com - Tag: expect](https://www.baeldung.com/linux/tag/expect)
 - [wikipedia.org - Expect](https://en.wikipedia.org/wiki/Expect)
 
