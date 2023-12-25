@@ -15,7 +15,34 @@ Expect is a tool for automation of text/terminal based applications. In simple t
 - [baeldung.com - Tag: expect](https://www.baeldung.com/linux/tag/expect)
 - [wikipedia.org - Expect](https://en.wikipedia.org/wiki/Expect)
 
+# Basic usage
 
+**Create test-file `expect-test1.sh`:**  
+```shell
+cat << EOF | tee ./expect-test1.sh
+#!/bin/bash
+echo "What is your name?"
+read NAME
+echo "What is your hobby?"
+read HOBBY
+echo "Hi $NAME, so you like $HOBBY?"
+EOF
+chmod +x ./expect-test1.sh
+```
+
+<br>
+
+**Execute `expect-test1.sh` normally:**  
+```shell
+./expect-test1.sh
+```
+
+<br>
+
+**Create expect script `expect-test2.exp`:**  
+```shell
+
+```
 
 
 
