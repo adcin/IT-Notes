@@ -116,6 +116,28 @@ sudo apt purge <PACKAGE_NAME>
 
 </br>
 
+### gdebi
+
+Apt checks for dependencies of packages from online sources. But it doesn't do this, if you want to install from a local \*.deb file.
+
+Gdebi solves this problem and checks for dependencies when installing a Package from a local \*.deb file.
+
+- [debian.org - gdebi package](https://packages.debian.org/de/stable/gdebi)
+
+Source `man gdebi`:
+
+> NAME
+> gdebi - Simple tool to install deb files
+>
+> SYNOPSIS
+> gdebi [package.deb]...
+>
+> DESCRIPTION
+> gdebi lets you install local deb packages resolving and installing its dependencies. apt does the same, but only for remote (http, ftp) located packages. It can also resolve build‐depends of debian/control files.
+
+
+</br>
+
 ### aptitude
 
 Text-based user interface for package management.
