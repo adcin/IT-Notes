@@ -1,8 +1,8 @@
-# Vim Cheat Sheet
+# Vim
 
-[Official online help](https://vimhelp.org)
-
-[Cheat Sheet at DuckDuckGo](https://duckduckgo.com/?q=vim+cheat+sheet&ia=cheatsheet&iax=1)
+- [vimhelp.org - Official online help](https://vimhelp.org)
+- [duckduckgo.com - Vim Cheat Sheet](https://duckduckgo.com/?q=vim+cheat+sheet&ia=cheatsheet&iax=1)
+- [quickref.me - Vim Cheat Sheet](https://quickref.me/vim)
 
 Document Metainformations:
 - "Triggers" -> Keys or Commands which indicate an action
@@ -161,13 +161,16 @@ Nouns or movements are commands for moving within the document or representing a
 
 Change each foo to bar, but ask for confirmation first:  
 ```shell
-:%s/foo/bar/gc
+:%s/foo/bar/gci
 ```
 
 | Flag | Description                                |
 |:----:| ------------------------------------------ |
 |  g   | global – each match in the line is changed |
-|  c   | confirmation needed for each change        | 
+|  c   | confirmation needed for each change        |
+|  i   | case insensitive (ignore case)             | 
+
+See also [RegEx](../misc/RegEx.md)
 
 </br>
 
