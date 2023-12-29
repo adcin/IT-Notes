@@ -42,17 +42,16 @@ apt purge neofetch && apt autoremove
 # Structure
 
 Title
-Table of contents - Sitemap
+Description (excerpt from `man` page): 
 Introduction - Einleitung
+Table of contents - Sitemap
 Goal - Ziel
-Inspiration / Links / Source
 Prerequisites - Voraussetzungen
 Main - Article Body
 TL;DR - too long; didn't read
 Conclusion - Fazit, Schlusswort
+References / Inspiration / Links / Source
 Meta Information
-Description (excerpt from `man` page): 
-
 
 Command autopsy:
 
@@ -93,7 +92,7 @@ Command autopsy:
 |   ┓    | `0xE2 0x94 0x93` | `0x2513` | `0x00002513` |
 |   ┗    | `0xE2 0x94 0x97` | `0x2517` | `0x00002517` |
 |   ┛    | `0xE2 0x94 0x9B` | `0x251B` | `0x0000251B` |
-|   ✓    | `0xE2 0x9C 0x93` | `0x2713` | `0x00002713` | 
+|   ✓    | `0xE2 0x9C 0x93` | `0x2713` | `0x00002713` |
 
 # UTF Box
 
