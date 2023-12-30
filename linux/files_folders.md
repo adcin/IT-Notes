@@ -71,8 +71,15 @@ shred -u <FILENAME>
 Overwrite a whole partition to delete all files safely:  
 
 ```shell
-sudo shred -vn 1 /dev/sdb1
+sudo shred -fvn 3 /dev/sdb1
 ```
+
+| Option             | Description                                      |
+|:------------------ | ------------------------------------------------ |
+| -u                 | deallocate and remove file after overwriting     |
+| -f, --force        | change permissions to allow writing if necessary |
+| -v, --verbose      | show progress                                    |
+| -n, --iterations=N | overwrite N times instead of the default (3)     |
 
 </br>
 
