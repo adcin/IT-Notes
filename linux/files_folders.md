@@ -797,7 +797,14 @@ Output: `file.txt`
 
 </br>
 
-## unzip .zip archives
+## zip/unzip .zip archives
+
+Create folder.zip of folder and all subfolders:
+```shell
+zip -r folder.zip folder
+```
+
+</br>
 
 Extract file.zip to current folder:
 ```shell
