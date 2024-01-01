@@ -483,19 +483,19 @@ rsync -avzh --progress --delete ~/docs/folder1/ ~/docs/backup_of_folder1
 
 Backup local folder to remote server via ssh:
 ```shell
-rsync -avzh --progress --delete -e ssh ~/docs/folder1/ username@192.168.0.69:home/username/docs/backup_of_folder1
+rsync -avzh --progress --delete -e ssh ~/docs/folder1/ username@192.168.0.69:/home/username/docs/backup_of_folder1
 ```
 </br>
 
 Backup local folder to remote server via ssh with keyfile and specified port: 
 ```shell
-rsync -avzh --progress --delete -e "ssh -p 6969 -i ~/.ssh/id_rsa" ~/docs/folder1/ username@192.168.0.69:home/username/docs/backup_of_folder1
+rsync -avzh --progress --delete -e "ssh -p 6969 -i ~/.ssh/id_rsa" ~/docs/folder1/ username@192.168.0.69:/home/username/docs/backup_of_folder1
 ```
 </br>
 
 Backup remote server folder to local machine via ssh with keyfile and specified port: 
 ```shell
-rsync -avzh --progress --delete -e "ssh -p 6969 -i ~/.ssh/id_rsa" username@192.168.0.69:home/username/docs/folder1/ ~/docs/backup_of_folder1
+rsync -avzh --progress --delete -e "ssh -p 6969 -i ~/.ssh/id_rsa" username@192.168.0.69:/home/username/docs/folder1/ ~/docs/backup_of_folder1
 ```
 
 ---------------------
