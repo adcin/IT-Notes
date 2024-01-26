@@ -19,24 +19,16 @@ Break:
 
 # Neofetch sysinfo
 
-Install neofetch:  
+System info (`neofetch distro kernel shell de wm`):  
+
 ```shell
-apt install neofetch
+neofetch --stdout --disable title underline model uptime resolution wm_theme theme icons term_font packages
 ```
 
-System info (`neofetch distro kernel shell de wm`):  
 ```shell
 echo -e "\n| $(neofetch --separator ' |' distro)|\n|----|----|\n| $(neofetch --separator ' |' kernel)|\n| $(neofetch --separator ' |' shell)|\n| $(neofetch --separator ' |' de)|\n"
 ```
 
-Remove neofetch:  
-
-```shell
-sudo apt purge neofetch && sudo apt autoremove
-```
-```shell
-apt purge neofetch && apt autoremove
-```
 
 # Structure
 
