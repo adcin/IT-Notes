@@ -318,3 +318,15 @@ sudo netstat -tulpn | grep LISTEN
 ```shell
 nc -z -v 127.0.0.1 1-65535 2>&1 | grep -v 'Connection refused'
 ```
+
+# Troubleshooting commands
+
+
+| Linux                   | Windows    | Description                                                               |
+| ----------------------- | ---------- | ------------------------------------------------------------------------- |
+| `ifconfig` or `ip addr` | `ipconfig` | Displays IP configuration information.                                    |
+| `ping`                  | `ping`     | Tests connections to other IP hosts.                                      |
+| `netstat` or `ss`       | `netstat`  | Displays network connections.                                             |
+| `traceroute` or `mtr`   | `tracert`  | Displays the route taken to the destination.                              |
+| `nslookup` or `dig`     | `nslookup` | Directly queries the name server for information on a destination domain. |
+

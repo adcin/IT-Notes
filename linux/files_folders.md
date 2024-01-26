@@ -81,18 +81,7 @@ sudo shred -fvn 3 /dev/sdb1
 | -v, --verbose      | show progress                                    |
 | -n, --iterations=N | overwrite N times instead of the default (3)     |
 
-</br>
 
-Show folder size:
-
-```shell
-du -shc <FOLDER1> <FOLDER2> <...>
-```
-| Option | Description |
-|:----:|:------|
-| -s, --summarize | Display an entry for each specified file |
-| -h, --human-readable | “Human-readable” output, like MB,GB,TB... |
-| -c, --total | Display a grand total |
 
 </br>
 
@@ -115,7 +104,7 @@ _Simplified - amount of available (used/free) files._
 
 </br>
 
-Count all files (not folders) in a directory:
+Count all files (not folders) in a directory and subdirectories:
 
 ```shell
 find /path/to/directory -type f | wc -l
@@ -201,6 +190,13 @@ Mount with ssh authentication key `/home/LOCAL_USER_NAME/.ssh/ID_KEYFILE` (metho
 ```shell
 sshfs -o reconnect,IdentityFile=/home/LOCAL_USER_NAME/.ssh/ID_KEYFILE REMOTE_USER_NAME@REMOTE_HOST_ADDRESS:/PATH/TO/REMOTE/DIRECTORY /home/LOCAL_USER_NAME/MOUNT/TO/HERE
 ```
+
+**Options**
+
+|    Option     | Description                                                                                                                                                      |
+|:-------------:| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -o idmap=user | Convert file owner between local and remote user IDs. The idmap=user option translates the UID of the connecting user to the remote user (GID remains unchanged) |
+| -o reconnect  | automatically  reconnect  to  server if connection is interrupted                                                                                                |
 
 </br>
 

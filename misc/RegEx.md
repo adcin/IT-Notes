@@ -94,6 +94,8 @@ Reference: https://remram44.github.io/regex-cheatsheet/regex.html
 
 # Links
 
+- [GNU.org - Regexp (The GNU Awk User’s Guide)](https://www.gnu.org/software/gawk/manual/html_node/Regexp.html)
+
 ## Cheat Sheets
 - [QuickRef.ME - RegEX cheatsheet](https://quickref.me/regex.html)
 - [datacamp.com - Regular Expressions Cheat Sheet](https://www.datacamp.com/cheat-sheet/regular-expresso)
@@ -102,3 +104,7 @@ Reference: https://remram44.github.io/regex-cheatsheet/regex.html
 ## Tutorials
 - [rexegg.com - Rex eats regular expressions for breakfast. And so can you!](https://www.rexegg.com)
 - [Regular-Expressions.info](https://www.regular-expressions.info/)
+- [regexone.com - Learn Regular Expressions with simple, interactive exercises.](https://regexone.com/)
+
+## MISC
+- http://www.tads.org/t3doc/doc/sysman/regex.htm

@@ -1,15 +1,14 @@
-# Codeblock
+# HTML
+No break space:  
 ```shell
-
+&nbsp;
 ```
 
-</br>
+Break:  
+```shell
+<br>
+```
 
-\`\`\`shell
-
-\`\`\`
-
-\<\/br\>
 
 # Table - Option \| Description
 ```shell
@@ -52,6 +51,7 @@ TL;DR - too long; didn't read
 Conclusion - Fazit, Schlusswort
 References / Inspiration / Links / Source
 Meta Information
+Glossary of Terms
 
 Command autopsy:
 

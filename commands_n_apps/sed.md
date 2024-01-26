@@ -1,15 +1,18 @@
-# Sed command description
+# Sed - stream editor for filtering and transforming text
 
-source man sed:
+## Description (excerpt from `man` page):
 > Sed is a stream editor.  A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).
 
----------------------
+<br>
 
-</br>
+## Links
+
+- [sourceforge.io - sed project page](https://sed.sourceforge.io/)
+- [GNU.org - sed homepage](https://www.gnu.org/software/sed)
 
 # Basics: change string in a file
 
-</br>
+<br>
 
 Change "foo" to "bar" from example.txt:  
 
@@ -32,10 +35,13 @@ sed -i 's/foo/bar/g' example.txt
 sed -i.bak 's/foo/bar/g' example.txt
 ```
 
-|    Option    | Description                          |
-|:------------:| ------------------------------------ |
-|      -i      | Edit files in place.                 |
-| -i\[SUFFIX\] | Create a backup, then edit the file. | 
+# Options
+
+|          Option           | Description                                          |
+|:-------------------------:| ---------------------------------------------------- |
+|            -i             | Edit files in place.                                 |
+|       -i\[SUFFIX\]        | Create a backup, then edit the file.                 |
+| -E, -r, --regexp-extended | Use [extended regular expressions](../misc/RegEx.md) | 
 
 --------------------------
 

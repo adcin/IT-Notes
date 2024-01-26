@@ -276,3 +276,4 @@ Please, note some of these commands are not supported by VSCodeVim yet.
 - [YouTube.com - Vim Visual Block Mode](https://www.youtube.com/watch?v=Ydzw70SvF-g)
 - [SpaceVim.org - A community-driven vim distribution](https://spacevim.org/)
 - [freeCodeCamp.org - Vimrc Configuration Guide](https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor/)
+- [vimcasts.org - Learn Essential Vim Skills with Drew Neil, author of Practical Vim](http://vimcasts.org/)

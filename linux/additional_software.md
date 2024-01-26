@@ -318,6 +318,7 @@ flatpak --user update
 ### VirtualBox  
 
 - [Download and installation manual](https://www.virtualbox.org/wiki/Linux_Downloads)  
+- [VirtualBox.org - Download links](https://download.virtualbox.org/virtualbox/)
 
 System info: `neofetch distro kernel shell de wm`  
 
@@ -347,6 +348,17 @@ sudo apt update
 ```shell
 sudo apt install virtualbox virtualbox-dkms virtualbox-ext-pack
 ```  
+
+#### MISC VB stuff
+
+Check Version of installed guest additions:  
+```shell
+# Linux:
+VBoxClient --version
+
+# Windows
+VBoxControl.exe --version
+```
 
 </br>
 

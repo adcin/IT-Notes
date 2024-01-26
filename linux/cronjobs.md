@@ -71,3 +71,7 @@ Execute backup.sh every 3 days:
 ### Attention!  
 - When the system is not running at the defined time, the task will NOT be executed!  
 - `* */2 * * * srcipt.sh` will execute the script.sh every 2 hours, but then 60 times (every minute).  
+
+# Links & Resources
+- [baeldung.com - Temporarily or Permanently Disable Every Job Listed in a Crontab](https://www.baeldung.com/linux/crontab-disable-jobs)
+- [baeldung.com - How to Backup Cron Files](https://www.baeldung.com/linux/cron-files-backup#location-of-anacron-and-cron-configuration-files)
