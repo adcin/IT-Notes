@@ -59,17 +59,15 @@ find ./ -type f -print0 | xargs -0 sed -i 's/foo/bar/g'
 
 Command autopsy:
 
-| Section              | Description                                                                                                                                                 |
-|:-------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| find ./ -type f      | Search all files in the current directory and all subdirectories                                                                                            |
-| -print0 \|           | Print the full file name, followed by a null character (instead of the newline character) and pipe the output to the next command.                          |
-| xargs                | Build and execute the following command from the piped input.                                                                                               |
-| -0                   | Input items are terminated by a null character instead of by whitespace, and the quotes and backslash are not special (every character is taken literally). |
-| sed -i 's/foo/bar/g' | Read each file piped by `find`, substitute all occurrences of foo with bar `s/foo/bar/g` and edit the in place `-i`.                                        | 
+| Section              | Description                                                                                                                                                   |
+|:-------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| find ./ -type f      | Search all files in the current directory and all subdirectories.                                                                                             | 
+| -print0 \|           | Print the full file name, followed by a null character (instead of the newline character) and pipe the output to the next command.                            |
+| xargs                | Build and execute the following command from the piped input.                                                                                                 |
+| -0                   | Input items are terminated by a null character instead of a whitespace or newline. Quotes and backslash are not special (every character is taken literally). |
+| sed -i 's/foo/bar/g' | Read each file piped by `find`, substitute all occurrences of foo with bar `s/foo/bar/g` and edit the file in place `-i`.                                     |
 
 
 > [!important]
 > 
-> The `-print0` and `-0` option together make sure, that files with whitespaces, quotes or backslashes in their name can be processed correctly.
-
-
+> The combination of the `-print0` and `-0` option ensures, that files with whitespaces, quotes or backslashes in their name are processed correctly.
