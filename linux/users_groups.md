@@ -1,4 +1,7 @@
 # Users
+
+- [systemd.io - User/Group Name Syntax](https://systemd.io/USER_NAMES)
+
 ## User information
 
 Info about a user and his groups with corresponding IDs. Just `id` shows Info about current user.
@@ -153,6 +156,8 @@ sudo wall -n THIS IS MY MESSAGE!
 
 ----------
 # Groups 
+
+- [systemd.io - User/Group Name Syntax](https://systemd.io/USER_NAMES)
 
 ## Group information
 

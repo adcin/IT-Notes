@@ -1,18 +1,17 @@
 # Sed - stream editor for filtering and transforming text
+- [GNU.org - sed homepage](https://www.gnu.org/software/sed)
 
 ## Description (excerpt from `man` page):
 > Sed is a stream editor.  A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).
 
-<br>
 
 ## Links
 
 - [sourceforge.io - sed project page](https://sed.sourceforge.io/)
-- [GNU.org - sed homepage](https://www.gnu.org/software/sed)
+- [GNU.org - sed manual](https://www.gnu.org/software/sed/manual/html_node/index.html)
+- [The seder's grab bag](https://sed.sourceforge.io/grabbag)
 
 # Basics: change string in a file
-
-<br>
 
 Change "foo" to "bar" from example.txt:  
 
@@ -25,7 +24,7 @@ sed 's/foo/bar/' example.txt
 - _foo can be a string or a regular expression._
 - Only the first `foo` in each line will be changed. The syntax for all foo is `'s/foo/bar/g'` (g for global)
 
-</br>
+----
 
 Change every "foo" to "bar" in example.txt:  
 
@@ -43,9 +42,6 @@ sed -i.bak 's/foo/bar/g' example.txt
 |       -i\[SUFFIX\]        | Create a backup, then edit the file.                 |
 | -E, -r, --regexp-extended | Use [extended regular expressions](../misc/RegEx.md) | 
 
---------------------------
-
-</br>
 
 # Examples
 
@@ -53,3 +49,27 @@ Read the public ssh key from a file, put a string with options in front and appe
 ```shell
 cat ~/.ssh/id_ed25519.pub | sed 's/^/no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty /' >> ~/.ssh/authorized_keys
 ```
+
+----
+
+Replace all "foo" with "bar" in every file in the current directory and all subdirectories:  
+```shell
+find ./ -type f -print0 | xargs -0 sed -i 's/foo/bar/g'
+```
+
+Command autopsy:
+
+| Section              | Description                                                                                                                                                 |
+|:-------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| find ./ -type f      | Search all files in the current directory and all subdirectories                                                                                            |
+| -print0 \|           | Print the full file name, followed by a null character (instead of the newline character) and pipe the output to the next command.                          |
+| xargs                | Build and execute the following command from the piped input.                                                                                               |
+| -0                   | Input items are terminated by a null character instead of by whitespace, and the quotes and backslash are not special (every character is taken literally). |
+| sed -i 's/foo/bar/g' | Read each file piped by `find`, substitute all occurrences of foo with bar `s/foo/bar/g` and edit the in place `-i`.                                        | 
+
+
+> [!important]
+> 
+> The `-print0` and `-0` option together make sure, that files with whitespaces, quotes or backslashes in their name can be processed correctly.
+
+

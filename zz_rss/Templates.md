@@ -45,12 +45,13 @@ References / Inspiration / Links / Source
 Meta Information
 Glossary of Terms
 
+```
 Command autopsy:
 
 | Section | Description          |
 |:------- | -------------------- |
 | sudo    | You should know this | 
-
+```
 
 # Unicode symbols
 

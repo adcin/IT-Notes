@@ -289,6 +289,12 @@ rm </PATH/TO/SYMLINK>
 unlink </PATH/TO/SYMLINK>
 ```
 
+<br>
+
+Remove broken symlinks from the current dir and all subdirs:
+```shell
+find -xtype l -delete
+```
 
 ---------------------
 

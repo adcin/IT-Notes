@@ -418,6 +418,8 @@ git push origin main
 git fetch -v
 ```
 
+
+
 Output: 
 > From git-server:./scripts-home
 >  = [up to date]      main       -> origin/main
