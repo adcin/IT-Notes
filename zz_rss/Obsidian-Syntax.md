@@ -1,4 +1,7 @@
-[Online Markdown Guide](https://www.markdownguide.org)
+# Online Docs
+
+- [markdownguide.org](https://www.markdownguide.org)
+- [Obsidian.md - help](https://help.obsidian.md)
 
 # Headings
 
@@ -8,7 +11,6 @@
 ### Heading 3
 #### Heading 4
 ##### Heading 5
-###### Heading 6
 ```
 
 # Heading 1
@@ -16,7 +18,6 @@
 ### Heading 3
 #### Heading 4
 ##### Heading 5
-###### Heading 6
 
 ----------------
 
@@ -87,15 +88,79 @@ Strike-through:
 
 > **The quick brown fox** *jumps over the lazy dog.*
 
-# Boxed
+# Callouts
+- [obsidian.md - Callouts](https://help.obsidian.md/Editing+and+formatting/Callouts)
 
+```md
+> [!info]
+> You can use multiple layers of nesting.
+> > [!question] Can you change the title?
+> > > [!success] Yes, and make title only callouts as well.
+> 
+> You can make a callout foldable by adding a plus (+) or a minus (-) directly after the type identifier.
+> > [!example]- And there are a bunch of different Styles
+> > > [!note]
+> >
+> > > [!abstract] Abstract - Aliases: summary, tldr
+> >
+> > > [!info]
+> >
+> > > [!todo]
+> >
+> > > [!tip] Tip - Aliases: hint, important
+> >
+> > > [!success] Success - Aliases: check, done
+> >
+> > > [!question] Question - Aliases: help, faq
+> >
+> > > [!warning] Warning - Aliases: caution, attention
+> >
+> > > [!failure] Failure - Aliases: fail, missing
+> >
+> > > [!danger] Danger - Alias: error
+> >
+> > > [!bug]
+> >
+> > > [!example]
+> >
+> > > [!quote] Quote - Alias: cite
 ```
-<table><tr><td>The quick brown fox jumps over the lazy dog.</td></tr></table>
-```
 
-<table><tr><td>The quick brown fox jumps over the lazy dog.</td></tr></table>
+> [!info]
+> You can use multiple layers of nesting.
+> > [!question] Can you change the title?
+> > > [!success] Yes, and make title only callouts as well.
+> 
+> You can make a callout foldable by adding a plus (+) or a minus (-) directly after the type identifier.
+> > [!example]- And there are a bunch of different Styles
+> >
+> > > [!quote] Quote - Alias: cite
+> >
+> > > [!example]
+> >
+> > > [!note]
+> >
+> > > [!info]
+> >
+> > > [!todo]
+> >
+> > > [!tip] Tip - Aliases: hint, important
+> >
+> > > [!abstract] Abstract - Aliases: summary, tldr
+> >
+> > > [!success] Success - Aliases: check, done
+> >
+> > > [!question] Question - Aliases: help, faq
+> >
+> > > [!warning] Warning - Aliases: caution, attention
+> >
+> > > [!failure] Failure - Aliases: fail, missing
+> >
+> > > [!danger] Danger - Alias: error
+> >
+> > > [!bug]
 
------------------
+
 
 # Syntax Highlighting
 

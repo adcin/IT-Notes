@@ -2,5 +2,5 @@
 
 # Cheat Sheets
 
-- [MarkDown](MarkDown.md)
+- [Obsidian-Syntax](Obsidian-Syntax.md)
 - [Templates](Templates.md)

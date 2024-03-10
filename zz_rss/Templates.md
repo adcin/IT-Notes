@@ -29,11 +29,30 @@ neofetch --stdout --disable title underline model uptime resolution wm_theme the
 echo -e "\n| $(neofetch --separator ' |' distro)|\n|----|----|\n| $(neofetch --separator ' |' kernel)|\n| $(neofetch --separator ' |' shell)|\n| $(neofetch --separator ' |' de)|\n"
 ```
 
+# Output
+```text
+> [!quote]- &nbsp;Output (stdout)
+> 
+```
+
+# Quote from man page
+
+```text
+> [!quote] &nbsp;Excerpt from man page:
+> 
+```
+
+# Too long, didn't read
+
+```text
+> [!tldr] &nbsp;TL;DR
+> 
+```
 
 # Structure
 
 Title
-Description (excerpt from `man` page): 
+Description (excerpt from man page): 
 Introduction - Einleitung
 Table of contents - Sitemap
 Goal - Ziel

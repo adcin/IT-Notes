@@ -204,4 +204,9 @@ docker compose up --force-recreate --wait --detach && \
 docker image prune -f
 ```  
 
+Alternative to follow logs of a detached container (use `CTRL+C` to stop). Remove all unused images afterwards:
+```bash
+docker compose pull && docker compose up -d && docker compose logs -f
+docker image prune -a
+```
 </br>

@@ -454,7 +454,9 @@ rsync -a ~/docs/folder1 ~/docs/folder2
 |          -q           | quiet mode                                                                                                                              |
 |          -z           | compresses data during transfers                                                                                                        |
 |          -h           | human readable numbers                                                                                                                  |
+|          -P           | Same as --progress + --partial                                                                                                          |
 |      --progress       | show progress during transfer                                                                                                           |
+|       --partial       | Partial files of interrupted transfers are kept and continued, instead of being deleted and restarted.                                  | 
 |       --delete        | delete extraneous files from destination                                                                                                |
 |          -e           | specify the remote shell to use                                                                                                         |
 |          -n           | perform a trial run with no changes made                                                                                                |
@@ -463,6 +465,10 @@ rsync -a ~/docs/folder1 ~/docs/folder2
 </br>
 
 ### Examples
+Copy recursively to remote destination (in user's home folder) and show progress. Keep symlinks, permissions and timestamps, don't keep owner/group.
+```bash
+rsync -rlptzP ~/sourcefolder/ user@server:./destinationfolder
+```
 
 Copy the content of a local folder to an other:  
 ```shell

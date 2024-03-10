@@ -1,6 +1,6 @@
 # Running scripts
 
-</br>
+
 
 ## Make script-file executable
 
@@ -8,11 +8,11 @@
 chmod +x /path/to/my_script.sh
 ```
 
-</br>
+
 
 ## Execute script
 
-</br>
+
 
 ### Execute immediately 
 
@@ -23,7 +23,7 @@ chmod +x /path/to/my_script.sh
 - Method 3: Specify the interpreter    
     `/bin/bash my_script.sh`
 
-</br>
+
 
 ### Execute at particular time
 
@@ -73,7 +73,7 @@ Delete an `at` job (example job no. 9):
 atrm 9
 ```
 
-</br>
+
 
 -----------------
 
@@ -91,7 +91,7 @@ Tells the shell what program to interpret the script with, when executed.
 | Python                              | `#!/bin/bin/python` |
 | Ruby                                | `#!/bin/bin/ruby`   |
 
-</br>
+
 
 -----------------
 
@@ -105,7 +105,32 @@ There are a lot of different types and versions of operating systems and shells 
 
 TL;DR: __**"Use commands and syntax based on the UNIX standard you n00b."**__
 
-</br>
+# Redirection
+
+> [!quote] Quote from Wikipedia article "Standard streams"
+>
+> In computer programming, standard streams are preconnected input and output communication channels between a computer program and its environment when it begins execution. The three input/output connections are called standard input (stdin), standard output (stdout) and standard error (stderr).
+
+**In bash the standard streams are represented by file descriptors:**
+
+| Stream | File Descriptor |
+| ------ | :-------------: |
+| stdin  |        0        |
+| stdout |        1        |
+| stderr |        2        |
+
+| Example                                                                                     | Effect                                         |
+| ------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| `somecommand &> /dev/null`<br>`somecommand >& /dev/null`<br>`somecommand > /dev/null 2>&1`  | stdout and stderr to null                      |
+| `somecommand > output.txt`<br>`somecommand 1> output.txt`                                   | stdout to file output.txt                      |
+| `somecommand > /dev/null 2> errorlog.txt`                                                   | stdout to null and stderr to file errorlog.txt |
+| `somecommand >> output.txt`                                                                 | append stdout to output.txt                    |
+| `somecommand &>> output.txt`<br>`somecommand >>& output.txt`<br>`somecommand >> output.txt` | append stdout and stderr to output.txt         | 
+
+
+- _The standard stream for `>` is 1 - so `>` and `1>` are equal._
+- _The standard stream for `<` is 0 - so `<` and `0<` are equal._
+- _It doesn't matter if there's a space after the redirection operator - so `somecommand > output.txt` and `somecommand >output.txt` are the same._
 
 ## Testing POSIX compliance without tools
 
@@ -125,7 +150,7 @@ Test your script by using sh:
 /bin/sh ~/myscripts/supercompliant.sh
 ```
 
-</br>
+
 
 ## ShellCheck shell script analysis tool
 
@@ -143,7 +168,7 @@ shellcheck --shell=sh ~/myscripts/supercompliant.sh
 
 **TIPP:** ShellCheck can be integrated in many popular editors: https://github.com/koalaman/shellcheck#in-your-editor
 
-</br>
+
 
 ## Helpful Links:
 - [Wikipedia](https://wikipedia.org/wiki/POSIX)
@@ -151,12 +176,12 @@ shellcheck --shell=sh ~/myscripts/supercompliant.sh
 - [Baeldung - A Guide to POSIX](https://www.baeldung.com/linux/posix)
 - [Baeldung - How to Test for POSIX Compliance](https://www.baeldung.com/linux/test-posix-compliance-shell-scripts)
 
-</br>
+
 
 -------------------
 # Special shell variables
 
-</br>
+
 
 |   Variable    | Description                                          |
 |:-------------:|:---------------------------------------------------- |
@@ -168,7 +193,7 @@ shellcheck --shell=sh ~/myscripts/supercompliant.sh
 |     `$?`      | The exit status of the last executed command.        | 
 |     `$!`      | The process id of the last executed command.         |
 
-</br>
+
 
 Simple test script:  
 
@@ -198,7 +223,7 @@ stdout of: `./test.sh "one" "two"`
 
 ```
 
-</br>
+
 
 -------------------
 # Temporary files - `mktemp`
@@ -208,25 +233,25 @@ stdout of: `./test.sh "one" "two"`
 
 Syntax: `mktemp [OPTION]... [TEMPLATE]`
 
-</br>
+
 
 Best practice for most scripts is to use variables for the path to the file/directory.
 
-</br>
+
 
 Create a temporary file: 
 ```shell
 TEMP_FILE=$(mktemp)
 ```
 
-</br>
+
 
 Create a temporary directory: 
 ```shell
 TEMP_DIR=$(mktemp -d)
 ```
 
-</br>
+
 
 Use example:  
 ```shell
@@ -236,14 +261,14 @@ cat $TEMP_FILE
 rm -f $TEMP_FILE
 ```
 
-</br>
+
 
 | Option | Description |
 |:------:| ----------- |
 | -d     |  create a directory, not a file           |
 
 
-</br>
+
 
 -------------------
 # Read user input
@@ -393,7 +418,7 @@ sleep 1m 30s
 - [Dialog - Graphical CLI menu](https://invisible-island.net/dialog/)
 - [Zenity - GUI menu](https://help.gnome.org/users/zenity/stable/index.html)
 
-</br>
+
 
 ## Text based Menu Template
 
@@ -431,7 +456,7 @@ esac
 mymenu
 ```
 
-</br>
+
 
 ## Create directory/file if it doesn't exist
 
@@ -445,7 +470,7 @@ Check for a file:
 [[ ! -f ./result.txt ]] && touch ./result.txt
 ```
 
-</br>
+
 
 ## Check for root privileges
 

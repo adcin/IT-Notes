@@ -1,7 +1,7 @@
 # Sed - stream editor for filtering and transforming text
 - [GNU.org - sed homepage](https://www.gnu.org/software/sed)
 
-## Description (excerpt from `man` page):
+## Description (excerpt from man page):
 > Sed is a stream editor.  A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).
 
 

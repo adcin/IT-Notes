@@ -159,16 +159,18 @@ Nouns or movements are commands for moving within the document or representing a
 
 ## Substitute (search and replace)
 
+[vimhelp.org - change.txt #substitute](https://vimhelp.org/change.txt.html#%3Asubstitute)
+
 Change each foo to bar, but ask for confirmation first:  
 ```shell
 :%s/foo/bar/gci
 ```
 
-| Flag | Description                                |
-|:----:| ------------------------------------------ |
-|  g   | global – each match in the line is changed |
-|  c   | confirmation needed for each change        |
-|  i   | case insensitive (ignore case)             | 
+| Flag | Description                                |     |
+| :--: | ------------------------------------------ | --- |
+|  g   | global – each match in the line is changed |     |
+|  c   | confirmation needed for each change        |     |
+|  i   | case insensitive (ignore case)             |     |
 
 See also [RegEx](../misc/RegEx.md)
 

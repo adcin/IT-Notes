@@ -389,7 +389,28 @@ Connecting to server with example above:
 ssh craftmine
 ```  
 
-</br>
+> [!tip]
+> 
+> You can use tokens in the config file. This way you can create for example one config file for multiple systems with different ssh key-names. I think it's a little nicer for backups, instead of having all keys with the same filename. 
+> Example:
+> ```
+> Host example
+>     Hostname example.com
+>     User xmpl
+>     IdentityFile %d/.ssh/%L.%u.ed25519
+>     IdentitiesOnly yes
+> ```
+> 
+> Tokens:
+> - %d - Local user’s home directory.
+> - %L - The local hostname.
+> - %u - The local username.
+> 
+> So in this case the ssh identityfile-name must be: `~/.ssh/hostname.username.ed25519`
+> Use this command to automatically generate a key with the correct name pattern ON THE SSH CLIENT SYSTEM!
+> ```bash
+> ssh-keygen -t ed25519 -f ~/.ssh/$(hostname).$USER.ed25519
+> ```
 
 ## ssh agent
 
