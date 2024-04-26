@@ -191,6 +191,25 @@ _A new commit gets created which documents the revert._
 
 </br>
 
+> [!note] &nbsp;Check the URL of a remote repo:
+> 
+> ```bash
+> git remote -v
+> ```
+> 
+> > [!quote] &nbsp;Outpot example:
+> > 
+> > ```
+> > origin	git@git-server:/git-server/dotfiles.git (fetch)
+> > origin	git@git-server:/git-server/dotfiles.git (push)
+> > ```
+
+> [!note] &nbsp;Change the URL of a remote repo:
+> 
+> ```bash
+> git remote set-url origin git@git-server:./dotfiles.git
+> ```
+
 
 # Simple remote git server
 

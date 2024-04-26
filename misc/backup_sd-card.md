@@ -135,78 +135,55 @@ sudo gzip -dcv /backups/wifi-pi.gz | sudo dd status=progress of=/dev/rdisk6 bs=1
 | -v             | verbose-mode                         |
 | \| sudo dd of= | pipe output to `dd` command          |
 
-----------------
-----------------
-----------------
+## Backup and shrink an ssd drive
 
-# !! Work in progress
+Find the name of the device you want to backup:
+```bash
+lsblk -f
+```
+_Mine is: `/dev/sda`_
 
-## Backup and shrink 128 GB sd card with OSMC Pi System
-
-# lsblk -f
-mmcblk0
-├─mmcblk0p1            vfat        FAT32    OSMCInstall       01AB-C526
-└─mmcblk0p2            ext4        1.0                        9178b55d-c754-4925-8cfc-9f09f83fbbf5
-
-
-
-# sudo dd status=progress if=/dev/mmcblk0 of=/home/marcin/backups/rpi-media/osmc.img
-
-
-
-# ls -lh
-total 120G
--rw-r--r-- 1 root   root   120G 2023-10-25 20:56 osmc.img
-
-
-
-# sudo blockdev --getss /dev/mmcblk0
+Check the sector size of the device:
+```bash
+sudo blockdev --getss /dev/sda
 512
+```
+_If the sector size is not 512, you may later have to add the option `--sector-size` to `losetup`. Check the `losetup` manual for further info._
 
+Create the backup image:
+```bash
+sudo dd status=progress if=/dev/sda of=/home/marcin/backups/ssd-backup.img
+```
 
+Associate a loop devices with backup-image:
+```bash
+sudo losetup --show --find --partscan /home/marcin/backups/ssd-backup.img
+/dev/loop25
+```
 
-# sudo losetup --find --partscan /home/marcin/backups/rpi-media/osmc.img
+> [!tip]
+> 
+> Show which loop device is associated to a file:
+> ```bash
+> losetup --associated /home/marcin/backups/ssd-backup.img
+> ```
 
+Mount it:
+```bash
+sudo mount -m /dev/loop24p2 /mnt/tmp
+```
 
+Shrink the image:
+```bash
+sudo fstrim -v /mnt/tmp
+```
 
-# lsblk -f
-loop24
-├─loop24p1             vfat        FAT32    OSMCInstall       01AB-C526
-└─loop24p2             ext4        1.0                        9178b55d-c754-4925-8cfc-9f09f83fbbf5
+Unmount an detach the image file:
+```bash
+sudo umount /mnt/tmp && sudo losetup --detach /dev/loop24
+```
 
-mmcblk0
-├─mmcblk0p1            vfat        FAT32    OSMCInstall       01AB-C526
-└─mmcblk0p2            ext4        1.0                        9178b55d-c754-4925-8cfc-9f09f83fbbf5
-
-
-
-# sudo mount -m /dev/loop24p2 /mnt/tmp
-
-
-
-# sudo fstrim -v /mnt/tmp
-/mnt/tmp: 115,6 GiB (124126220288 bytes) trimmed
-
-
-
-# sudo umount /mnt/tmp
-
-
-
-# sudo losetup --detach /dev/loop24
-
-
-
-# ls -lh
-total 3,5G
--rw-r--r-- 1 root root 120G Okt 25 21:06 osmc.img
-
-
-
-# sudo gzip osmc.img
-
-
-
-# ls -lh
-total 628M
--rw-r--r-- 1 root root 628M Okt 25 21:06 osmc.img.gz
+Optionally compress the image:
+```bash
+sudo gzip ssd-backup.img
+```

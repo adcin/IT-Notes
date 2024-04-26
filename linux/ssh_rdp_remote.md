@@ -274,11 +274,7 @@ ssh <USERNAME>@<HOSTADDRESS> -i <PRIVAT-KEY-FILE>
 ### Adjust the access permissions to the authentication keys
 
 ```shell
-chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys
-
-# Alternative:
-
-chmod -R u+rwX,go-rwx $HOME/.ssh
+chmod -R u+rwX,go-rwx $HOME/.ssh && chmod 644 $HOME/.ssh/*.pub
 ```
 
 ### Set up configuration

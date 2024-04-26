@@ -114,6 +114,63 @@ unalias -a
 
 - https://wiki.ubuntuusers.de/Bash/Prompt/  
 
+Important Bash prompt control sequences for color settings:
+- `\[` - begin a sequence of non-printing characters (e.g. control sequence or comment)
+- `\]` - end a sequence of non-printing characters
+- `\033[` - (or `\e[`) beginning of a color control sequence
+- `m` - end of a color control sequence
+
+Examples:
+- `\[\033[36m\]` - full control sequence for cyan text color
+- `\[\033[00m\]` - full control sequence for resetting terminal colors to default
+
+##### Basic foreground/text color codes:
+
+| Code | Effect |
+| :--: | ------ |
+|  30  | Black  |
+|  34  | Blue   |
+|  36  | Cyan   |
+|  32  | Green  |
+|  35  | Purple |
+|  31  | Red    |
+|  37  | White  |
+|  33  | Yellow |
+
+##### Basic background color codes:
+
+| Code | Effect |
+| :--: | ------ |
+|  40  | Black  |
+|  44  | Blue   |
+|  46  | Cyan   |
+|  42  | Green  |
+|  45  | Purple |
+|  41  | Red    |
+|  47  | White  |
+|  43  | Yellow |
+
+##### Attribute codes
+The syntax is `<attribute>;<color>` (e.g. `4;32` for underlined green foreground/text). So the attribute first, followed by semicolon and color-code.
+
+| Code | Effect                                           |
+| :--: | ------------------------------------------------ |
+|  0   | normal                                           |
+|  1   | bold or light (depends on the terminal emulator) |
+|  2   | dim                                              |
+|  4   | underlined                                       |
+|  5   | blinking (ignored by most terminal emulators)    |
+|  7   | inverts the foreground and background colors     |
+|  8   | hidden                                           |
+
+Examples:
+`\[\033[1;31;47m\]` - red and bold/light text on white background
+`\[\033[0;32;40m\]` - normal green text on black background
+`\[\033[00m\033[34m\]` - reset color settings and then make text blue
+
+Remember:
+Define at the end of the prompt settings your standard terminal text color or reset the color-setting to default (`\[\033[00m\]`).
+
 Bash colour chart:  
 ![Bash Colour Chart](../zz_rss/bash-color-chart.png)
 

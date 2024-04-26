@@ -8,11 +8,7 @@
 chmod +x /path/to/my_script.sh
 ```
 
-
-
 ## Execute script
-
-
 
 ### Execute immediately 
 
@@ -22,8 +18,6 @@ chmod +x /path/to/my_script.sh
     `./my_script.sh`
 - Method 3: Specify the interpreter    
     `/bin/bash my_script.sh`
-
-
 
 ### Execute at particular time
 
@@ -316,9 +310,18 @@ Example Code for flags a,s,d:
 while getopts a:s:d: flag
 do
     case "${flag}" in
-        a) printf "The a argument was: ${OPTARG}\n";;
-        s) printf "The s argument was: ${OPTARG}\n";;
-        d) printf "The d argument was: ${OPTARG}\n";;
+        a)
+            printf "The a argument was: %s\n" ${OPTARG}
+        ;;
+        s) 
+            printf "The s argument was: %s\n" ${OPTARG}
+        ;;
+        d)
+            printf "The d argument was: %s\n" ${OPTARG}
+        ;;
+        \?)
+            printf "Unknown argument!\n"
+        ;;
     esac
 done
 
@@ -345,11 +348,12 @@ Your arguments have been processed - bye.
 
 # Location of the current script file
 
-- [source stackoverflow](https://stackoverflow.com/a/4774063)
+The special Variable `$0` equals the location/path of the scrypt-file. But be careful with symlinks. If you execute the symlink, then `$0` equals the location of the symlink, not the actual script-file.
 
 Save path in a variable:
 ```bash
-SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+SCRIPTPATH=`realpath "$0"` # realpath prints the actual path, even when $0 is a symlink
+SCRIPT_DIR=`dirname $(realpath "$0")` # dirname strips the last component from a path
 ```
 
 -------------------
@@ -471,6 +475,11 @@ Check for a file:
 ```
 
 
+## Timestamp variable
+
+```bash
+TIMESTAMP=$(date +"%Y.%m.%d_%H.%M")
+```
 
 ## Check for root privileges
 
@@ -492,6 +501,14 @@ sudo -k
 - `if [ "$EUID" -ne 0 ]` ▷▷▷ Check if Effective User ID is 0 (root)
 - `exec sudo -s "$0" "$@"` ▷▷▷ restart current script with root privileges
 - `sudo -k` ▷▷▷ reset sudo timestamp, so password needs to be entered again
+
+## Check if dependency (needed app) is installed
+
+Check if xclip is installed: 
+```
+[[ -z "$(command -v xclip)" ]] && printf "\n\tPlease install nessecary software: xclip\n\n" && exit 1
+```
+
 
 -----------------
 # Useful links

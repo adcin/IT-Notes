@@ -73,3 +73,18 @@ xev | grep button
 ```shell
 mogrify -strip ./*.jpg
 ```
+
+# `jhead` - Digicam JPEG Exif header manipulation tool
+
+##### DESCRIPTION
+
+jhead is used to display and manipulate data contained in the Exif header of JPEG images from digital cameras. By default, jhead displays the more useful camera settings from the file in a user‐friendly format.
+
+jhead can also be used to manipulate some aspects of the image relating to JPEG and Exif headers, such as changing the internal timestamps, removing the thumbnail, or transferring Exif headers back into edited images after graphical editors deleted the Exif header. jhead can also be used to launch other programs, similar in style to the UNIX find command, but much simpler.
+
+# `ncdu` - NCurses Disk Usage
+
+##### DESCRIPTION
+ncdu (NCurses Disk Usage) is a curses‐based version of the well‐known `du`, and provides a fast way to see what directories are using yourdisk space.
+
+Very useful, when you suddenly don't have space left and need to delete something.

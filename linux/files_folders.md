@@ -5,8 +5,6 @@
 pwd
 ```
 
-</br>
-
 **Create folder:**  
 ```shell
 mkdir FOLDER [FOLDER2] [FOL...]
@@ -17,14 +15,42 @@ Create all non existing parent folders as well:
 mkdir -p FOLDER [FOLDER2] [FOL...]
 ```
 
-</br>
+Create a folder hierarchy with one command:
+```
+mkdir -p project1/{users/{user1,user2,user3}/{documemts,templates,media},shares/{media,docs,dev}}
+```
+
+Result:
+<pre style="margin-left: 2em"><code>project1
+├── shares
+│   ├── dev
+│   ├── docs
+│   └── media
+└── users
+   ├── user1
+   │   ├── documemts
+   │   ├── media
+   │   └── templates
+   ├── user2
+   │   ├── documemts
+   │   ├── media
+   │   └── templates
+   └── user3
+       ├── documemts
+       ├── media
+       └── templates</code></pre>
+
+Create a folder with the permissions 700:
+```
+mkdir -m 700 my-private-folder
+```
 
 **Move/Rename files and folders:**  
 ```shell
 mv /way/to/folder/or/file /new/way/to/folder/or/file
 ```
 
-</br>
+
 
 **Copy:**  
 ```shell
@@ -37,7 +63,7 @@ Copy directory and all subdirectories to folder
 cp -R junk /tmp
 ```
 
-</br>
+
 
 **delete**
 
@@ -58,7 +84,7 @@ Empty folder:
 rmdir FOLDER
 ```
 
-</br>
+
 
 Overwrite a file to hide its contents, then deallocate and remove it:  
 
@@ -66,7 +92,7 @@ Overwrite a file to hide its contents, then deallocate and remove it:
 shred -u <FILENAME>
 ```
 
-</br>
+
 
 Overwrite a whole partition to delete all files safely:  
 
@@ -83,7 +109,7 @@ sudo shred -fvn 3 /dev/sdb1
 
 
 
-</br>
+
 
 Show file system disk space usage:
 
@@ -91,7 +117,7 @@ Show file system disk space usage:
 df -h
 ```
 
-</br>
+
 
 Show Inode usage:
 
@@ -102,7 +128,7 @@ df -i
 _Simplified - amount of available (used/free) files._
 
 
-</br>
+
 
 Count all files (not folders) in a directory and subdirectories:
 
@@ -112,15 +138,15 @@ find /path/to/directory -type f | wc -l
 find ./ -type f | wc -l 
 ```
 
-</br>
+
 
 ---------------------
 
-</br>
+
 
 # Mount
 
-</br>
+
 
 ## mnt vs media
 
@@ -129,7 +155,7 @@ find ./ -type f | wc -l
 | /media | Linux mounts media like CDs or USB-Drives here. | 
 | /mnt   | You should mount manually here.                 |
 
-</br>
+
 
 ## Show mounted file-systems:
 
@@ -143,7 +169,7 @@ cat /etc/mtab
 less /etc/mtab
 ```
 
-</br>
+
 
 ## sshfs mount
 
@@ -151,7 +177,7 @@ less /etc/mtab
 sudo apt update && sudo apt install sshfs libfuse2 -y
 ```
 
-</br>
+
 
 Add remote host to known_hosts:
 
@@ -159,7 +185,7 @@ Add remote host to known_hosts:
 ssh-keyscan -H REMOTE_HOST_ADDRESS >> ~/.ssh/known_hosts
 ```
 
-</br>
+
 
 Create local mount directory (if necessary):
 
@@ -167,7 +193,7 @@ Create local mount directory (if necessary):
 mkdir /home/USER_NAME/MOUNT/HERE
 ```
 
-</br>
+
 
 1st quick mount as test and for adding host key to known hosts (important):
 
@@ -175,7 +201,7 @@ mkdir /home/USER_NAME/MOUNT/HERE
 sshfs REMOTE_USER_NAME@REMOTE_HOST_ADDRESS:/PATH/TO/REMOTE/DIRECTORY /home/LOCAL_USER_NAME/MOUNT/HERE
 ```
 
-</br>
+
 
 Mount without interactive password request (method: unsecure, quick and dirty):
 
@@ -183,7 +209,7 @@ Mount without interactive password request (method: unsecure, quick and dirty):
 sshfs -o reconnect,password_stdin REMOTE_USER_NAME@REMOTE_HOST_ADDRESS:/PATH/TO/REMOTE/DIRECTORY /home/LOCAL_USER_NAME/MOUNT/TO/HERE <<< 'REMOTE_USER_PASSWORD'
 ```
 
-</br>
+
 
 Mount with ssh authentication key `/home/LOCAL_USER_NAME/.ssh/ID_KEYFILE` (method: more secure, needs to be supported and set up on remote host first):
 
@@ -198,7 +224,7 @@ sshfs -o reconnect,IdentityFile=/home/LOCAL_USER_NAME/.ssh/ID_KEYFILE REMOTE_USE
 | -o idmap=user | Convert file owner between local and remote user IDs. The idmap=user option translates the UID of the connecting user to the remote user (GID remains unchanged) |
 | -o reconnect  | automatically  reconnect  to  server if connection is interrupted                                                                                                |
 
-</br>
+
 
 ## Mount automatically using crontab
 
@@ -228,7 +254,7 @@ sleep 15
 sshfs -o reconnect,IdentityFile=$AUTH_KEY $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIRECTORY $LOCAL_DESINATION_DIRECTORY
 ```
 
-</br>
+
 
 Create a crontab instruction:
 
@@ -242,11 +268,11 @@ Insert the line at the end of the file:
 @reboot /home/USER_NAME/my_mount_script.sh
 ```
 
-</br>
+
 
 _Done - the network drive should now be automatically mounted on next reboot._
 
-</br>
+
 
 ## Unmount
 
@@ -256,11 +282,11 @@ umount /home/LOCAL_USER_NAME/MOUNT/HERE
 
 ---------------------
 
-</br>
+
 
 # Symbolic links (symlinks)
 
-</br>
+
 
 Create a hardlink:
 ```shell
@@ -270,7 +296,7 @@ _Hardlinks basically define the location of a file on the hardware (disc). If th
 Hardlinks work only on the same device and filesystem.  
 Hardlinks work with files, not with folders._
 
-</br>
+
 
 Create a softlink:  
 ```shell
@@ -280,7 +306,7 @@ ln -s [/PATH/TO/TARGET] [/PATH/TO/SYMLINK]
 _Softlinks refer to the path in the filesystem, not the location on the hardware/disc. When the softlink is removed, the file stays intact. If the original file is deleted, the soft symlink is still there, but it doesn't work any more.  
 Softlinks can be used for files and folders, and work regardless of different disks or partitions._  
 
-</br>
+
 
 Remove a symlink:
 ```shell
@@ -298,7 +324,7 @@ find -xtype l -delete
 
 ---------------------
 
-</br>
+
 
 # Navigate along a path
 
@@ -405,108 +431,7 @@ Copy folder recursively from server to client:
 ```shell
 scp -r <USER>@<SOURCE_HOST>:/path/to/source/folder /path/to/destination/directory
 ``` 
-## rsync
 
-Rsync  is  a  fast and extraordinarily versatile file copying tool.  It can copy locally, to/from another host over any remote shell, or to/from a remote rsync daemon. (Source: [rsync man page](https://download.samba.org/pub/rsync/rsync.1))
-
-Basic syntax: 
-```shell
-rsync options SOURCE DESTINATION
-```
-</br>
-
-### Important slash "`/`" syntax
-
-Copy the content of `folder1`into `folder2`:
-```shell
-rsync -a ~/docs/folder1/ ~/docs/folder2
-```
-
-Copy the `folder1` itself and its content into `folder2`:
-```shell
-rsync -a ~/docs/folder1 ~/docs/folder2
-```
-
-_Notice the missing `/` at the end of the source in the 2nd example_
-
-This means these two commands do the same: 
-```shell
-rsync -a ~/docs/folder1/ ~/docs/folder2/folder1
-rsync -a ~/docs/folder1 ~/docs/folder2
-```
-</br> 
-
-### Common options
-
-|        Option         | Description                                                                                                                             |
-|:---------------------:| --------------------------------------------------------------------------------------------------------------------------------------- |
-|          -a           | archive mode (same as -rlptgoD) - keeps basically the meta data as in the source.                                                       |
-|          -r           | copy directories recursively.                                                                                                           |
-|          -l           | add  symlinks to the transferred files instead of noisily ignoring them                                                                 |
-|          -p           | causes the receiving rsync to set the destination permissions to be the same as the source permissions.                                 |
-|          -t           | transfer modification times along with the files and update them on the remote system.                                                  |
-|          -g           | set the group of the destination file to be the same as the source file.                                                                |
-|          -o           | set the owner of the destination file to be the same as the source file, but only if the receiving rsync is being run as the super‐user |
-|          -D           | equivalent to "--devices --specials"                                                                                                    |
-|       --devices       | transfer character and block device files to the remote system to recreate these devices                                                |
-|      --specials       | transfer special files, such as named sockets and fifos                                                                                 |
-|          -v           | verbose mode                                                                                                                            |
-|          -q           | quiet mode                                                                                                                              |
-|          -z           | compresses data during transfers                                                                                                        |
-|          -h           | human readable numbers                                                                                                                  |
-|          -P           | Same as --progress + --partial                                                                                                          |
-|      --progress       | show progress during transfer                                                                                                           |
-|       --partial       | Partial files of interrupted transfers are kept and continued, instead of being deleted and restarted.                                  | 
-|       --delete        | delete extraneous files from destination                                                                                                |
-|          -e           | specify the remote shell to use                                                                                                         |
-|          -n           | perform a trial run with no changes made                                                                                                |
-| --remove-source-files | remove source files after the transfer is complete                                                                                      |
-
-</br>
-
-### Examples
-Copy recursively to remote destination (in user's home folder) and show progress. Keep symlinks, permissions and timestamps, don't keep owner/group.
-```bash
-rsync -rlptzP ~/sourcefolder/ user@server:./destinationfolder
-```
-
-Copy the content of a local folder to an other:  
-```shell
-rsync -rvzh --progress ~/docs/folder1/ ~/docs/folder2
-```
-</br>
-
-Copy multiple sources to a folder:  
-```shell
-rsync -rvzh --progress ~/downloads/music1/ ~/downloads/music2/ ~/downloads/Pink_Floyd ~/music
-```
-_Notice: rsync will copy only the content of music1 and music2, but will also copy the folder itself for Pink_Floyd._
-</br>
-
-Make a backup of a folder (like copy but also deletes files from destination):
-```shell
-rsync -avzh --progress --delete ~/docs/folder1/ ~/docs/backup_of_folder1
-```
-</br>
-
-Backup local folder to remote server via ssh:
-```shell
-rsync -avzh --progress --delete -e ssh ~/docs/folder1/ username@192.168.0.69:/home/username/docs/backup_of_folder1
-```
-</br>
-
-Backup local folder to remote server via ssh with keyfile and specified port: 
-```shell
-rsync -avzh --progress --delete -e "ssh -p 6969 -i ~/.ssh/id_rsa" ~/docs/folder1/ username@192.168.0.69:/home/username/docs/backup_of_folder1
-```
-</br>
-
-Backup remote server folder to local machine via ssh with keyfile and specified port: 
-```shell
-rsync -avzh --progress --delete -e "ssh -p 6969 -i ~/.ssh/id_rsa" username@192.168.0.69:/home/username/docs/folder1/ ~/docs/backup_of_folder1
-```
-
----------------------
 
 # Permissions
 
@@ -614,96 +539,12 @@ chown <USER>:<GROUP> <FILE OR FOLDER>
 
 # Search/Find files
 
-Plocate - fast search the file sshd_config: 
+locate - fast search the file sshd_config: 
 ```shell
-plocate sshd_config
+locate sshd_config
 ```
 
-Search the file sshd_config: 
-```shell
-sudo find / -name "sshd_config" -print
-```
 
-Search files, folders and links:
-```shell
-find /path/to/file/ -type d,f,l -iname filename
-```
-
-Search files (not folders):
-```shell
-find /path/to/file/ -iname filename
-```
-
-Show all files (not folders) in current directory:
-
-```shell
-find .
-```
-
-Show all files (not folders) named software in current directory:
-
-```shell
-find . software
-```
-
-Search in home folder of current user:
-
-```shell
-find ~/ -iname filename
-```
-
-Search in the whole system:
-
-```shell
-find / -iname filename
-```
-
-Show files with foo at the beginning of their name:
-
-```shell
-find /path/to/file/ -iname foo*
-```
-
-Show files which have been modified up till 2 days ago:
-
-```shell
-find /path/to/file/ -mtime -2
-```
-
-Show files which have been modified up till 24 hours ago:
-
-```shell
-find $HOME -mtime 0
-```
-
-Show file which have been accesed up till 2 days ago:
-
-```shell
-find /path/to/file/ –atime -2
-```
-
-Show file which have been changed up till 2 days ago:
-
-```shell
-find /path/to/file/ –ctime -2
-```
-
-Show files bigger then 5 MB:
-
-```shell
-find /path/to/file/ –size +5M
-```
-
-Delete all ini files in the current directory and all sub-directories:
-
-```shell
-cd /media/some_usb_drive/directory/
-find . -name 'desktop.ini' -type f -delete
-```
-
-------------------------
-
-</br>
 
 # Archives
 
@@ -712,21 +553,21 @@ find . -name 'desktop.ini' -type f -delete
 
 - [TecMint tar examples](https://www.tecmint.com/tar-command-examples-linux/)
 
-</br>
+
 
 Extract:
 ```shell
 tar vxf archiv.tar
 ```
 
-</br>
+
 
 Extract to a defined directory:
 ```shell
 tar vxf archiv.tar -C $HOME/extract/here
 ```
 
-</br>
+
 
 Extract to a defined directory, but without the first 2 leading parent directories. Very useful, if you want to get rid of the `/home/user` directory.
 
@@ -734,7 +575,7 @@ Extract to a defined directory, but without the first 2 leading parent directori
 tar vxf archiv.tar -C $HOME/extract/here --strip-components=2
 ```
 
-</br>
+
 
 Extract only a specific file/folder from within the tarball. Specify destination directory and strip 2 leading parent directories.
 
@@ -742,21 +583,21 @@ Extract only a specific file/folder from within the tarball. Specify destination
 tar vxf archiv.tar -C $HOME/extract/here home/user/Documents/ --strip-components=2
 ```
 
-</br>
+
 
 Create new archive:
 ```shell
 tar cfvp archiv.tar file1 file2 file3
 ```
 
-</br>
+
 
 Create new archive and compress with gzip:
 ```shell
 tar cfzvp archiv.tar.gz file1 file2 file3
 ```
 
-</br>
+
 
 Archive all files from inside a folder (not the folder itself)
 
@@ -764,14 +605,14 @@ Archive all files from inside a folder (not the folder itself)
 tar cfzvp $HOME/destination/of/my/backup.tar.gz -C /path/to/source/folder ./
 ```
 
-</br>
+
 
 List the contents of an archive:
 ```shell
 tar tfv archiv.tar
 ```
 
-</br>
+
 
 Options:
 
@@ -787,7 +628,7 @@ Options:
 |             C             | Change to DIR before performing any following operations.      |
 | --strip-components=NUMBER | Strip NUMBER leading components from file names on extraction. |
 
-</br>
+
 
 ## gzip .gz archives
 
@@ -803,7 +644,7 @@ gunzip file.gz
 ```
 Output: `file.txt`
 
-</br>
+
 
 ## zip/unzip .zip archives
 
@@ -812,14 +653,14 @@ Create folder.zip of folder and all subfolders:
 zip -r folder.zip folder
 ```
 
-</br>
+
 
 Extract file.zip to current folder:
 ```shell
 unzip file.zip
 ```
 
-</br>
+
 
 ## xzcat .xz archives
 
@@ -829,7 +670,7 @@ Extract file.xz to current folder and delete the input file.
 unxz file.xz
 ```
 
-</br>
+
 
 Command aliases: 
 - unxz is equivalent to xz --decompress.
@@ -840,7 +681,7 @@ Command aliases:
 
 ------------------------
 
-</br>
+
 
 # Compare files and directories
 
@@ -856,7 +697,7 @@ Description:
 Synopsis:    
 > `diff [OPTION]... FILES`
 
-</br>
+
 
 Compare 2 directories, show the differences:
 
@@ -870,7 +711,7 @@ diff -q -r ~/Music /mnt/ext_ssd/music
 |   -q   | report only when files differ                |
 |   -r   | recursively compare any subdirectories found |
 
-</br>
+
 
 ## cmp
 

@@ -229,6 +229,15 @@ iw list
 - `mail` [Debian Manpage](https://manpages.debian.org/bullseye/mailutils/mail.1.en.html)  
 - [GNU Mailutils manuals](https://mailutils.org/manual/)
 
+Location of the mail spool files:
+- `/var/mail/$USER`
+- `/var/spool/mail/$USER`
+
+mail is part of the mailutils package. Install the package:
+```
+sudo apt install mailutils
+```
+
 Open the system mailbox for the invoking user (works only if you have mail in the spool):
 
 ```shell

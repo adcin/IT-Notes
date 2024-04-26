@@ -86,3 +86,22 @@ sudo visudo
 
 Save custom user configuration files to `/etc/sudoers.d/`.
 
+# Disable sudo password query for a specific user
+The basic syntax is (replace `username`):
+```
+username ALL=(ALL:ALL) NOPASSWD: ALL
+```
+
+Method 1 - Insert the prior described line via `sudo visudo` to the `/etc/sudoers` in the "User privilege specification" section:
+```
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+username ALL=(ALL:ALL) NOPASSWD: ALL
+```
+
+Method 2 (preferred) - Add a custom user config file to `/etc/sudoers.d/`:
+```
+echo 'username ALL=(ALL:ALL) NOPASSWD: ALL' | sudo tee /etc/sudoers.d/username
+```
+_Check "@include" in `man 5 sudoers` for further details._
+

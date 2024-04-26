@@ -39,7 +39,12 @@ sudo nano /etc/needrestart/needrestart.conf
 Find: `#$nrconf{restart} = 'i';`
 Change to: `$nrconf{restart} = 'a';`
 
-</br>
+# Error message: `sh: 0: getcwd() failed: No such file or directory`
+
+This basically means, that the current working directory (cwd) is not valid. You are most likely in the terminal in a directory, which does not exist any more. Maybe it has been moved or deleted by another process.
+
+##### Solution:
+Changing the directory (`cd ~/` or `cd /`) should solve the issue.
 
 # KDE - add spell check dictionaries
 
@@ -49,7 +54,6 @@ Change to: `$nrconf{restart} = 'a';`
 - [Hunspell Languages](https://hosted.weblate.org/projects/hunspell/#languages)
 - [GNU Aspell](http://aspell.net/)
 - [GNU Aspell Dictionaries](https://ftp.gnu.org/gnu/aspell/dict/0index.html)
-
 
 
 ## Prerequisites

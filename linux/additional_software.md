@@ -360,36 +360,29 @@ VBoxClient --version
 VBoxControl.exe --version
 ```
 
-</br>
+> [!note] &nbsp;Connect via ssh from host to the VirtualBox VM
+> 
+> Thanks to: https://averagelinuxuser.com/ssh-into-virtualbox/#why-ssh-into-virtualbox
+> 
+> 0. VM (e.g. Ubuntu 22.04) is already created and has a functioning ssh server installed and configured - listening on port 22.
+> 1. Open Settings of the VM.
+> 2. Select "Network" (1) -> "Advanced" (2) -> "Port Forwanding" (3)
+> 
+> ![600](_attachments-media/Screenshot_20240327_131112.png)
+> 
+> 3. Click the green plus icon (1) to add the new port forwarding rule.
+> 4. Add the following rule:
+>     - Name: `ssh`
+>     - Protocol: `TCP`
+>     - Host Port: `22222` (or any other free port on the host machine)
+>     - Guest Port: `22` (ssh port on the vm)
+> 
+> ![600](_attachments-media/Screenshot_20240327_132037.png)
+> 
+> 5. Confirm and save the changes.
+> 6. Connect from host to the VM: `ssh -p 22222 vm-user-name@localhost`
 
 ## Command Line Software
-
-</br>
-
-### nano
-
-A very common FOSS editor, inspired by Pico.
-
-- [Official GNU nano homepage](https://www.nano-editor.org/)
-- [Official Documentation](https://www.nano-editor.org/docs.php)
-- [Documentation - nanorc \(config file\)](https://www.nano-editor.org/dist/latest/nanorc.5.html)
-
-```shell
-sudo apt install nano
-```
-
-Configuration file locations:
-- `/etc/nanorc`
-- `~/.nanorc`
-- `$XDG_CONFIG_HOME/nano/nanorc`
-- `~/.config/nano/nanorc`
-
-| Option           | Description                |
-|:---------------- | -------------------------- |
-| set tabsize 4    | Tabsize value (0-8)        |
-| set tabstospaces | Use Spaces instead of Tabs | 
-
-</br>
 
 ### neofetch
 
