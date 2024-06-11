@@ -1,6 +1,15 @@
 # ASCII (extended)
 - [Source: ascii-code.com](https://www.ascii-code.com)
 
+Display ASCII table in terminal:
+```
+man ascii
+```
+
+Display the hex values of all chars in line 5 of example.sh:
+```
+sed '5!d;q' example.sh | od -A x -t x1z -v
+```
 
 ## ASCII control characters (0-31)
 

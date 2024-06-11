@@ -96,6 +96,9 @@ echo "Line No 2" >> file.txt
 Update 2023-08-28:
 > Meanwhile I've learned about POSIX compliance. See this post on stackoverflow: [Why is printf better than echo?](https://unix.stackexchange.com/a/65819)
 
+# [`printf`  - format and print data](../commands_n_apps/printf.md)
+- [GNU documentation](https://www.gnu.org/software/coreutils/manual/html_node/printf-invocation.html)
+
 # Read files
 
 Print whole file: 

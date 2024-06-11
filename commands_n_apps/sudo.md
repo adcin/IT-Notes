@@ -105,3 +105,11 @@ echo 'username ALL=(ALL:ALL) NOPASSWD: ALL' | sudo tee /etc/sudoers.d/username
 ```
 _Check "@include" in `man 5 sudoers` for further details._
 
+# Link collection
+Beware, I may not have checked theses yet, but just saved for later.
+
+- https://karandeepsingh.ca/post/sudo-mastery-and-best-practices/
+- https://github.com/fcaviggia/hardening-script-el6/blob/master/config/sudoers
+- https://networklogician.com/2022/01/05/best-practices-for-etc-sudoers/
+- https://www.digitalocean.com/community/questions/mini-tutorial-restricting-sudo-users-to-only-a-handful-commands
+- https://ostechnix.com/restrict-sudo-users-run-specific-commands/

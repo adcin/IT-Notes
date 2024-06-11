@@ -182,12 +182,12 @@ Generate ed25519 key pair:
 ssh-keygen -a 40 -t ed25519 -f ~/.ssh/id_ed25519 -C "user@example.com_on_device"
 ```
 
-|   Option    | Description                                                                                                       |
-|:-----------:| ----------------------------------------------------------------------------------------------------------------- |
-|     -a      | Number of KDF rounds used.  Higher numbers = slower passphrase verification = increased resistance to brute-force (default = 16) |
-|     -t      | Specifies the type of key to create                                                                               |
-| -C \<Text\> | Comment                                                                                                           |
-|     -f      | Filename of the key file                                                                                          | 
+|   Option    | Description                                                                                                                      |     |
+| :---------: | -------------------------------------------------------------------------------------------------------------------------------- | --- |
+|     -a      | Number of KDF rounds used.  Higher numbers = slower passphrase verification = increased resistance to brute-force (default = 16) |     |
+|     -t      | Specifies the type of key to create                                                                                              |     |
+| -C \<Text\> | Comment                                                                                                                          |     |
+|     -f      | Filename of the key file                                                                                                         |     |
 
 ### Generate public key out of existing private key
 
@@ -439,6 +439,7 @@ ssh-agent -D
 ## ProxyJump (Bastion Host)
 
 - [ProxyJump on Red Hat - Enable Sysadmin](https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump)
+- [youtube.com - ExitZero: Learn SSH Bastion/Jump Servers](https://www.youtube.com/watch?v=KIeBC7NIzj4)
 
 -J option (ProxyJump) is used to connect to your target through an ssh connection to one or more jump-hosts (also called bastion hosts). Very useful if you can't connect directly to your target and more convenient then opening the ssh-sessions one by one.
 

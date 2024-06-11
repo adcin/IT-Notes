@@ -1,7 +1,6 @@
 # Watchtower
-- [containrrr.dev - Watchtower](https://containrrr.dev/watchtower)
 
-> [!quote]
+> [!quote] Quote from "[containrrr.dev - Watchtower](https://containrrr.dev/watchtower)"
 > 
 > A container-based solution for automating Docker container base image updates.
 

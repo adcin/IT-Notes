@@ -1,8 +1,107 @@
 # Shell history usage
 
+Display the shells history:
+```
+history
+```
 
+Display the last 10 entries of the shells history:
+```
+history 10
+```
 
-## Bash variables
+List specific commands from history (e.g. ssh):
+```
+history | grep ssh
+```
+
+Execute/Repeat a command from history by its history-ID:
+```
+!<ID>
+# e.g.
+!265
+```
+
+Execute/Repeat the fourth last command from hostory:
+```
+!-4
+```
+
+Remove a specific command from history:
+```
+history -d 666
+```
+
+Clear the entire history:
+```
+history -c
+```
+##### Modify the last command
+
+_Very useful, when you have a typo in the last command._
+
+\1. Display/Print the last command (it will not be executed):
+```
+!:p
+```
+
+\2. Change foo to bar in the last command from history and execute the modified command:
+```
+^foo^bar^
+```
+
+Example:
+```
+$ printf "\n%15s\n\n" "Hello wold!"
+
+    Hello wold!
+
+$ ^wold^World^
+printf "\n%15s\n\n" "Hello World!"
+
+   Hello World!
+   
+```
+
+# `fc` - Find/Fix command
+`fc` is a shell builtin command. It lists, or edits and re‐executes, commands previously entered to an interactive shell. So it has similar functions as history, but it has 2 very nice extras:
+
+- You can edit and then execute multiple commands at once.
+- You can use your favorite editor to edit the commands.
+
+Display last 10 commands:
+```
+fc -l
+```
+
+List commands 120 to 125:
+```
+fc -l 120 125
+```
+
+List all commands since the last one beginning with `sud` (will find `sudo`, but not `su`):
+```
+fc -l sud
+```
+
+Edit the last command with vim and then execute it:
+```
+fc -e vim
+```
+
+_The command will be executed immediately after you exit the editor. If you saved the changes, then the new command will be executed. If you did not save the changes, then the old command will be repeated. So the best way to cancel the execution of the command is to delete it in the editor, then save and exit._
+
+Edit the 2nd last command in nano:
+```
+fc -e nano -2
+```
+
+Edit commands 120 to 122 in vi:
+```
+fc -e vi 120 122
+```
+
+# History variables
 ##### HISTCONTROL
 
 Controls how lines are saved:

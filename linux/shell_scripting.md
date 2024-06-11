@@ -144,8 +144,6 @@ Test your script by using sh:
 /bin/sh ~/myscripts/supercompliant.sh
 ```
 
-
-
 ## ShellCheck shell script analysis tool
 
 - [ShellCheck website](https://www.shellcheck.net)
@@ -161,8 +159,6 @@ shellcheck --shell=sh ~/myscripts/supercompliant.sh
 ```
 
 **TIPP:** ShellCheck can be integrated in many popular editors: https://github.com/koalaman/shellcheck#in-your-editor
-
-
 
 ## Helpful Links:
 - [Wikipedia](https://wikipedia.org/wiki/POSIX)
@@ -300,8 +296,21 @@ read -p "Press Enter to continue" </dev/tty
 
 Arguments are passed to the script by writing them separated by `Space`. The arguments (also known as positional parameters) can be accessed within the bash script by using the variables $1, $2, $3 ... $n.
 
-## Flags
+## Flags using `getopts`
 
+- https://www.gnu.org/savannah-checkouts/gnu/bash/manual/html_node/Bourne-Shell-Builtins.html#index-getopts
+
+`getopts` is a shell builtin. It can handle short syntax arguments (e.g. `-a`), but not the long syntax (e.g. `--all`).
+
+Usage (simplified): `getopts <flags> ARGUMENT`
+
+`<flags>` syntax with examples `:ab:c::`
+- `:a`
+    - colon at the beginning means that silent error reporting is used. 
+    - "`a`": flag `-a` without an argument
+- `bc::d:`
+    - `b:`: flag `-b` 
+getopts optstring opt
 Example Code for flags a,s,d:
 
 ```shell

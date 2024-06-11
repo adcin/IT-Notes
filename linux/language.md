@@ -8,14 +8,17 @@ Sources:
 ```
 :~$ env | grep LANG
 LANG=de_DE.UTF-8
+### or
+:~$ locale
 ```
 
-Structure of the LANG Variable: `<two letter language code>_<two letter country code>.UTF-8`
+Structure of the LANG Variable: `<two letter language code>_<two letter country code>.<Character-Set>`
 
 \2. Identify the LANG code you want to change to.
 
 - List of two letter language codes: [wikipedia.org - List of ISO 639 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)
 - List of two letter country codes: [wikipedia.org - ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1)
+- The only Character set I ran into so far, is `UTF-8`. However you can check out the [man-page](https://www.man7.org/linux/man-pages/man7/charsets.7.html) (`man 7 charsets`) for further details.
 - Bonus-Link - List of time zones: [wikipedia.org - List of tz database time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 
 All available combinations can be found in: `/usr/share/i18n/SUPPORTED`

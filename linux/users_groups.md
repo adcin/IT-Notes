@@ -154,7 +154,23 @@ sudo wall -n THIS IS MY MESSAGE!
 |:------:| --------------------------------------------- |
 |   -n   | Send only the message and suppress the banner | 
 
+# Methods to get the current users name in a script
+
+Check the difference when you execute this script with or without sudo:
+```
+#!/bin/bash
+printf "\nMethods to get the current users name in a script:\n\n"
+printf "\t| %-13s | %-13s |\n" "Method" "Output"
+printf "\t| %-13s | %-13s |\n" | tr " " "-"
+printf "\t| %-13s | %-13s |\n" '$(logname)' $(logname)
+printf "\t| %-13s | %-13s |\n" '$SUDO_USER' $SUDO_USER
+printf "\t| %-13s | %-13s |\n" '$USER' $USER
+printf "\t| %-13s | %-13s |\n" '$(whoami)' $(whoami)
+printf "\n"
+```
+
 ----------
+
 # Groups 
 
 - [systemd.io - User/Group Name Syntax](https://systemd.io/USER_NAMES)
@@ -177,10 +193,13 @@ getent group
 groups <USER>
 ```
 
-Print all users in a group
+List all group members
 
 ```shell
 getent group <GROUP>
+```
+```
+sudo groupmems -g <GROUPNAME> -l
 ```
 
 ## Create group

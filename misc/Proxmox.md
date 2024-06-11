@@ -35,8 +35,6 @@ After the first system reboot you should not need the monitor, keyboard or mouse
 
 ##### 2. Open the shell
 
-![300](../zz_rss/Screenshot_20240210_103214-1.png)
-
 ##### 3. Edit /etc/apt/sources.list ([pve-wiki-page](https://pve.proxmox.com/wiki/Package_Repositories#sysadmin_no_subscription_repo)): 
 ```shell
 vi /etc/apt/sources.list
@@ -366,3 +364,33 @@ poweroff; exit
 _When you simply exit the terminal, then the GParted Live Desktop would open. Otherwise, when you try to shutdown the VM with `poweroff` or `shutdown -h now` it will wait, until your current bash session process ends._
 
 4. Detach the ISO from the CD/DVD device and restart the actual VM OS.
+
+# Command `pct` - Tool to manage Linux Containers (LXC) on Proxmox VE
+
+##### SYNOPSIS
+`pct <COMMAND> [ARGS] [OPTIONS]`
+
+LXC container index (per node):
+```
+pct list
+```
+
+Launch a shell for the specified container:
+```
+pct enter <vmid>
+```
+
+Mount a containers filesystem on the host:
+```
+pct mount <vmid>
+```
+
+Start a container:
+```
+pct start <vmid>
+```
+
+Stop a container:
+```
+pct stop <vmid>
+```

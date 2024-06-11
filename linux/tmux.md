@@ -157,3 +157,5 @@ alacritty -e tmux
 - [tmux on github](https://github.com/tmux/tmux)
 - [tmuxcheatsheet.com](https://tmuxcheatsheet.com/)
 - [YouTube - Learn Linux TV - tmux playlist](https://youtube.com/playlist?list=PLT98CRl2KxKGiyV1u6wHDV8VwcQdzfuKe&feature=shared)
+- [dev.to - Tmux Tutorial for Beginners](https://dev.to/iggredible/tmux-tutorial-for-beginners-5c52)
+- [dev.to - Useful Tmux Configuration Examples](https://dev.to/iggredible/useful-tmux-configuration-examples-k3g)

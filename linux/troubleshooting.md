@@ -115,3 +115,79 @@ sudo apt install hunspell-de-de-frami aspell-de
 
 App:  System Settings
 Manu: Regional Settings ▷ Spell Check
+
+# MacBook 11,1 - WIFI not working after upgrade fedora 39 to 40
+
+> [!tip]
+> I connected my android phone via usb to the notebook and activated usb tathering on the phone. This way I could go online without a working internal networking device or a dedicated usb network adapter.
+
+Source of solution: https://discussion.fedoraproject.org/t/macbook-11-1-wifi-driver-broken-after-update/80276
+
+Output of `lspci -k`:
+```
+03:00.0 Network controller: Broadcom Inc. and subsidiaries BCM4360 802.11ac Dual Band Wireless Network Adapter (rev 03)
+        Subsystem: Apple Inc. Device 0117
+        Kernel driver in use: wl
+        Kernel modules: bcma, wl
+```
+
+The following commands solved the problem for me:
+```
+sudo dnf install broadcom-wl
+rpm -q -a akmod-wl kmod-wl\*
+rpm -V -a akmod-wl kmod-wl\*
+rpm -q -l -a akmod-wl kmod-wl\*
+ls -l /usr/src/akmods/wl-kmod*
+sudo akmods --force --akmod wl
+akmodsbuild /usr/src/akmods/wl-kmod.latest
+sudo rpm --force -i ~/kmod-wl-*.rpm
+sudo modprobe wl
+```
+
+> [!quote]- &nbsp;Full list of commands and output:
+> 
+> ```
+> $ sudo dnf install broadcom-wl
+> [sudo] password for marcin:
+> Last metadata expiration check: 1:18:01 ago on Mo 20 Mai 2024 17:35:18 CEST.
+> Package broadcom-wl-6.30.223.271-23.fc40.noarch is already installed.
+> Dependencies resolved.
+> Nothing to do.
+> Complete!
+> 
+> $ rpm -q -a akmod-wl kmod-wl\*
+> kmod-wl-6.8.8-200.fc39.x86_64-6.30.223.271-49.fc39.x86_64
+> kmod-wl-6.8.9-200.fc39.x86_64-6.30.223.271-49.fc39.x86_64
+> akmod-wl-6.30.223.271-51.fc40.x86_64
+> kmod-wl-6.30.223.271-51.fc40.x86_64
+> kmod-wl-6.8.9-300.fc40.x86_64-6.30.223.271-51.fc40.x86_64
+> 
+> $ rpm -V -a akmod-wl kmod-wl\*
+> 
+> $ rpm -q -l -a akmod-wl kmod-wl\*
+> /lib/modules/6.8.8-200.fc39.x86_64/extra
+> /lib/modules/6.8.8-200.fc39.x86_64/extra/wl
+> /lib/modules/6.8.8-200.fc39.x86_64/extra/wl/wl.ko.xz
+> /lib/modules/6.8.9-200.fc39.x86_64/extra
+> /lib/modules/6.8.9-200.fc39.x86_64/extra/wl
+> /lib/modules/6.8.9-200.fc39.x86_64/extra/wl/wl.ko.xz
+> /usr/src/akmods/wl-kmod-6.30.223.271-51.fc40.src.rpm
+> /usr/src/akmods/wl-kmod.latest
+> (contains no files)
+> /lib/modules/6.8.9-300.fc40.x86_64/extra
+> /lib/modules/6.8.9-300.fc40.x86_64/extra/wl
+> /lib/modules/6.8.9-300.fc40.x86_64/extra/wl/wl.ko.xz
+> 
+> $ ls -l /usr/src/akmods/wl-kmod*
+> -rw-r--r--. 1 root root 5808348 Feb  4 01:00 /usr/src/akmods/wl-kmod-6.30.223.271-51.fc40.src.rpm
+> lrwxrwxrwx. 1 root root      36 Feb  4 01:00 /usr/src/akmods/wl-kmod.latest -> wl-kmod-6.30.223.271-51.fc40.src.rpm
+> 
+> $ sudo akmods --force --akmod wl
+> Checking kmods exist for 6.8.9-300.fc40.x86_64 [  OK  ]
+> 
+> $ akmodsbuild /usr/src/akmods/wl-kmod.latest
+> * Rebuilding /usr/src/akmods/wl-kmod.latest for kernel(s) 6.8.9-300.fc40.x86_64: prep build install clean; Successfull; Saved kmod-> wl-6.8.9-300.fc40.x86_64-6.30.223.271-51.fc40.x86_64.rpm in /home/marcin/
+> 
+> $ sudo rpm --force -i ~/kmod-wl-*.rpm
+> ```
+

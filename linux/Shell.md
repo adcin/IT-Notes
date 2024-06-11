@@ -112,7 +112,13 @@ unalias -a
 
 ## Bash shell colours
 
-- https://wiki.ubuntuusers.de/Bash/Prompt/  
+> [!warning]
+> What I wrote here was a little naive, but it worked for me. Check out this Link for better and deeper information:
+> - [gist.github.com - fnky: ANSI Escape Sequences](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797)
+
+- https://wiki.ubuntuusers.de/Bash/Prompt/
+- https://michurin.github.io/xterm256-color-picker/
+- https://misc.flogisoft.com/bash/tip_colors_and_formatting
 
 Important Bash prompt control sequences for color settings:
 - `\[` - begin a sequence of non-printing characters (e.g. control sequence or comment)
@@ -200,6 +206,9 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[00;31m\]\u \[\033[00;00m\]@ \[\033
 --------------------
 
 # Change tty shortcuts 
+
+> [!warning]
+> This works, but you should better simply learn to use `[Ctrl]`+`[Shift]`+`[C]` and `[Ctrl]`+`[Shift]`+`[V]` - believe me.
 
 Command: [stty](https://manpages.debian.org/bullseye/coreutils/stty.1.en.html) - change and print terminal line settings
 

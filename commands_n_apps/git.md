@@ -51,7 +51,6 @@ git config --global user.email "rocky.balboa@rambo.com"
 
 </br>
 
-
 # Simple local workflow
 
 </br>
@@ -77,7 +76,6 @@ mkdir -p ~/projects/abc && cd ~/projects/abc
 git init
 ```
 
-
 </br>
 
 **Now you should put or crate your project files in the folder.**
@@ -97,7 +95,6 @@ git commit
 ```
 
 </br>
-
 
 # Simple remote workflow (GitHub with ssh)
 
@@ -222,21 +219,18 @@ The goal is to create a git-server, to manage, backup and distribute my scripts,
 
 </br>
 
-
 **Hardware**: Raspberry Pi 3 Model B (aarch64)
 **OS**: [DietPi](https://dietpi.com/) v8.25.1
 
 </br>
 
-
-**Features:  **
+**Features:**
 - Restricted access
 - auth-keys, no passwords
 - Security features
 - No unnecessary apps or tools
 
 </br>
-
 
 ## Server - install and config git
 
@@ -263,12 +257,9 @@ sudo -e /etc/shells
 
 </br>
 
-
-
 ## Server - create and configure user git
 
 </br>
-
 
 ```shell
 sudo adduser --system --shell $(which git-shell) --group --disabled-login --disabled-password --home /mnt/dietpi_userdata/git-server git
@@ -297,7 +288,6 @@ mkdir ~/.ssh && \
 touch ~/.ssh/authorized_keys && \
 chmod -R u+rwX,go-rwx $HOME/.ssh
 ```
-
 
 </br>
 
@@ -328,9 +318,7 @@ sudo printf "no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty %s\
 sudo printf "no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty %s\n" "" >> /mnt/dietpi_userdata/git-server/.ssh/authorized_keys
 ```
 
-
 </br>
-
 
 ## Server - create bare git repository
 
@@ -358,7 +346,6 @@ git init --bare
 
 </br>
 
-
 ## Client - add git-server to ~/.ssh/config
 
 </br>
@@ -376,14 +363,11 @@ _This makes it much easier to use._
 
 </br>
 
-
 ## Client - create repo
-
 
 Let's assume the project folder already exists and had data in it. Otherwise you'll need to create it.
 
 </br>
-
 
 **CD into the project folder:**  
 ```shell
@@ -399,14 +383,12 @@ git init
 
 </br>
 
-
 **Add all files to the index:**  
 ```shell
 git add .
 ```
 
 </br>
-
 
 **Commit the repo:**  
 ```shell
@@ -415,7 +397,6 @@ git commit -m "first commit after init"
 
 </br>
 
-
 **Add the remote server to the repo:**  
 ```shell
 git remote add origin git@git-server:./scripts-home.git
@@ -423,14 +404,16 @@ git remote add origin git@git-server:./scripts-home.git
 
 </br>
 
-
 **Push the files to remote repo:**  
 ```shell
-git push origin main
+git push --set-upstream origin master
 ```
+__
+
+> [!note]
+> My default init branch name is "master". If yours is different, you'll need to adjust the push command. List the name with: `git branch -l`
 
 </br>
-
 
 **A little checking:**  
 ```shell

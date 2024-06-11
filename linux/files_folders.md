@@ -127,18 +127,8 @@ df -i
 
 _Simplified - amount of available (used/free) files._
 
-
-
-
-Count all files (not folders) in a directory and subdirectories:
-
-```shell
-find /path/to/directory -type f | wc -l
-# or for the current directory
-find ./ -type f | wc -l 
-```
-
-
+![find](../commands_n_apps/find.md#^a1c871)
+![find](../commands_n_apps/find.md#^find-cout-files)
 
 ---------------------
 
@@ -315,12 +305,9 @@ rm </PATH/TO/SYMLINK>
 unlink </PATH/TO/SYMLINK>
 ```
 
-<br>
 
-Remove broken symlinks from the current dir and all subdirs:
-```shell
-find -xtype l -delete
-```
+![Remove broken symlinks](../commands_n_apps/find.md#^6d22d8)
+![find](../commands_n_apps/find.md#^7a08d3)
 
 ---------------------
 
@@ -528,6 +515,19 @@ For delicate files and folders you might want to have very strickt settings, so 
 ```shell
 umask 077
 ```
+
+List of `umask` values and their respective meaning in symbolic mode.
+
+| Value | File permissions | Directory permissions |
+|:-----:|:----------------:|:---------------------:|
+|  `0`  |      `rw-`       |        `rwx`          |
+|  `1`  |      `rw-`       |        `rw-`          |
+|  `2`  |      `r--`       |        `r-x`          |
+|  `3`  |      `r--`       |        `r--`          |
+|  `4`  |      `-w-`       |        `-wx`          |
+|  `5`  |      `-w-`       |        `-w-`          |
+|  `6`  |      `---`       |        `--x`          |
+|  `7`  |      `---`       |        `---`          |
 
 ## `chown`  - change ownership 
 
