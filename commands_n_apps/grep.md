@@ -27,7 +27,7 @@
 
 |                            Option                            | Description                                                                                                                                                                                                                                                           |
 | :----------------------------------------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                             `-E`                             | Use extended RegEx (ERE)                                                                                                                                                                                                                                              |
+|                             `-E`                             | Interpret pattern as extended RegEx (ERE)                                                                                                                                                                                                                             |
 |                             `-F`                             | Interpret PATTERNS as fixed strings, not RegEx.                                                                                                                                                                                                                       |
 |                        `-e PATTERNS`                         | Useful when searching multiple PATTERNS or to protect a PATTERN which begins with a "`-`" symbol.                                                                                                                                                                     |
 |                             `-i`                             | `--ignore-case` - Ignore case distinctions in patterns and input data.                                                                                                                                                                                                |
@@ -48,4 +48,11 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias rgrep='rgrep --color=auto'
+```
+
+## Nice greps
+
+Print a file's (e.g. `/etc/login.defs`) content without blank lines or comments:
+```bash
+grep -vE '^$|^#' /etc/login.defs
 ```

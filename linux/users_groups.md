@@ -151,8 +151,8 @@ sudo wall -n THIS IS MY MESSAGE!
 ```
 
 | Option | Description                                   |
-|:------:| --------------------------------------------- |
-|   -n   | Send only the message and suppress the banner | 
+| :----: | --------------------------------------------- |
+|   -n   | Send only the message and suppress the banner |
 
 # Methods to get the current users name in a script
 

@@ -392,6 +392,8 @@ VBoxControl.exe --version
 
 ## Command Line Software
 
+- [GitHub.com - Modern Unix](https://github.com/ibraheemdev/modern-unix)
+
 ### neofetch
 
 A fast, highly customizable system info script.  

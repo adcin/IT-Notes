@@ -59,12 +59,12 @@ sudo systemctl reload sshd
 ```
 
 ##### 4. Enable sshd autostart at reboot:
-```
+```shell
 sudo systemctl enable sshd
 ```
 ## Install some basic apps (optional):
 
-```
+```shell
 sudo dnf -y install stow vim git curl htop mc inxi tmux ncdu
 ```
 
@@ -72,7 +72,7 @@ sudo dnf -y install stow vim git curl htop mc inxi tmux ncdu
 - https://docs.docker.com/engine/install/fedora/#install-using-the-repository
 
 Add the docker repo:
-```
+```shell
 sudo dnf -y config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 ```
 

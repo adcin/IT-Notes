@@ -73,7 +73,11 @@ find . -name 'desktop.ini' -type f -delete
 
 Remove broken symlinks from the current dir and all subdirs: ^6d22d8
 ```shell
-find -xtype l -delete
+find . -xtype l -delete
+```
+To delete symlink loops as well, use:
+```shell
+find . -type l ! -exec test -e {} \; -delete
 ```
 ^7a08d3
 

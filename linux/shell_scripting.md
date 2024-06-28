@@ -113,13 +113,14 @@ TL;DR: __**"Use commands and syntax based on the UNIX standard you n00b."**__
 | stdout |        1        |
 | stderr |        2        |
 
-| Example                                                                                     | Effect                                         |
-| ------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| `somecommand &> /dev/null`<br>`somecommand >& /dev/null`<br>`somecommand > /dev/null 2>&1`  | stdout and stderr to null                      |
-| `somecommand > output.txt`<br>`somecommand 1> output.txt`                                   | stdout to file output.txt                      |
-| `somecommand > /dev/null 2> errorlog.txt`                                                   | stdout to null and stderr to file errorlog.txt |
-| `somecommand >> output.txt`                                                                 | append stdout to output.txt                    |
-| `somecommand &>> output.txt`<br>`somecommand >>& output.txt`<br>`somecommand >> output.txt` | append stdout and stderr to output.txt         | 
+| Example                                                                                     | Effect                                            |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| `somecommand &> /dev/null`<br>`somecommand >& /dev/null`<br>`somecommand > /dev/null 2>&1`  | stdout and stderr to null                         |
+| `somecommand > output.txt`<br>`somecommand 1> output.txt`                                   | stdout to file output.txt                         |
+| `somecommand > /dev/null 2> errorlog.txt`                                                   | stdout to null and stderr to file errorlog.txt    |
+| `somecommand >> output.txt`                                                                 | append stdout to output.txt                       |
+| `somecommand &>> output.txt`<br>`somecommand >>& output.txt`<br>`somecommand >> output.txt` | append stdout and stderr to output.txt            |
+| `somecommand 1>&2`                                                                          | stdout to stderr (e.g. for script error messages) |
 
 
 - _The standard stream for `>` is 1 - so `>` and `1>` are equal._
@@ -487,7 +488,7 @@ Check for a file:
 ## Timestamp variable
 
 ```bash
-TIMESTAMP=$(date +"%Y.%m.%d_%H.%M")
+TIMESTAMP=$(date +%FT%H-%M-%S)
 ```
 
 ## Check for root privileges

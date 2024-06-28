@@ -98,7 +98,7 @@ Syntax we focus on:
 |     `%`      | Indicates the start of a conversion specifier                                                                                                                                                                                                          |     |
 |   `flags`    | Modifies the normal behavior of the specifier (e.g `-` lets a string align left when a `width` is defined, default alignment is right)                                                                                                                 |     |
 |   `width`    | Defines the minimal field width. If the normal conversion would be shorter than the defined width, then the remaining field is padded with spaces "` `" by default. Normally a wider input would not be truncated, unless you specify the `precision`. |     |
-| `.precision` | Specifies usually the number of digits. But ca also be used to to truncate strings.                                                                                                                                                                    |     |
+| `.precision` | Specifies usually the number of digits. But can also be used to truncate strings.                                                                                                                                                                      |     |
 | `conversion` | The [conversion specifiers](printf.md#Common%20conversion%20specifiers)                                                                                                                                                                                |     |
 
 Example script:

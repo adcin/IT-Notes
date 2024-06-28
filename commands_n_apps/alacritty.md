@@ -1,10 +1,8 @@
-# Alacritty terminal emulator
+# Alacritty terminal emulator (notes probably outdated)
 
 Alacritty is a fast, cross-platform, OpenGL terminal emulator.
 
 - [GitHub.com - alacritty](https://github.com/alacritty/alacritty)
-
-</br>
 
 --------------------
 
@@ -14,13 +12,9 @@ Alacritty can be installed easily with a package manager or on many other ways:
 
 - [See the official documentation](https://github.com/alacritty/alacritty#installation)
 
-</br>
-
 ## Build from source
 
 I decided to build it from source as described in the documentation on GitHub: [Alacritty build docs on GitHub](https://github.com/alacritty/alacritty/blob/master/INSTALL.md#building)
-
-</br>
 
 1. Clone the repo
 
@@ -65,11 +59,7 @@ cd ~/git/alacritty
 
 -------------
 
-</br>
-
 # Post build set ups
-
-</br>
 
 ## terminfo 
 
@@ -110,8 +100,6 @@ alacritty|alacritty terminal emulator,
 ...
 ```
 
-</br>
-
 ## Desktop Entry
 
 ⚠ Execute the following commands from inside the repo directory (`cd ~/git/alacritty`).
@@ -124,8 +112,6 @@ sudo update-desktop-database
 ```
 
 Test: Search Alacritty in the desktop application menu.
-
-</br>
 
 ## Man pages
 

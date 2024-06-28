@@ -4,15 +4,11 @@ Description from the man page:
 
 > tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and controlled from a single screen.  tmux may be detached from a screen and continue running in the background, then later reattached.
 
-<br>
-
 # Install
 
 ```shell
 sudo apt install tmux
 ```
-
-<br>
 
 # Start tmux session
 
@@ -20,15 +16,11 @@ sudo apt install tmux
 tmux
 ```
 
-<br>
-
 # List running sessions
 
 ```shell
 tmux ls
 ```
-
-<br>
 
 # Attach to a running session
 
@@ -41,8 +33,6 @@ Attach to a specific (Target) session (target session 2 in this example):
 ```shell
 tmux a -t 2
 ```
-
-<br>
 
 # Shortcuts / tmux commands
 
@@ -65,8 +55,6 @@ To execute a tmux command like "split the current pane" you need to use the pref
 |       `$`        | Rename current session                        |
 |       `S`        | Interactive session select menu with previews |
 |       `:`        | Start the tmux command prompt                 |
-
-<br>
 
 # configuration and customization
 
@@ -91,8 +79,6 @@ Edit the file:
 ```shell
 nano ~/.config/tmux/tmux.conf
 ```
-
-<br>
 
 # Mouse select and copy to desktop clipboard
 
@@ -119,8 +105,6 @@ bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip
 
 Restart the tmux session.
 
-<br>
-
 # Autostart tmux in terminal
 
 ## Alacritty
@@ -137,20 +121,15 @@ shell:
     - "tmux attach || tmux"
 ```
 
-<br>
-
 Or simply start Alacritty with this option:  
 ```shell
 alacritty -e tmux
 ```
 
-<br>
-
 # Tips
 
 - Some recommend setting the prefix key to `Ctrl + A`. I do not recommend this, because this is the prefix key of the cli tool **screen**. So you might have trouble when using both, tmux and screen.
-
-<br>
+- By default you can send the prefix-key to a nested session by repeating it. For example to split pane in the nested session use: `Strg`+`b` -> `Strg`+`b` -> `%`
 
 # Links
 

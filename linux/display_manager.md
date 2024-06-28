@@ -24,3 +24,23 @@ Common display managers:
     - [GDM Wiki](https://wiki.gnome.org/Projects/GDM/)
 - LightDM: A lightweight display manager, which is developed independent of desktop environments.
     - [GitHub.com - LightDM Repo](https://github.com/canonical/lightdm)
+
+## LXDM
+- Display Manager from [LXDE (Lightweight X11 Desktop Environment)](https://www.lxde.org/)
+- [Arch-Wiki LXDM](https://wiki.archlinux.org/title/LXDM)
+- Location of config-files: `/etc/lxdm/`; `/etc/lxdm/lxdm.conf`
+
+### LXDM - setup autologin user
+
+I have created the user `displayer`. The purpose is to auto-start a browser in kiosk-mode directly after bootup. System: fedora 40 with LXDE as desktop environment.
+
+Edit `/etc/lxdm/lxdm.conf`:
+```shell
+sudo vim /etc/lxdm/lxdm.conf
+```
+
+Add this:
+```
+autologin=displayer
+session=/usr/bin/startlxde
+```

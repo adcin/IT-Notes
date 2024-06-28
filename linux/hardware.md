@@ -26,9 +26,9 @@ lsblk -fp
 ```
 
 | Option | Description                    |
-|:------:| ------------------------------ |
+| :----: | ------------------------------ |
 |   -f   | Output info about filesystems. |
-|   -p   | Print full device paths.       | 
+|   -p   | Print full device paths.       |
 
 </br>
 
@@ -90,3 +90,14 @@ $ sync && dd if=/media/username/mountpoint/testfile of=/dev/null bs=100M count=1
 1+0 records out
 104857600 bytes (105 MB, 100 MiB) copied, 0,0478513 s, 2,2 GB/s
 ```
+
+# Hardware Testing / Troubleshooting
+
+- https://www.redhat.com/sysadmin/troubleshooting-hardware-problems-linux
+- https://www.stresslinux.org
+- https://www.phoronix-test-suite.com
+- https://www.techradar.com/best/best-linux-repair-and-rescue-distros
+- https://www.ultimatebootcd.com
+- https://www.system-rescue.org
+- https://www.supergrubdisk.org
+

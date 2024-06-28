@@ -306,12 +306,8 @@ unlink </PATH/TO/SYMLINK>
 ```
 
 
-![Remove broken symlinks](../commands_n_apps/find.md#^6d22d8)
+Find and delete broken or cycling symlinks.
 ![find](../commands_n_apps/find.md#^7a08d3)
-
----------------------
-
-
 
 # Navigate along a path
 
