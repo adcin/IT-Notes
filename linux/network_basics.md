@@ -277,8 +277,6 @@ cat /etc/services
 
 # List open, listening ports of local machine
 
-</br>
-
 ## ss
 
 ```shell

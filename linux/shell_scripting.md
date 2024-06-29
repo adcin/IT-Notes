@@ -300,6 +300,7 @@ Arguments are passed to the script by writing them separated by `Space`. The arg
 ## Flags using `getopts`
 
 - https://www.gnu.org/savannah-checkouts/gnu/bash/manual/html_node/Bourne-Shell-Builtins.html#index-getopts
+- https://linuxsimply.com/bash-scripting-tutorial/functions/script-argument/bash-getopts/
 
 `getopts` is a shell builtin. It can handle short syntax arguments (e.g. `-a`), but not the long syntax (e.g. `--all`).
 
@@ -308,11 +309,13 @@ Usage (simplified): `getopts <flags> ARGUMENT`
 `<flags>` syntax with examples `:ab:c::`
 - `:a`
     - colon at the beginning means that silent error reporting is used. 
-    - "`a`": flag `-a` without an argument
-- `bc::d:`
-    - `b:`: flag `-b` 
-getopts optstring opt
-Example Code for flags a,s,d:
+    - "`-a`" - flag/option without an argument
+- `b:`
+    - `-b <argument>`  - flag/option with an argument
+- `c::`
+    - `-c [<argument>]` - the double colon after the character makes the argument optional.
+
+Example:
 
 ```shell
 #!/bin/sh

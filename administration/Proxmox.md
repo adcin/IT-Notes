@@ -380,6 +380,13 @@ Launch a shell for the specified container:
 pct enter <vmid>
 ```
 
+Copy a file from a running container to the host:
+```shell
+pct pull <vmid> <path> <destination> [OPTIONS]
+# Example with a pi-hole backup-file:
+pct pull 101 /root/backups/pi-hole-pihole-teleporter_2024-06-29_18-30-19.tar.gz ./pi-hole-pihole-teleporter_2024-06-29_18-30-19.tar.gz
+```
+
 Mount a containers filesystem on the host:
 ```
 pct mount <vmid>
