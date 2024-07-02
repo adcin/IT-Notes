@@ -1,6 +1,12 @@
-# Docker commands
+# Docker
+- [Official homepage](https://www.docker.com/)
+- [Docker hub](https://hub.docker.com/)
+- [Docker Engine installation guide](https://docs.docker.com/engine/install/)
+- [Docker CLI commands](https://docs.docker.com/engine/reference/commandline/docker)
+- [Docker Compose CLI commands](https://docs.docker.com/compose/reference/)
+- [Compose file version 3 reference](https://docs.docker.com/compose/compose-file/compose-file-v3/)
 
-</br>
+# CLI commands
 
 ## Version
 
@@ -149,64 +155,4 @@ Example: `docker exec -it wireguard wg`
 
 </br>
 
-# Docker Compose
 
-All the Docker Compose commands should be executed in the directory of the corresponding docker-compose.yaml file. If you want to execute it from an other directory or with a script, use the `-f <PATH_TO_FILE>` option.  
-
-- [Docker Compose commands - manual](https://docs.docker.com/engine/reference/commandline/compose/)
-- [Docker run options](https://docs.docker.com/engine/reference/commandline/run/)
-
-</br>
-
-## up - Create and start containers
-
-```shell
-docker compose up -d
-```
-
-```shell
-docker compose up --force-recreate -d
-```
-
-|      Option      | Description                                                                |
-|:----------------:| -------------------------------------------------------------------------- |
-|        -d        | Detached mode: Run containers in the background                            |
-| --force-recreate | Recreate containers even if their configuration and image haven’t changed. |
-
-</br>
-
-## logs - show log output from container
-
-```shell
-docker compose logs -f
-```
-
-| Option | Description     |
-|:------:| --------------- |
-|   -f   | follow the logs | 
-
-</br>
-
-## down - Stop and remove everything created by `up`
-
-```shell
-docker compose down
-```
-
-</br>
-
-## Update Containers to new version
-
-Pull new images, recreate and restart container, delete unused images: 
-```shell
-docker compose pull && \
-docker compose up --force-recreate --wait --detach && \
-docker image prune -f
-```  
-
-Alternative to follow logs of a detached container (use `CTRL+C` to stop). Remove all unused images afterwards:
-```bash
-docker compose pull && docker compose up -d && docker compose logs -f
-docker image prune -a
-```
-</br>

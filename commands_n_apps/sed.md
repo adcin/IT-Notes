@@ -144,6 +144,18 @@ For some `commands` a semicolon "`;`" can be used as a separator as well: `sed -
 > > - `—` em dash (Unicode 2014)
 > > - `−` minus (Unicode 2212)
 
+> [!example] &nbsp;Remove unnecessary empty lines
+> 
+> One empty line is ok, but no more:
+> ```shell
+> sed -E '/^\s*$/N;/\n\s*$/D' example.txt
+> ```
+>
+> > [!info]
+> > 1. `sed -E`: Enables extended regular expressions.
+> > 2. `/^\s*$/N;`: If a line matches the regex for an empty line (including lines with spaces or tabs), read the next line into the pattern space.
+> > 3. `/\n\s*$/D`: If the next line is also empty (after reading), delete the first line in the pattern space (leaving the second line). This ensures only one empty line is kept.
+
 # Useful aliases
 
 Display `/etc/services` without comment lines or empty lines:

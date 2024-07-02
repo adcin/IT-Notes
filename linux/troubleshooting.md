@@ -10,7 +10,7 @@ sudo locale-gen de_DE.UTF-8
 sudo dpkg-reconfigure locales
 ```
 
-</br>
+
 
 # Notification: Pending update of "firefox" snap
 
@@ -20,7 +20,7 @@ sudo dpkg-reconfigure locales
 sudo snap refresh
 ```
 
-</br>
+
 
 # Ubuntu server dialogue: "Which service should be restarted ?"
 
@@ -71,7 +71,6 @@ Changing the directory (`cd ~/` or `cd /`) should solve the issue.
 
 1. Find the Aspell and Hunspell dictionaries you need. You can use the dictionary links above or simply try your country code.
 
-</br>
 
 Example for German dictionaries:
 
@@ -97,11 +96,11 @@ aspell-de-1901 - Traditional German dictionary for aspell
 hunspell-de-med - German medical dictionary for hunspell
 ```
 
-</br>
+
 
 2. Install the dictionaries
 
-</br>
+
 
 Example for my German dictionaries:
 
@@ -109,7 +108,9 @@ Example for my German dictionaries:
 sudo apt install hunspell-de-de-frami aspell-de
 ```
 
-</br>
+(Fedora: `sudo dnf install hunspell-de aspell-de`)
+
+
 
 3. Activate new dictionaries in the KDE System Settings GUI
 
